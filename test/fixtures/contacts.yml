@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  store: one
+  phone: 1
+  date: 2017-06-30 15:39:44
+
+two:
+  store: two
+  phone: 1
+  date: 2017-06-30 15:39:44

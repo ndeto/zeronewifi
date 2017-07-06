@@ -1,123 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Campaign Page</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+	<head>
+		<title>Campaign Page</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
 
-<style>
-  .panel{
-    background:rgba(0,0,0,0.5);
-    width:50%;
-    height:400px;
-  }
-  body{
-    background-color:#B5252E;
-  }
-  video{
-    border-style:solid;
-    border-color:#FFFFFF;
-    border-width:1px;
-  }
-  input[type=text]{
-    width: 53%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    background-position:center;
-  }
+	<style>
+		.panel {
+			background: rgba(0,0,0,0.5);
+			width: 50%;
+			height: 400px;
+		}
+		body {
+			background-color: #B5252E;
+		}
+		video {
+			border-style: solid;
+			border-color: #FFFFFF;
+			border-width: 1px;
+		}
+		input[type=text] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			background-position: center;
+		}
 
-  button{
-    background-color:#B5252E;
-    color:#000000;
-    font-family:"Century Gothic";
-  }
-  a{
-    text-decoration:none;
-    color:#FFFFFF;
-  }
-  a:visited{
-    text-decoration:none;
-    color:#FFFFFF;
-  }
-  a:hover{
-    text-decoration:none;
-    color:#FFFFFF;
-  }
+		button {
+			background-color: #B5252E;
+			color: #000000;
+			font-family: "Century Gothic";
+		}
+		a {
+			text-decoration: none;
+			color: #FFFFFF;
+		}
+		a:visited {
+			text-decoration: none;
+			color: #FFFFFF;
+		}
+		a:hover {
+			text-decoration: none;
+			color: #FFFFFF;
+		}
 
-  ::-webkit-input-placeholder {
-    color:#000000;
-  }
-</style>
+		::-webkit-input-placeholder {
+			color: #000000;
+		}
 
-<script>
+		.outer {
+			display: table;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+		}
 
-    $(document).ready(function() {
+		.middle {
+			display: table-cell;
+			vertical-align: middle;
+		}
 
-        $( "#thenumber" ).keyup(function( event ) {
-            //xTriggered++;
-            //var msg = "Handler for .keyup() called " + xTriggered + " time(s).";
-            //$.print( msg, "html" );
-            //$.print( event );
-            num = $('#thenumber').val();
-            phonenumbers(num);
+		.inner {
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+		}
+	</style>
 
-        });
+	<script>
+		$(document).ready(function() {
 
-        function phonenumbers(phonenumber) {
-            var phoneno = /^(?:(?:254|\+254|0)?(7(?:(?:[12][0-9])|(?:0[0-8])|(9[0-2]))[0-9]{6})|(?:254|\+254|0)?(7(?:(?:[3][0-9])|(?:5[0-6])|(8[5-9]))[0-9        ]{6})    |(?:254|\+254|0)?(77[0-6][0-9]{6})|(?:254|\+254|0)?(76[34][0-9]{6}))$/;
+			$("#thenumber").keyup(function(event) {
+				//xTriggered++;
+				//var msg = "Handler for .keyup() called " + xTriggered + " time(s).";
+				//$.print( msg, "html" );
+				//$.print( event );
+				num = $('#thenumber').val();
+				phonenumbers(num);
 
-            if(phonenumber.match(phoneno)) {
-                document.getElementById('signupbtn').removeAttribute('disabled');
-                <!--document.getElementById('signupbtn').setAttribute('style','background-color:#003333; border-radius:25px; border-style:groove;                    border-width:thin;');-->
-            }
+			});
 
-            else {
-                <!--document.getElementById('signupbtn').setAttribute('style','background-color:orange;border-radius:25px; border-style:groove;                      border-width:thin;');-->
-                document.getElementById('signupbtn').setAttribute('disabled','true');
-            }
-        }
+			function phonenumbers(phonenumber) {
+				var phoneno = /^(?:(?:254|\+254|0)?(7(?:(?:[12][0-9])|(?:0[0-8])|(9[0-2]))[0-9]{6})|(?:254|\+254|0)?(7(?:(?:[3][0-9])|(?:5[0-6])|(8[5-9]))[0-9        ]{6})    |(?:254|\+254|0)?(77[0-6][0-9]{6})|(?:254|\+254|0)?(76[34][0-9]{6}))$/;
 
-    });
-    //function disablebtn(){
-    //document.getElementById("signupbtn").disabled = true;
-    //}
-</script>
+				if (phonenumber.match(phoneno)) {
+					document.getElementById('signupbtn').removeAttribute('disabled');
+					<!--document.getElementById('signupbtn').setAttribute('style', 'background-color:#003333; border-radius:25px; border-style:groove;                    border-width:thin;');
+					-->
+				} else {
+					<!--document.getElementById('signupbtn').setAttribute('style', 'background-color:orange;border-radius:25px; border-style:groove;                      border-width:thin;');
+					-->document.getElementById('signupbtn').setAttribute('disabled', 'true');
+				}
+			}
 
-<body>
-<div class="container" align="center" alink="#FFFFFF">
-  <br/><br/><br/>
-  <p style="color:#FFFFFF; font-size:36px; font-family:'Century Gothic';"><strong> A cup of coffee. A cup of Love.</strong></p>
-  <video id="myVideo" src="Videos/Java House.mp4" type="video/mp4" width="600" autoplay controls></video>
+		});
+		//function disablebtn(){
+		//document.getElementById("signupbtn").disabled = true;
+		//}
+	</script>
+	<script>
+		document.getElementById('myVideo').addEventListener('ended', myHandler, false);
+		function myHandler(e) {
+			// What you want to do after the event
+			document.getElementById('signupbtn').disabled = false;
+			<!--document.getElementById('signupbtn').setAttribute('style', 'background-color:#003333; border-radius:25px; border-style:groove;             border-width:thin;');
+			-->
+		}
+	</script>
 
-  <script>
-
-      document.getElementById('myVideo').addEventListener('ended',myHandler,false);
-      function myHandler(e) {
-          // What you want to do after the event
-          document.getElementById('signupbtn').disabled=false;
-          <!--document.getElementById('signupbtn').setAttribute('style','background-color:#003333; border-radius:25px; border-style:groove;             border-width:thin;');-->
-      }
-  </script>
-
-  <br/><br/>
-  <form action="submit.php" method="post">
-    <!--<p style=" color:#FFFFFF; font-size:20px; font-family:'Century Gothic'; ">Leave your contact details below for customer loyalty rewards:</p>-->
-    <input id="thenumber" type="text" placeholder="Leave your phone number here" class="text-center" required>
-
-  </form>
-  <a href="https://www.google.com/"><button id="signupbtn" type="button" class="btn btn-lg" style="font-size:22px; text-align:center; color:	        #FFFFFF" disabled="disabled"><strong>Continue to free Wi-Fi</strong></button></a>
-  <!--<div class="panel panel-success">
-    <div class="panel-body panel-success">
-
-    </div>
-  </div>-->
-</div>
-</body>
+	<body>
+		<div class="outer">
+			<div class="middle">
+				<div class="inner">
+					<%= render 'videocampaign'%>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

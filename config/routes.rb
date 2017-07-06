@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'page/index'
+  get 'page/index' => "page#index"
+  post 'pages/submit' => "page#submit"
 
   get 'home/stores' => "home#stores"
   get '/stores/new' => "devise/registrations#new"
