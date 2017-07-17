@@ -4,4 +4,5 @@ class Store < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   belongs_to :user
+  has_many :store_campaign
 end

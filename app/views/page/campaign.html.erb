@@ -119,7 +119,7 @@
 		<div class="outer">
 			<div class="middle">
 				<div class="inner">
-					<%= render 'videocampaign'%>
+					<%= render Campaign.find(StoreCampaign.find(@store.store_campaign_id).campaign_id).name %>
 				</div>
 			</div>
 		</div>

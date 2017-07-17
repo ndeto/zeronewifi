@@ -1,0 +1,34 @@
+
+
+
+
+<h1>Campaigns</h1>
+
+<table>
+  <thead>
+    <tr>
+    	<th>Name</th>
+    	<th>Campaign Type</th>
+    	
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @campaigns.each do |c| %>
+      <tr>
+      	<td><%= c.name %></td>
+      	<td><%= Campaign.find(c.campaign_id).name%></td>
+        <td>
+        <%= link_to 'Show', "#" %> |
+        <%= link_to 'Edit', edit_store_campaign_path(c) %> |
+        <%= link_to 'Destroy', "#", method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Campaign', new_store_campaign_path %>

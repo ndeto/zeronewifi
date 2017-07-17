@@ -1,0 +1,2 @@
+module StoreCampaignsHelper
+end

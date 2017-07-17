@@ -1,0 +1,8 @@
+Campaigns page
+
+<% @campaigns.each do |c| %>
+
+<p><%= c.name %></p>
+<%end%>
+
+<%= link_to "New Campaign", new_store_campaign_path%>

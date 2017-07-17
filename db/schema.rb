@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170630123944) do
+ActiveRecord::Schema.define(version: 20170717190007) do
+
+  create_table "campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contact_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "store_id"
@@ -19,6 +30,25 @@ ActiveRecord::Schema.define(version: 20170630123944) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["store_id"], name: "index_contacts_on_store_id", using: :btree
+  end
+
+  create_table "store_campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "campaign_id"
+    t.string   "name"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.integer  "store_id"
+    t.boolean  "sponsored_text_status"
+    t.string   "sponsored_text"
+    t.boolean  "campaign_text_status"
+    t.string   "campaign_text"
+    t.string   "media"
+    t.boolean  "splashpage_status"
+    t.integer  "contact_type_id"
+    t.string   "splashimage"
+    t.index ["campaign_id"], name: "index_store_campaigns_on_campaign_id", using: :btree
+    t.index ["contact_type_id"], name: "index_store_campaigns_on_contact_type_id", using: :btree
+    t.index ["store_id"], name: "index_store_campaigns_on_store_id", using: :btree
   end
 
   create_table "stores", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -38,8 +68,11 @@ ActiveRecord::Schema.define(version: 20170630123944) do
     t.string   "username"
     t.string   "key"
     t.string   "store_name"
+    t.string   "activecamp"
+    t.integer  "store_campaign_id"
     t.index ["email"], name: "index_stores_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_stores_on_reset_password_token", unique: true, using: :btree
+    t.index ["store_campaign_id"], name: "index_stores_on_store_campaign_id", using: :btree
     t.index ["user_id"], name: "index_stores_on_user_id", using: :btree
   end
 
@@ -62,4 +95,8 @@ ActiveRecord::Schema.define(version: 20170630123944) do
   end
 
   add_foreign_key "contacts", "stores"
+  add_foreign_key "store_campaigns", "campaigns"
+  add_foreign_key "store_campaigns", "contact_types"
+  add_foreign_key "store_campaigns", "stores"
+  add_foreign_key "stores", "store_campaigns"
 end

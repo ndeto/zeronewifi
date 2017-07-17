@@ -4,7 +4,7 @@ class StoresController < ApplicationController
   # GET /stores
   # GET /stores.json
   def index
-    @stores = Store.all
+    @store = Store.find(current_store.id)
   end
 
   # GET /stores/1
@@ -19,6 +19,7 @@ class StoresController < ApplicationController
 
   # GET /stores/1/edit
   def edit
+    @storecampaign = StoreCampaign.find(params[:id])
   end
 
   # POST /stores

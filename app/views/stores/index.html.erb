@@ -1,25 +1,10 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Stores</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h1><%= @store.store_name %></h1>
 
-  <tbody>
-    <% @stores.each do |store| %>
-      <tr>
-        <td><%= link_to 'Show', store %></td>
-        <td><%= link_to 'Edit', edit_store_path(store) %></td>
-        <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+<p>Visits : <%= Contact.where(store_id:current_store.id).count%></p>
 
-<%= link_to 'New Store', new_store_path %>
+
+<%= link_to 'Campaigns', store_campaigns_path %></p>
+<%= link_to 'Edit Store Settings', edit_store_registration_path %></p>

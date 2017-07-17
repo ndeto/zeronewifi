@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     case resource
       when User then home_stores_path
-      when Store then home_stores_path
+      when Store then stores_path
     end
   end
 end

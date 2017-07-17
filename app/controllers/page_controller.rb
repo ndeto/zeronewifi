@@ -3,13 +3,23 @@ class PageController < ApplicationController
     #@sto = Store.where(key:params[:key])
     #@store = @sto[0]
     @store = Store.includes(:user).find_by(key: params[:key])
+    @camp = StoreCampaign.find(@store.store_campaign_id)
     @user = User.find(@store.user_id)
     session[:store_id] = @store.id
-    render :layout => false
-
+    
+    
+    if @camp.splashpage_status == true
+      redirect_to(pages_campaign_path)
+    else
+      render :layout=> false
+    end
+    
+    
   end
 
   def campaign
+    @store = Store.find(session[:store_id])
+    @camp = StoreCampaign.find(@store.store_campaign_id)
     render :layout=> false
   end
   
