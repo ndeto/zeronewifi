@@ -41,8 +41,52 @@
 	<%= f.text_area :campaign_text,class:'form-control' %>
 </div>
 
+<div class="field">
+    <%= f.label "Campaign Image" %>
+    <%= f.file_field :media %>
+  </div>
+  
+  
+  <div class="field">
+    <%= f.label "Splash Image" %>
+    <%= f.file_field :splashimage %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "Image Background" %>
+    <%= f.radio_button(:background, 'image')%>
+  </div>
+  
+  <div class="field">
+    <%= f.label "Color Background" %>
+    <%= f.radio_button(:background, "color") %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "Background Color" %>
+    <%= f.text_field :background_color, class:'colorpicker' %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "Background Image" %>
+    <%= f.file_field :bg_img %>
+  </div>
+  
+  
+  
+
 <p>
 	<%= f.submit%>
 </p>
 <% end %>
+
+
 </div>
+
+<div class="row">
+	<div class="col-md-4 col-md-offset-1"><%= image_tag(@storecampaign.media_url.to_s, width:'100%') %></div>
+	
+	<div class="col-md-4 col-md-offset-1"><%= image_tag(@storecampaign.splashimage_url.to_s, width:'100%') %></div>
+	
+	<div class="col-md-4 col-md-offset-1"><%= image_tag(@storecampaign.bg_img_url.to_s, width:'100%') %></div>
+	</div>

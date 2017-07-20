@@ -6,7 +6,7 @@
 			</p>
 		</div>
 		<div class="col-xs-12 col-md-6 col-md-offset-3">
-			<%= image_tag('logo.jpg', :width => '100%', :class =>'border' ) %>
+			<%= image_tag(@camp.splashimage_url.to_s, width:'100%', class:'border') %>
 			<%= link_to "ACCEPT AND CONTINUE", pages_campaign_path, :class=>'btn btn-lg', :style =>'font-size:22px; text-align:center;' %>
 		</div>
 	</div>

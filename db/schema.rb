@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170717190007) do
+ActiveRecord::Schema.define(version: 20170719184018) do
 
   create_table "campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -46,6 +46,9 @@ ActiveRecord::Schema.define(version: 20170717190007) do
     t.boolean  "splashpage_status"
     t.integer  "contact_type_id"
     t.string   "splashimage"
+    t.string   "background_color"
+    t.string   "background"
+    t.string   "bg_img"
     t.index ["campaign_id"], name: "index_store_campaigns_on_campaign_id", using: :btree
     t.index ["contact_type_id"], name: "index_store_campaigns_on_contact_type_id", using: :btree
     t.index ["store_id"], name: "index_store_campaigns_on_store_id", using: :btree

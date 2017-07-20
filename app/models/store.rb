@@ -5,4 +5,5 @@ class Store < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   belongs_to :user
   has_many :store_campaign
+  
 end

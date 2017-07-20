@@ -7,6 +7,9 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
 	</head>
 	<style>
 		button {
@@ -37,7 +40,11 @@
 			font-size: 24px;
 		}
 		body {
-			background-color: #B5252E;
+			<% if @camp.background == 'image' %>
+			background-image:url('<%= @camp.bg_img_url.to_s %>');
+			<% else %>
+			background-color: <%= @camp.background_color %>;
+			<% end %>
 		}
 		.border {
 			border-style: solid;

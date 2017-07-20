@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   end
 
   def stores
-    @stores = Product.where(store_id:current_user.id) rescue nil
+    @stores = Product.w(user_id:current_user.id) rescue nil
   end
   
   def campaigns
