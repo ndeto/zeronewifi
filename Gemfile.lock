@@ -116,6 +116,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+    pg (0.18.1)
     puma (3.9.1)
     rack (2.0.3)
     rack-test (0.6.3)
@@ -210,6 +211,7 @@ DEPENDENCIES
   mini_magick
   mysql2 (>= 0.3.18, < 0.5)
   paperclip (~> 5.0.0)
+  pg
   puma (~> 3.0)
   rails (~> 5.0.2)
   sass-rails (~> 5.0)
