@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'store_campaigns/new'
 
   get 'store_campaigns/edit'
+  
+  get 'store_campaigns/test'
 
   get 'page/index' => "page#index"
   post 'pages/submit' => "page#submit"
@@ -14,7 +16,7 @@ Rails.application.routes.draw do
   get '/stores/new' => "devise/registrations#new"
 
   get 'pages/campaign' => "page#campaign"
-  devise_for :stores, :controllers => { registrations: 'store_registrations' }
+  devise_for :stores, :controllers => { registrations: 'store_registrations', sessions:'store_sessions'}
   #resources :stores
   root to: "stores#index"
   #devise_for :stores

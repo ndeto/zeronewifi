@@ -12,6 +12,11 @@ class StoreRegistrationsController < Devise::RegistrationsController
       flash[:notice] = "Ooops"
     end
   end
+  
+  def new
+    set_admin
+  end
+  
 
   private
 

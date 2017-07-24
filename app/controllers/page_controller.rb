@@ -24,7 +24,7 @@ class PageController < ApplicationController
   end
   
   def submit
-    @contact = Contact.create(contact_params.merge(store_id:session[:store_id]))
+    @contact = Contact.create(contact_params.merge(store_id:session[:store_id],date:Date.current))
     if @contact.save
       flash[:notice] = "Success"
       redirect_to(root_path)

@@ -1,10 +1,14 @@
 class StoresController < ApplicationController
   before_action :set_store, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_store!
 
   # GET /stores
   # GET /stores.json
   def index
     @store = Store.find(current_store.id)
+    #@contacts = Contact.where(store_id:current_store.id)
+    @contact = Contact.where(store_id:current_store.id).distinct.pluck(:date)
+    set_admin
   end
 
   # GET /stores/1

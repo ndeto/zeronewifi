@@ -1,19 +1,22 @@
 <div class="container" align="center" alink="#FFFFFF">
 
 	<div class="col-md-12 col-xs-12">
+		<% if @camp.campaign_text_status %>
 		<p class="text-center" style="color:#FFFFFF; font-size:36px; font-family:'Century Gothic';">
 			<strong><%= @camp.campaign_text %></strong>
 		</p>
-
-		<%= image_tag(@camp.media_url.to_s, width:'100%') %>
-	</div>
-
+		<% end %>
+		
+		<%= image_tag(@camp.media_url.to_s) %>
+	
+</div>
 	<div class="col-md-6 col-md-offset-3 col-xs-12">
 		<%= form_tag('/pages/submit') do%>
 
 		<p><%= text_field_tag :phone, nil, placeholder:'Leave your phone number here', class:'text-center', id:'thenumber', width:'100%' %></p>
-		<p><%= submit_tag 'Continue to free Wi-Fi', class:'btn btn-lg', style:'font-size:22px; text-align:center;color:#FFFFFF;border-radius:0px;width:"100%";', disabled:'disabled', id:'signupbtn', type:'submit' %></p>
+		<p><%= submit_tag 'Continue to free Wi-Fi', class:'btn btn-lg', style:'font-size:22px; text-align:center;color:#FFFFFF;border-radius:0px;width:"100%";border-style:none;background-color:transparent', id:'signupbtn', type:'submit' %></p>
 		
 		<% end %>
 	</div>
+
 </div>

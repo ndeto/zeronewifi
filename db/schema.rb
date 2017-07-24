@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170719184018) do
+ActiveRecord::Schema.define(version: 20170724160821) do
 
   create_table "campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "display"
   end
 
   create_table "contact_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -26,7 +27,7 @@ ActiveRecord::Schema.define(version: 20170719184018) do
   create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "store_id"
     t.integer  "phone"
-    t.datetime "date"
+    t.date     "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["store_id"], name: "index_contacts_on_store_id", using: :btree
@@ -35,8 +36,8 @@ ActiveRecord::Schema.define(version: 20170719184018) do
   create_table "store_campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "campaign_id"
     t.string   "name"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
     t.integer  "store_id"
     t.boolean  "sponsored_text_status"
     t.string   "sponsored_text"
@@ -49,6 +50,7 @@ ActiveRecord::Schema.define(version: 20170719184018) do
     t.string   "background_color"
     t.string   "background"
     t.string   "bg_img"
+    t.decimal  "splashimage_opacity",   precision: 10, scale: 1
     t.index ["campaign_id"], name: "index_store_campaigns_on_campaign_id", using: :btree
     t.index ["contact_type_id"], name: "index_store_campaigns_on_contact_type_id", using: :btree
     t.index ["store_id"], name: "index_store_campaigns_on_store_id", using: :btree

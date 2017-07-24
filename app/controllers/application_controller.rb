@@ -7,4 +7,10 @@ class ApplicationController < ActionController::Base
       when Store then stores_path
     end
   end
+  
+  
+  
+  def set_admin
+    render layout:'admin'
+  end
 end
