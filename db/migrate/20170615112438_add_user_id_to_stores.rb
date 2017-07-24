@@ -1,4 +1,4 @@
-class AddUserIdToStores < ActiveRecord::Migration[5.0]
+class AddUserIdToStore < ActiveRecord::Migration[5.0]
   def change
     add_reference :stores, :user, foreign_key: true
   end
