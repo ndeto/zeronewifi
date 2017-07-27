@@ -24,7 +24,7 @@ class StoreCampaignsController < ApplicationController
   end
 
   def edit
-    @storecampaign = StoreCampaign.find(params[:id])
+    @storecampaign = StoreCampaign.where(params[:id])
     set_admin
   end
 
