@@ -1,12 +1,13 @@
 class HomeController < ApplicationController
-  before_action :authenticate_store!
+  before_action :authenticate_user!
 
   def index
     render 'home'
   end
 
   def stores
-    @stores = Product.w(user_id:current_user.id) rescue nil
+    @stores = Store.where(user_id:current_user.id) rescue nil
+    set_admin
   end
   
   def campaigns
