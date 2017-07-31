@@ -13,6 +13,7 @@ gem 'mini_magick'
 gem 'bootstrap-colorpicker-rails'
 gem "paperclip", "~> 5.0.0"
 ruby "2.4.0"
+gem 'sendgrid-ruby'
 gem 'sqlite3', group: :development
 gem 'pg', '0.18.1', group: :production
 gem 'rails_12factor', group: :production
