@@ -1,6 +1,7 @@
 # Load the Rails application.
 require_relative 'application'
 require 'carrierwave/orm/activerecord'
+ config.action_mailer.default_url_options = { :host => 'intense-sands-76808.herokuapp.com' }
 
 =begin
 ActionMailer::Base.smtp_settings = {
