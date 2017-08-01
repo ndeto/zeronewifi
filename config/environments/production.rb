@@ -7,8 +7,9 @@ config.action_mailer.smtp_settings = {
   :address => "mail.cnetwifi.com",
   :port    => 25,
   :domain  => 'cnetwifi.com',
-  :user    => 'auto@cnetwifi.com',
-  :password => 'Mart7592.'
+  :user_name    => 'auto@cnetwifi.com',
+  :password => 'Mart7592.',
+  :authentication => 'plain'
 }
 
   # Settings specified here will take precedence over those in config/application.rb.
