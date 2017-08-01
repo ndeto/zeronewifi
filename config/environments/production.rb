@@ -9,7 +9,8 @@ config.action_mailer.smtp_settings = {
   :domain  => 'cnetwifi.com',
   :user_name    => 'auto@cnetwifi.com',
   :password => 'Mart7592.',
-  :authentication => 'plain'
+  :authentication => 'login',
+  #:enable_starttls_auto => true
 }
 
   # Settings specified here will take precedence over those in config/application.rb.
