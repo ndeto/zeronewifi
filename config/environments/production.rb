@@ -2,6 +2,7 @@ Rails.application.configure do
   
 config.action_mailer.default_url_options = {:host => 'intense-sands-76808.herokuapp.com'}
 config.action_mailer.delivery_method = :smtp
+=begin
 config.action_mailer.smtp_settings = {
   :address => "mail.cnetwifi.com",
   :port    => 25,
@@ -9,6 +10,7 @@ config.action_mailer.smtp_settings = {
   :user    => 'auto@cnetwifi.com',
   :password => 'Mart7592.'
 }
+=end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
