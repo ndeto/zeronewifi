@@ -10,6 +10,7 @@ config.action_mailer.smtp_settings = {
   :user_name    => 'auto@cnetwifi.com',
   :password => 'Mart7592.',
   :authentication => 'login',
+  :openssl_verify_mode => 'none'
   #:enable_starttls_auto => true
 }
 
