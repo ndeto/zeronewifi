@@ -17,6 +17,23 @@ Rails.application.routes.draw do
   
   get '/stores/new' => "devise/registrations#new"
   
+  get 'stores/settings' => 'stores#settings'
+  
+  put '/stores/update'
+  
+  devise_scope :store do
+  get 'home/new', to: 'store_registrations#new'
+  get 'logout', to: 'store_registrations#destroy'
+  
+  end
+  
+  devise_scope :store do
+  get 'logout', to: 'user_registrations#destroy'
+  
+  end
+  
+  
+  
   
   get 'pages/campaign' => "page#campaign"
   devise_for :stores, :controllers => { registrations: 'store_registrations', sessions:'store_sessions'}

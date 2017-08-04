@@ -26,44 +26,55 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand"> <small> <i class="fa fa-leaf"></i> <% if store_signed_in? %> <%= current_store.store_name%> <%else%> CARDS <%end%> </small> </a>
+					<a href="<%= root_path %>" class="navbar-brand"> <small> <i class="fa fa-leaf"></i> <% if store_signed_in? %> <%= current_store.store_name.upcase%> <%else%> CARDS <%end%> </small> </a>
+					
 				</div>
-				
+
 				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
-						
 
 						<li class="light-blue dropdown-modal">
-							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<i class="fa fa-user fa-2x"></i>
-								<span class="user-info">
-									Profile
-								</span>
-
-								<i class="ace-icon fa fa-caret-down"></i>
-							</a>
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle"> <i class="fa fa-user fa-2x"></i> <span class="user-info"> Profile </span> <i class="ace-icon fa fa-caret-down"></i> </a>
 
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								<li>
-									<a href="#">
-										<i class="ace-icon fa fa-cog"></i>
-										Settings
-									</a>
+									<a href="#"> <i class="ace-icon fa fa-cog"></i> Settings </a>
 								</li>
 
 								<li>
+									
+									
+									<%if controller_name=='stores' || controller_name=='store_campaigns' %>
 									<%= link_to edit_store_registration_path do %>
-										<i class="ace-icon fa fa-user"></i> Profile
-										<%end%>
-							
+									<i class="ace-icon fa fa-user"></i> Profile
+									<%end%>
+									
+									<%end%>
+									
+									<%if controller_name=='home'%>
+									
+									<%= link_to edit_user_registration_path do %>
+									<i class="ace-icon fa fa-user"></i> Profile
+									<%end%>
+									
+									<%end%>
+
 								</li>
 
 								<li class="divider"></li>
 
 								<li>
-									<%= link_to destroy_user_session_path, :method => 'delete' do %>
-										<i class="ace-icon fa fa-power-off"></i> Logout
-										<%end%>
+									<% if controller_name=='home' %>
+									<%= link_to destroy_user_session_path, method:'delete' do %>
+									<i class="ace-icon fa fa-power-off"></i> Logout
+									<%end%>
+									<%end%>
+									
+									<% if controller_name=='stores' || controller_name=='store_campaigns' %>
+									<%= link_to destroy_store_session_path, method:'delete' do %>
+									<i class="ace-icon fa fa-power-off"></i> Logout
+									<%end%>
+									<%end%>
 								</li>
 							</ul>
 						</li>
@@ -80,20 +91,19 @@
 				} catch(e) {
 				}
 			</script>
-			<%if store_signed_in? && controller_name='home'%>
+			<%if store_signed_in? && controller_name=='stores' || controller_name=='store_campaigns'%>
 			<%= render 'layouts/sidebar' %>
 			<%end%>
-			
-			<%if user_signed_in? && controller_name='home'%>
+
+			<%if user_signed_in? && controller_name=='home'%>
 			<%= render 'layouts/usersidebar' %>
 			<%end%>
 
 			<div class="main-content">
 				<div class="main-content-inner">
-					
 
 					<%= yield %>
-					
+
 					<!-- PAGE CONTENT ENDS -->
 				</div><!-- /.col -->
 			</div><!-- /.row -->

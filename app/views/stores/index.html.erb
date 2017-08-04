@@ -1,72 +1,63 @@
+<%= render 'layouts/alerts' %>
 <div class="row">
-	<div class="space-6"></div>
 	
+	<div class="space-6"></div>
 
 	<div class="col-sm-12">
 
-	<script type="text/javascript">
-  window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer",
-    {
-      theme: "theme2",
-      title:{
-        text: "Visits per day"
-      },
-      animationEnabled: true,
-      axisX: {
-        valueFormatString: "DDD",
-        interval:1,
-        intervalType: "day"
-        
-      },
-      axisY:{
-        includeZero: false
-        
-      },
-      data: [
-      {        
-        type: "line",
-        //lineThickness: 3, 
-        
-        
-             
-               
-               
-        dataPoints: [
-        
-         <% @contact.each do |c|%>
-        {x: new Date(<%= c.strftime("%Y") %>, <%= c.strftime("%m") %>, <%= c.strftime("%-d") %>) , y:<%= Contact.where(date:c).count %>},
-        <% end %> 
-        
-        ]
-        // { x: new Date(2012, 00, 1), y: 234 },
-        // { x: new Date(2012, 01, 1), y: 414},
-        // { x: new Date(2012, 02, 1), y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle"},
-        // { x: new Date(2012, 03, 1), y: 460 },
-        // { x: new Date(2012, 04, 1), y: 450 },
-        // { x: new Date(2012, 05, 1), y: 500 },
-        // { x: new Date(2012, 06, 1), y: 480 },
-        // { x: new Date(2012, 07, 1), y: 480 },
-        // { x: new Date(2012, 08, 1), y: 410 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"},
-        // { x: new Date(2012, 09, 1), y: 500 },
-        // { x: new Date(2012, 10, 1), y: 480 },
-        // { x: new Date(2012, 11, 1), y: 510 }
-//         
-        // ]
-      }
-      
-      
-      ]
-    });
+		<script type="text/javascript">
+			window.onload = function () {
+var chart = new CanvasJS.Chart("chartContainer",
+{
+theme: "theme2",
+title:{
+text: "Visits per day"
+},
+animationEnabled: true,
+axisX: {
+valueFormatString: "DDD",
+interval:1,
+intervalType: "day"
 
-chart.render();
-}
-</script>
-<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-  <div id="chartContainer" style="height: 300px; width: 100%;">
-  </div>
+},
+axisY:{
+includeZero: false
 
-		 
+},
+data: [
+{
+type: "line",
+//lineThickness: 3,
+
+dataPoints: [
+
+<% @contact.each do |c|%>
+	{x: new Date(<%= c.strftime("%Y") %>,<%= c.strftime("%m") %>,<%= c.strftime("%-d") %>) , y:<%= Contact.where(date:c).count %>},<% end %>
+	]
+	// { x: new Date(2012, 00, 1), y: 234 },
+	// { x: new Date(2012, 01, 1), y: 414},
+	// { x: new Date(2012, 02, 1), y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle"},
+	// { x: new Date(2012, 03, 1), y: 460 },
+	// { x: new Date(2012, 04, 1), y: 450 },
+	// { x: new Date(2012, 05, 1), y: 500 },
+	// { x: new Date(2012, 06, 1), y: 480 },
+	// { x: new Date(2012, 07, 1), y: 480 },
+	// { x: new Date(2012, 08, 1), y: 410 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"},
+	// { x: new Date(2012, 09, 1), y: 500 },
+	// { x: new Date(2012, 10, 1), y: 480 },
+	// { x: new Date(2012, 11, 1), y: 510 }
+	//
+	// ]
+	}
+
+	]
+	});
+
+	chart.render();
+	}
+		</script>
+		<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+		<div id="chartContainer" style="height: 300px; width: 100%;"></div>
 
 	</div><!-- /.col -->
 	<div class="vspace-12-sm"></div>
@@ -76,7 +67,6 @@ chart.render();
 			<div class="widget-header widget-header-flat widget-header-small">
 				<h5 class="widget-title"><i class="ace-icon fa fa-signal"></i> Visitor Stats</h5>
 
-				
 			</div>
 
 			<div class="widget-body">
@@ -106,5 +96,4 @@ chart.render();
 		</div><!-- /.widget-box -->
 	</div><!-- /.col -->
 </div><!-- /.row -->
-
 

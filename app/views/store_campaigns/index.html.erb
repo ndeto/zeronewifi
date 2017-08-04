@@ -1,13 +1,13 @@
-
+<%= render 'layouts/alerts'%>
 </br>
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
-		<a href="#" class="btn btn-success"> <i class="ace-icon fa fa-plus"></i> New Campaign</a>
+		<a href="<%= new_store_campaign_path %>" class="btn btn-success"> <i class="ace-icon fa fa-plus"></i> New Campaign</a>
 	</div>
 </div>
 
 <div class="row">
-	<div class="col-xs-12">
+	<div class="col-xs-9 col-md-offset-1">
 		<h3 class="header smaller lighter blue"></h3>
 
 		<div class="clearfix">
@@ -25,33 +25,28 @@
 				<thead>
 
 					<tr>
-						<th class="center"><label class="pos-rel">
-							<input type="checkbox" class="ace" />
-							<span class="lbl"></span> </label></th>
 						<th>Name</th>
 						<th>Campaign Type</th>
 						<th>Status</th>
-
-						<th></th>
 					</tr>
 				</thead>
 
 				<tbody>
 					<% @campaigns.each do |c| %>
 					<tr>
-						<td class="center"><label class="pos-rel">
-							<input type="checkbox" class="ace" />
-							<span class="lbl"></span> </label></td>
-
-						<td><a href="#"><%= c.name %></a></td>
+						<td><a href="<%= edit_store_campaign_path(c) %>"><%= c.name %></a></td>
 						<td><%= Campaign.find(c.campaign_id).display%></td>
 						<td>
 						<div class="hidden-sm hidden-xs action-buttons">
-							<a class="blue" href="#"> <i class="ace-icon fa fa-search-plus bigger-130"></i> </a>
+							
 
-							<a class="green" href="<%= edit_store_campaign_path(c) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> </a>
+							<a class="green" href="<%= edit_store_campaign_path(c) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i>  Edit </a> |
+							
+							<%= link_to store_campaign_path(c), data: { confirm: "Are you sure?" }, method: :delete, class:'red' do %>
 
-							<a class="red" href="#"> <i class="ace-icon fa fa-trash-o bigger-130"></i> </a>
+							<i class="ace-icon fa fa-trash-o bigger-130"></i> Delete
+							
+							<% end %>
 						</div>
 						<div class="hidden-md hidden-lg">
 							<div class="inline pos-rel">

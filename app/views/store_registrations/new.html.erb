@@ -1,16 +1,22 @@
-<h2>Sign up</h2>
+<div class="col-md-6 col-md-offset-3">
+<h2>New Store</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+  
+  <div class="field">
+    <%= f.label :store_name %><br />
+    <%= f.text_field :store_name, autofocus: true, required:'required' %>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, required:'required' %>
   </div>
 
     <div class="field">
       <%= f.label :username %><br />
-      <%= f.text_field :username, autofocus: true %>
+      <%= f.text_field :username, autofocus: true, required:'required' %>
     </div>
 
   <div class="field">
@@ -18,17 +24,17 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", required:'required' %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", required:'required' %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "New Store" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+</div>

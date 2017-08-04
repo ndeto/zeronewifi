@@ -2,8 +2,11 @@ class PageController < ApplicationController
   def index
     #@sto = Store.where(key:params[:key])
     #@store = @sto[0]
+   
     @store = Store.includes(:user).find_by(key: params[:key])
+
     @camp = StoreCampaign.find(@store.store_campaign_id)
+    
     @user = User.find(@store.user_id)
     session[:store_id] = @store.id
     
@@ -14,6 +17,11 @@ class PageController < ApplicationController
       render :layout=> false
     end
     
+    rescue NoMethodError
+    render 'lost' and return
+    
+    rescue ActiveRecord::RecordNotFound
+    render 'lost' and return
     
   end
 

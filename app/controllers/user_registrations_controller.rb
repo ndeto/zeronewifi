@@ -33,6 +33,10 @@ class UserRegistrationsController < Devise::RegistrationsController
       respond_with resource
     end
   end
+  
+  def edit
+    set_admin
+  end
 
 
   private

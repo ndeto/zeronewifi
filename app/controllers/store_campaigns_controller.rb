@@ -10,8 +10,13 @@ class StoreCampaignsController < ApplicationController
   end
 
   def create
+    splashpage_status = false
+    campaign_text_status = true
+    background = 'color'
+    background_color = '#FFF'
     @store = Store.find(current_store.id)
-    @campaign = @store.store_campaign.create(campaign_params)
+    campaign_text = 'Welcome to ' + @store.store_name
+    @campaign = @store.store_campaign.create(campaign_params.merge(splashpage_status:splashpage_status, campaign_text_status:campaign_text_status,campaign_text:campaign_text,background:background,background_color:background_color))
     @campaign = @campaign.save
 
     if @campaign
@@ -24,7 +29,7 @@ class StoreCampaignsController < ApplicationController
   end
 
   def edit
-    @storecampaign = StoreCampaign.where(params[:id])
+    @storecampaign = StoreCampaign.where(params[:id]).first
     set_admin
   end
 
@@ -32,15 +37,26 @@ class StoreCampaignsController < ApplicationController
     @storecampaign = StoreCampaign.find(params[:id])
     if @storecampaign.update(campaign_params)
       flash[:notice] = "Campaign Successfully updated!"
+      
     else
       flash[:alert] = "Something went wrong, try again"
     end
-
     redirect_to(request.referer)
   end
 
   def test
     render layout:'admin'
+  end
+  
+  def destroy
+    @storecampaign = StoreCampaign.find(params[:id])
+    if @storecampaign.destroy
+      flash[:notice] = 'Campaign deleted'
+      redirect_to(request.referer)
+    else
+      flash[:alert] = 'Something went wrong! Could not delete campaign'
+      redirect_to(request.referer)
+  end
   end
 
   private
