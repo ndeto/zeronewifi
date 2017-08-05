@@ -8,6 +8,14 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def after_update_path_for(resource)
+    case resource
+      when User then edit_user_registration_path
+      when UserRegistration then edit_user_registration_path
+      when Store then edit_store_registration_path
+    end
+  end
+  
   
   
   def set_admin

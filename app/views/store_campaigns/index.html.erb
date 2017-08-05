@@ -38,15 +38,28 @@
 						<td><%= Campaign.find(c.campaign_id).display%></td>
 						<td>
 						<div class="hidden-sm hidden-xs action-buttons">
+							<% if current_store.store_campaign_id == c.id %>
+							 <span class="Green"> <i class="ace-icon fa fa-check bigger-120"></i> Active </span>
+
+							<a class="blue" href="<%= edit_store_campaign_path(c) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> Edit </a> |
+							
+							
+							
+							<i class="ace-icon fa fa-trash-o bigger-130 "></i> <span style="color:grey">Delete</span>
+							
 							
 
-							<a class="green" href="<%= edit_store_campaign_path(c) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i>  Edit </a> |
+							<% else %>
+							<a href="<%= store_activate_path(c)%>" class="tooltip-info" data-rel="tooltip" title="View"> <span class="green"> <i class="ace-icon fa fa-check bigger-120"></i> Make Active   </span> </a> |
+
+							<a class="blue" href="<%= edit_store_campaign_path(c) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> Edit </a> |
 							
 							<%= link_to store_campaign_path(c), data: { confirm: "Are you sure?" }, method: :delete, class:'red' do %>
-
-							<i class="ace-icon fa fa-trash-o bigger-130"></i> Delete
 							
+							<i class="ace-icon fa fa-trash-o bigger-130"></i> Delete
+
 							<% end %>
+							<%end%>
 						</div>
 						<div class="hidden-md hidden-lg">
 							<div class="inline pos-rel">
@@ -66,6 +79,7 @@
 									<li>
 										<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete"> <span class="red"> <i class="ace-icon fa fa-trash-o bigger-120"></i> </span> </a>
 									</li>
+
 								</ul>
 							</div>
 						</div></td>

@@ -44,6 +44,12 @@ class StoresController < ApplicationController
     end
   end
   
+  def activate
+    @store = Store.find(current_store)
+    @store.update(store_campaign_id:params[:id])
+    redirect_to(request.referer)
+  end
+  
   private
   
   def store_params

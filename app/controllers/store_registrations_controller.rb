@@ -19,7 +19,7 @@ end
     @store = @user.store.create(store_params.merge(key:key,active:false))
 
     if @store.save
-      flash[:notice] = "DOne"
+      flash[:notice] = "Done"
       redirect_to(home_stores_path)
       else
       flash[:notice] = "Ooops"
@@ -29,8 +29,6 @@ end
   def edit
     set_admin
   end
-  
-
   
  
   

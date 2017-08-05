@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'stores/settings' => 'stores#settings'
   
   put '/stores/update'
+  get '/stores/activate/:id' => 'stores#activate', as: "store_activate"
   
   devise_scope :store do
   get 'home/new', to: 'store_registrations#new'

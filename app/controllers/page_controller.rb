@@ -11,7 +11,7 @@ class PageController < ApplicationController
     session[:store_id] = @store.id
     
     
-    if @camp.splashpage_status == true
+    if @camp.splashpage_status == false
       redirect_to(pages_campaign_path)
     else
       render :layout=> false

@@ -64,7 +64,8 @@
 								<li class="divider"></li>
 
 								<li>
-									<% if controller_name=='home' %>
+									
+									<% if controller_name=='home' || controller_name =='user_registrations' %>
 									<%= link_to destroy_user_session_path, method:'delete' do %>
 									<i class="ace-icon fa fa-power-off"></i> Logout
 									<%end%>
@@ -95,7 +96,7 @@
 			<%= render 'layouts/sidebar' %>
 			<%end%>
 
-			<%if user_signed_in? && controller_name=='home'%>
+			<%if user_signed_in? && controller_name=='home' || controller_name =='user_registrations'%>
 			<%= render 'layouts/usersidebar' %>
 			<%end%>
 

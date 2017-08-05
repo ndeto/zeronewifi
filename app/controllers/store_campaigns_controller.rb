@@ -29,7 +29,7 @@ class StoreCampaignsController < ApplicationController
   end
 
   def edit
-    @storecampaign = StoreCampaign.where(params[:id]).first
+    @storecampaign = StoreCampaign.find(params[:id])
     set_admin
   end
 
@@ -63,7 +63,7 @@ class StoreCampaignsController < ApplicationController
 
   def campaign_params
     params.require(:storecampaign).permit(:name, :campaign_id, :campaign_text_status, :campaign_text, :sponsored_text_status, :sponsored_text, :media, :splashimage_opacity , :splashimage, :background_color ,
-     :bg_img, :background, :splashpage_status  )
+     :bg_img, :background, :splashpage_status, :video  )
   end
 
 end
