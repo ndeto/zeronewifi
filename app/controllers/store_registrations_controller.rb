@@ -29,7 +29,6 @@ end
   def edit
     set_admin
   end
-  
  
   
 
