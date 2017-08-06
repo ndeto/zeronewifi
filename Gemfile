@@ -9,6 +9,7 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'carrierwave-video'
+gem 'fog'
 gem 'mini_magick'
 gem 'bootstrap-colorpicker-rails'
 gem "paperclip", "~> 5.0.0"
