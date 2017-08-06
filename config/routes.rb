@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/stores/new' => "devise/registrations#new"
   
   get 'stores/settings' => 'stores#settings'
+  get 'stores/secret' => 'stores#secret'
   
   put '/stores/update'
   get '/stores/activate/:id' => 'stores#activate', as: "store_activate"

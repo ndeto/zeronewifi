@@ -50,6 +50,10 @@ class StoresController < ApplicationController
     redirect_to(request.referer)
   end
   
+  def secret
+    @store = Store.all
+  end
+  
   private
   
   def store_params
