@@ -53,7 +53,7 @@ class StoresController < ApplicationController
   private
   
   def store_params
-    params.require(:store).permit(:store_name)
+    params.require(:store).permit(:store_name,:username, :active)
   end
   
 end
