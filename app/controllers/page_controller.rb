@@ -17,8 +17,8 @@ class PageController < ApplicationController
       render :layout=> false
     end
     
-    rescue NoMethodError
-    render 'lost' and return
+    #rescue NoMethodError
+    #render 'lost' and return
     
     rescue ActiveRecord::RecordNotFound
     render 'lost' and return
