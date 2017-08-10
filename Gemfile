@@ -17,6 +17,7 @@ ruby "2.4.0"
 gem 'sendgrid-ruby'
 gem "paperclip-ffmpeg"
 gem 'paperclip-av-transcoder'
+gem 'aws-sdk', '~> 2.3'
 #gem 'mailcatcher', group: :development
 gem 'sqlite3', group: :development
 gem 'pg', '0.18.1', group: :production

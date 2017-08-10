@@ -1,12 +1,25 @@
 class UserRegistrationsController < Devise::RegistrationsController
     # GET /resource/sign_up
   def new
+    
+=begin
     build_resource({})
     yield resource if block_given?
     respond_with resource do |format|
       format.html { set_admin }
     end
+=end
 
+  redirect_to(stores_path)
+
+  end
+  
+  def private
+    build_resource({})
+    yield resource if block_given?
+    respond_with resource do |format|
+      format.html { set_admin }
+    end
   end
   
 

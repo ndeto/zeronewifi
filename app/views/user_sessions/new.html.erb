@@ -52,7 +52,7 @@
 								<div id="login-box" class="login-box visible widget-box no-border">
 									<div class="widget-body">
 										<div class="widget-main">
-											<h4 class="header blue lighter bigger"><i class="ace-icon fa fa-coffee green"></i> Please Enter Your Information </h4>
+											<h4 class="header blue lighter bigger"><i class="ace-icon fa fa-coffee green"></i> Enter Your Login Credentials </h4>
 
 											<div class="space-6"></div>
 
@@ -82,9 +82,9 @@
 
 										</div><!-- /.widget-main -->
 
-										<div class="toolbar clearfix">
+										<div class="toolbar clearfix text-center">
 											<div>
-												<a href="<%= new_store_password_path %>" class="forgot-password-link"> <i class="ace-icon fa fa-arrow-left"></i> I forgot my password </a>
+												<a href="<%= new_user_password_path %>"  class="forgot-password-link"> <i class="ace-icon fa fa-arrow-left"></i> I forgot my password </a>
 											</div>
 
 											<!-- <div>
@@ -100,24 +100,19 @@
 											<h4 class="header red lighter bigger"><i class="ace-icon fa fa-key"></i> Retrieve Password </h4>
 
 											<div class="space-6"></div>
-											<p>
-												Enter your email and to receive instructions
-											</p>
 
-											<form>
-												<fieldset>
-													<label class="block clearfix"> <span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
-															<i class="ace-icon fa fa-envelope"></i> </span> </label>
-
-													<div class="clearfix">
-														<button type="button" class="width-35 pull-right btn btn-sm btn-danger">
-															<i class="ace-icon fa fa-lightbulb-o"></i>
-															<span class="bigger-110">Send Me!</span>
-														</button>
-													</div>
-												</fieldset>
-											</form>
+											<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+											<%= devise_error_messages! %>
+											<fieldset>
+												<label class="block clearfix"> <span class="block input-icon input-icon-right"> <%= f.email_field :email, autofocus: true, class:'form-control', placeholder:'Email' %> <i class="ace-icon fa fa-envelope"></i> </span> </label>
+												<div class="clearfix">
+													<%= f.button type:'submit', class:"width-35 pull-right btn btn-sm btn-danger" do %>
+													<i class="ace-icon fa fa-lightbulb-o"></i>
+													<span class="bigger-110">Send Me!</span>
+													<%end%>
+												</div>
+											</fieldset>
+											<% end %>
 										</div><!-- /.widget-main -->
 
 										<div class="toolbar center">
@@ -126,7 +121,7 @@
 									</div><!-- /.widget-body -->
 								</div><!-- /.forgot-box -->
 
-								<!-- Register BOX-->
+								
 
 							<div class="navbar-fixed-top align-right">
 								<br />
