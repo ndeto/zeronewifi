@@ -1,7 +1,12 @@
 class StoreRegistrationsController < Devise::RegistrationsController
   
+  
+  
   # GET /resource/sign_up
   def new
+    if !user_signed_in?
+      redirect_to(new_user_session_path) and return
+    end
     if store_signed_in?
       flash[:alert] = "You need to logout of the current store to register another store"
     end
