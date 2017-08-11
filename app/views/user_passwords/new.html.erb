@@ -48,7 +48,6 @@
 
 							<div class="space-6"></div>
 
-
 							<div class="position-relative">
 								<div id="forgot-box" class="forgot-box visible widget-box no-border">
 									<div class="widget-body">
@@ -61,17 +60,20 @@
 											</p>
 
 											<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-											<%= devise_error_messages! %>
+											<p style="font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+											font-size: 14px !important;
+											line-height: 1.42857143;
+											color: #333333;">
+												<%= devise_error_messages! %>
+											</p>
 											<fieldset>
-												<label class="block clearfix"> <span class="block input-icon input-icon-right">
-													<%= f.email_field :email, autofocus: true, class:'form-control', placeholder:'Email' %>
-														<i class="ace-icon fa fa-envelope"></i> </span> </label>
+												<label class="block clearfix"> <span class="block input-icon input-icon-right"> <%= f.email_field :email, autofocus: true, class:'form-control', placeholder:'Email' %> <i class="ace-icon fa fa-envelope"></i> </span> </label>
 
 												<div class="clearfix">
 													<%= f.button type:'submit', class:'width-35 pull-right btn btn-sm btn-danger' do %>
-													
-														<i class="ace-icon fa fa-lightbulb-o"></i>
-														<span class="bigger-110">Send!</span>
+
+													<i class="ace-icon fa fa-lightbulb-o"></i>
+													<span class="bigger-110">Send!</span>
 													<%end%>
 												</div>
 											</fieldset>
