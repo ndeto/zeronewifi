@@ -7,10 +7,10 @@
 		</p>
 		<% end %>
 		
-		<%= image_tag(@camp.media_url.to_s) %>
+		<%= image_tag(@camp.media_url.to_s , width:'100%') %>
 	
 </div>
-	<div class="col-md-6 col-md-offset-3 col-xs-12">
+	<div class="col-md-6 col-xs-12">
 		<%= form_tag('/pages/submit') do%>
 
 		<p><%= text_field_tag :phone, nil, placeholder:'Leave your phone number here', class:'text-center', id:'thenumber', width:'100%' %></p>
