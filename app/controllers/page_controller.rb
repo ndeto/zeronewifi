@@ -34,7 +34,7 @@ class PageController < ApplicationController
   def submit
     @contact = Contact.create(contact_params.merge(store_id:session[:store_id],date:Date.current))
     if @contact.save
-      redirect_to("http://192.168.7.1?username=admin&password=root")
+      redirect_to("http://192.168.7.1/login?username=admin&password=root")
     else
       flash[:notice] = "NOpe"
       redirect_to(root_path)
