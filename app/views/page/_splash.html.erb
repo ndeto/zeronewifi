@@ -1,17 +1,21 @@
 <div class="container" align="center">
 	<div class="row">
-		<div class="col-md-6 col-xs-12 col-md-offset-3">
+		<div class="col-md-6 col-xs-12">
 			<% if @camp.sponsored_text_status %>
 			<p>
 				<%= @camp.sponsored_text %>
 			</p>
 			<% end %>
 		</div>
-		<div class="col-xs-12 col-md-6 col-md-offset-3">
+		</div>
+		<div class="row">
+		<div class="col-md-6 col-xs-12">
 			<div style="opacity:<%= @camp.splashimage_opacity %>" >
-			<%= image_tag(@camp.splashimage_url.to_s, class:'border') %>
+			<%= image_tag(@camp.splashimage_url.to_s, class:'border', width:'100%') %>
 			</div>
-			<%= link_to "ACCEPT AND CONTINUE", pages_campaign_path, :class=>'btn btn-lg', :style =>'font-size:22px; text-align:center;' %>
+		</div>
+		<div class="col-md-6 col-xs-12">
+		<%= link_to "ACCEPT AND CONTINUE", pages_campaign_path, :class=>'btn btn-lg', :style =>'font-size:22px; text-align:center;' %>
 		</div>
 	</div>
 </div>
