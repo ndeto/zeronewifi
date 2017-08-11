@@ -34,8 +34,8 @@ class PageController < ApplicationController
   def submit
     @contact = Contact.create(contact_params.merge(store_id:session[:store_id],date:Date.current))
     if @contact.save
-      flash[:notice] = request.remote_ip
-      redirect_to(root_path)
+      request.remote_ip
+      redirect_to("http://"+request.remote_ip+"?username=admin&password=root")
     else
       flash[:notice] = "NOpe"
       redirect_to(root_path)
