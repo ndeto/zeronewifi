@@ -7,15 +7,15 @@
 			</p>
 			<% end %>
 		</div>
-		</div>
-		<div class="row">
+	</div>
+	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			<div style="opacity:<%= @camp.splashimage_opacity %>" >
-			<%= image_tag(@camp.splashimage_url.to_s, class:'border', width:'100%') %>
+				<%= image_tag(@camp.splashimage_url.to_s, class:'border', width:'100%') %>
 			</div>
 		</div>
 		<div class="col-md-6 col-md-offset-3">
-		<%= link_to "ACCEPT AND CONTINUE", pages_campaign_path, :class=>'btn btn-lg', :style =>'font-size:22px; text-align:center;' %>
+			<%= link_to "ACCEPT AND CONTINUE", pages_campaign_path, :class=>'btn btn-lg', :style =>'font-size:22px; text-align:center;' %>
 		</div>
 	</div>
 </div>
