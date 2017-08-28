@@ -37,7 +37,7 @@ class PageController < ApplicationController
       #redirect_to("http://192.168.7.1/login?username=admin&password=root")
       redirect_to("https://www.google.co.ke")
     else
-      flash[:notice] = "NOpe"
+      flash[:notice] = "Nope"
       redirect_to(root_path)
     end
   end
