@@ -21,7 +21,11 @@
 			border-width: 1px;
 		}
 		body {
-			background-color: #B5252E;
+			<% if @camp.background == 'image' %>
+			background-image:url('<%= @camp.bg_img_url.to_s %>');
+			<% else %>
+			background-color: <%= @camp.background_color %>;
+			<% end %>
 			
 		}
 		video {
