@@ -1,5 +1,8 @@
 jQuery(document).ready(function($) {
 	
+document.addEventListener("turbolinks:load", function() {
+
+
 	//alert('Jquery Loaded');
 
 	$('#op').change(function(e) {
@@ -35,5 +38,7 @@ jQuery(document).ready(function($) {
 		$(".backcolor").css('display', 'none');
 		
 	}
+	
+	});
 
 });
