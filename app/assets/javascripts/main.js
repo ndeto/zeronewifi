@@ -6,7 +6,6 @@ document.addEventListener("turbolinks:load", function() {
 	//alert('Jquery Loaded');
 
 	$('#op').change(function(e) {
-
 		$('#splash').css("opacity", $('#op').val());
 	});
 
