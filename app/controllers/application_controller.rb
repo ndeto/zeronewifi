@@ -15,8 +15,7 @@ class ApplicationController < ActionController::Base
       when Store then edit_store_registration_path
     end
   end
-  
-  
+
   
   def set_admin
     render layout:'admin'
