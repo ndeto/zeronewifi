@@ -10,110 +10,117 @@
 	</head>
 
 	<style>
-		.panel {
-			background: rgba(0,0,0,0.5);
-			width: 50%;
-			height: 400px;
-		}
-		.border {
-			border-style: solid;
-			border-color: #FFFFFF;
-			border-width: 1px;
-		}
-		body {
-			<% if @camp.background == 'image' %>
-			background-image:url('<%= @camp.bg_img_url.to_s %>');
-			<% else %>
-			background-color: <%= @camp.background_color %>;
-			<% end %>
-			
-		}
-		video {
-			border-style: solid;
-			border-color: #FFFFFF;
-			border-width: 1px;
-		}
-		input[type=text] {
-			width: 100%;
-			padding: 12px 20px;
-			margin: 8px 0;
-			display: inline-block;
-			border: 1px solid #ccc;
-			box-sizing: border-box;
-			background-position: center;
-		}
+.panel {
+background: rgba(0,0,0,0.5);
+width: 50%;
+height: 400px;
+}
+.border {
+border-style: solid;
+border-color: #FFFFFF;
+border-width: 1px;
+}
+body {
+<% if @camp.background == 'image' %>
+background-image:url('<%= @camp.bg_img_url.to_s %>');
+<% else %>
+background-color: <%= @camp.background_color %>;
+<% end %>
+	}
+	video {
+		border-style: solid;
+		border-color: #FFFFFF;
+		border-width: 1px;
+	}
+	input[type=text] {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+		background-position: center;
+	}
 
-		button {
-			background-color: #B5252E;
-			color: #000000;
-			font-family: "Century Gothic";
-		}
-		a {
-			text-decoration: none;
-			color: #FFFFFF;
-		}
-		a:visited {
-			text-decoration: none;
-			color: #FFFFFF;
-		}
-		a:hover {
-			text-decoration: none;
-			color: #FFFFFF;
-		}
+	button {
+		background-color: #B5252E;
+		color: #000000;
+		font-family: "Century Gothic";
+	}
+	a {
+		text-decoration: none;
+		color: #FFFFFF;
+	}
+	a:visited {
+		text-decoration: none;
+		color: #FFFFFF;
+	}
+	a:hover {
+		text-decoration: none;
+		color: #FFFFFF;
+	}
 
-		::-webkit-input-placeholder {
-			color: #000000;
-		}
+	::-webkit-input-placeholder {
+		color: #000000;
+	}
 
-		.outer {
-			display: table;
-			position: absolute;
-			height: 100%;
-			width: 100%;
-		}
+	.outer {
+		display: table;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
 
-		.middle {
-			display: table-cell;
-			vertical-align: middle;
-		}
+	.middle {
+		display: table-cell;
+		vertical-align: middle;
+	}
 
-		.inner {
-			margin-left: auto;
-			margin-right: auto;
-			width: 100%;
-		}
+	.inner {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
 	</style>
 
 	<script>
 		$(document).ready(function() {
 
 			$("#thenumber").keyup(function(event) {
-				//xTriggered++;
-				//var msg = "Handler for .keyup() called " + xTriggered + " time(s).";
-				//$.print( msg, "html" );
-				//$.print( event );
 				num = $('#thenumber').val();
 				phonenumbers(num);
 
 			});
+
+			$("#theemail").keyup(function(event) {
+				email = $('#theemail').val();
+				validateEmail(email);
+
+			});
+
+			function validateEmail(email) {
+				var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+				if (email.match(re)) {
+					document.getElementById('signupbtn').removeAttribute('disabled');
+				} else {
+
+					document.getElementById('signupbtn').setAttribute('disabled', 'true');
+				}
+			}
 
 			function phonenumbers(phonenumber) {
 				var phoneno = /^(?:(?:254|\+254|0)?(7(?:(?:[12][0-9])|(?:0[0-8])|(9[0-2]))[0-9]{6})|(?:254|\+254|0)?(7(?:(?:[3][0-9])|(?:5[0-6])|(8[5-9]))[0-9        ]{6})    |(?:254|\+254|0)?(77[0-6][0-9]{6})|(?:254|\+254|0)?(76[34][0-9]{6}))$/;
 
 				if (phonenumber.match(phoneno)) {
 					document.getElementById('signupbtn').removeAttribute('disabled');
-					<!--document.getElementById('signupbtn').setAttribute('style', 'background-color:#003333; border-radius:25px; border-style:groove;                    border-width:thin;');
-					-->
 				} else {
-					
-				document.getElementById('signupbtn').setAttribute('disabled', 'true');
+
+					document.getElementById('signupbtn').setAttribute('disabled', 'true');
 				}
 			}
 
 		});
-		//function disablebtn(){
-		//document.getElementById("signupbtn").disabled = true;
-		//}
 	</script>
 	<script>
 		document.getElementById('myVideo').addEventListener('ended', myHandler, false);

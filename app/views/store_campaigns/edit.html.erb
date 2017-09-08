@@ -118,6 +118,15 @@
 
 	</div>
 </div>
+<div class="row">
+	<div class="col-md-6">
+		<% ContactType.all.each do |c|%>
+		<%= f.radio_button(:contact_type_id, c.id) %> <%= c.display %>
+		<% end %>
+		
+		<p><%= Store.find(@storecampaign.store_id).key %></p>
+	</div>
+	</div>
 <br/>
 <br/>
 <div class="row">

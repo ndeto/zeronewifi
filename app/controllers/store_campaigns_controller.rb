@@ -10,20 +10,37 @@ class StoreCampaignsController < ApplicationController
   end
 
   def create
-    splashpage_status = false
-    campaign_text_status = true
-    background = 'color'
-    background_color = '#FFF'
-    @store = Store.find(current_store.id)
-    campaign_text = 'Welcome to ' + @store.store_name
-    @campaign = @store.store_campaign.create(campaign_params.merge(splashpage_status:splashpage_status, campaign_text_status:campaign_text_status,campaign_text:campaign_text,background:background,background_color:background_color))
-    @campaign = @campaign.save
 
-    if @campaign
+    if params[:storecampaign][:campaign_id].to_i.equal?(3)
+      splashpage_status = false
+      campaign_text_status = true
+      background = 'color'
+      background_color = '#FFF'
+      @store = Store.find(current_store.id)
+      campaign_text = 'Welcome to ' + @store.store_name
+      @campaign = @store.store_campaign.create(campaign_params.merge(splashpage_status:splashpage_status, campaign_text_status:campaign_text_status,campaign_text:campaign_text,background:background,background_color:background_color))
+      @savecampaign = @campaign.save
+
+      question = "Hello, please give us your opinion"
+      @question = Question.create(question:question, store_campaign_id:@campaign.id)
+      @question.save
+    else
+      splashpage_status = false
+      campaign_text_status = true
+      background = 'color'
+      background_color = '#FFF'
+      @store = Store.find(current_store.id)
+      campaign_text = 'Welcome to ' + @store.store_name
+      @campaign = @store.store_campaign.create(campaign_params.merge(splashpage_status:splashpage_status, campaign_text_status:campaign_text_status,campaign_text:campaign_text,background:background,background_color:background_color))
+      @savecampaign = @campaign.save
+
+    end
+
+    if @savecampaign
       flash[:notice] = "Campaign Created!"
       redirect_to(request.referer)
     else
-      flash[:notice] = "Something went wrong!"
+      flash[:alert] = "Something went wrong!"
       redirect_to(request.referer)
     end
   end
@@ -37,7 +54,7 @@ class StoreCampaignsController < ApplicationController
     @storecampaign = StoreCampaign.find(params[:id])
     if @storecampaign.update(campaign_params)
       flash[:notice] = "Campaign Successfully updated!"
-      
+
     else
       flash[:alert] = "Something went wrong, try again"
     end
@@ -47,7 +64,7 @@ class StoreCampaignsController < ApplicationController
   def test
     render layout:'admin'
   end
-  
+
   def destroy
     @storecampaign = StoreCampaign.find(params[:id])
     if @storecampaign.destroy
@@ -56,14 +73,14 @@ class StoreCampaignsController < ApplicationController
     else
       flash[:alert] = 'Something went wrong! Could not delete campaign'
       redirect_to(request.referer)
-  end
+    end
   end
 
   private
 
   def campaign_params
     params.require(:storecampaign).permit(:name, :campaign_id, :campaign_text_status, :campaign_text, :sponsored_text_status, :sponsored_text, :media, :splashimage_opacity , :splashimage, :background_color ,
-     :bg_img, :background, :splashpage_status, :video  )
+    :bg_img, :background, :splashpage_status, :video , :contact_type_id )
   end
 
 end

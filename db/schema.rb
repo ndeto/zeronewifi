@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170804233526) do
+ActiveRecord::Schema.define(version: 20170908052751) do
 
   create_table "campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -20,8 +20,11 @@ ActiveRecord::Schema.define(version: 20170804233526) do
   end
 
   create_table "contact_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "name"
+    t.string   "description"
+    t.string   "display"
   end
 
   create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -31,6 +34,17 @@ ActiveRecord::Schema.define(version: 20170804233526) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["store_id"], name: "index_contacts_on_store_id", using: :btree
+  end
+
+  create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "question"
+    t.integer  "feedback"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "campaign_id"
+    t.integer  "store_campaign_id"
+    t.index ["campaign_id"], name: "index_questions_on_campaign_id", using: :btree
+    t.index ["store_campaign_id"], name: "index_questions_on_store_campaign_id", using: :btree
   end
 
   create_table "store_campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -80,6 +94,7 @@ ActiveRecord::Schema.define(version: 20170804233526) do
     t.string   "activecamp"
     t.integer  "store_campaign_id"
     t.boolean  "active"
+    t.string   "contact_type"
     t.index ["email"], name: "index_stores_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_stores_on_reset_password_token", unique: true, using: :btree
     t.index ["store_campaign_id"], name: "index_stores_on_store_campaign_id", using: :btree
@@ -113,6 +128,8 @@ ActiveRecord::Schema.define(version: 20170804233526) do
   end
 
   add_foreign_key "contacts", "stores"
+  add_foreign_key "questions", "campaigns"
+  add_foreign_key "questions", "store_campaigns"
   add_foreign_key "store_campaigns", "campaigns"
   add_foreign_key "store_campaigns", "contact_types"
   add_foreign_key "store_campaigns", "stores"

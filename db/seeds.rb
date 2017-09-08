@@ -6,5 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 Campaign.create(name:'imagecampaign', display:'Image')
 Campaign.create(name:'videocampaign', display:'Video')
+Campaign.create(name:'pollcampaign', display:'Poll')
+
+
+
+ContactType.create(display:'Email', name:'email', description:'Require Email')
+ContactType.create(display:'Email',name:'phone', description:'Require Phone Number')
+ContactType.create(display:'Email',name:'none', description:'Require No Contacts')

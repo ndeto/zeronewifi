@@ -1,6 +1,7 @@
 class StoreCampaign < ApplicationRecord
   belongs_to :campaign
   belongs_to :store
+  has_one :question
   
   mount_uploader :media, MediaUploader
   mount_uploader :splashimage, SplashimageUploader
