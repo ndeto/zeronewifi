@@ -22,7 +22,7 @@ class StoreCampaignsController < ApplicationController
       @savecampaign = @campaign.save
 
       question = "Hello, please give us your opinion"
-      @question = Question.create(question:question, store_campaign_id:@campaign.id)
+      @question = Question.create(question:question, store_campaign_id:@campaign.id,feedback:0)
       @question.save
     else
       splashpage_status = false

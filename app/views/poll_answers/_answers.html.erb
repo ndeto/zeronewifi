@@ -1,0 +1,4 @@
+<% @question.poll_answer.all.each do |a| %>
+<%= a.answer%> <%= link_to poll_answer_url(a) , method:'delete', remote:true, data: { confirm: "Delete Answer?" } do %> <i class="fa fa-times"></i> <% end %>
+<p>
+	<%end%>

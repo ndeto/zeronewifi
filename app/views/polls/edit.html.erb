@@ -1,0 +1,49 @@
+<%= render 'layouts/alerts' %>
+<%= form_for :question , url:{controller:'polls',action:'update'}, method:'put' do |f| %>
+<div class="col-md-6 col-md-offset-3">
+	<h1>Edit <%= StoreCampaign.find(@question.store_campaign_id).name %></h1>
+</div>
+<div class="row">
+	<div class="col-md-offset-1 col-md-5 col-xs-12">
+		<div class="form-group">
+			<%= f.label :question %><p></p>
+			<%= f.text_area :question, style:'width:700px' %><p></p>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-offset-3 col-md-6">
+		<p>
+			<%= f.submit 'Save Changes', class:'btn btn-primary'%>
+		</p>
+	</div>
+
+</div>
+
+<%end%>
+
+<div class="row">
+	<div class="col-md-offset-1 col-md-5">
+		<h1> Answers</h1>
+		<p>
+
+			<%= form_for :poll_answer, url:{controller:'poll_answers', action:'create'}, remote:true, method:'post' do |f| %>
+
+			<input type="hidden" name="question_id" value="<%= @question.id %>" />
+
+			<%= f.label :answer %>
+			<%= f.text_field :answer%>
+		<p></p>
+		<%= f.submit %>
+		<% end %>
+	</div>
+	<div class="col-md-offset-1 col-md-5">
+		<div id="answers">
+			<% @question.poll_answer.all.each do |a| %>
+			<%= a.answer%> <%= link_to poll_answer_url(a) , method:'delete', remote:true, data: { confirm: "Delete Answer?" } do %> <i class="fa fa-times"></i> <% end %>
+			<p>
+				<%end%>
+		</div>
+	</div>
+</div>
+

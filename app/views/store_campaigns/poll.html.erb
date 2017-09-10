@@ -1,14 +1,14 @@
 <%= render 'layouts/alerts' %>
 
-<%= form_for :storecampaign, :url => {:controller => 'store_campaigns', :action => 'update'},method:'put' do |f|%>
+<%= form_for :question, :url => {:controller => 'questions', :action => 'update'},method:'put' do |f|%>
 <div class="col-md-6 col-md-offset-3">
 	<h1>Edit <%= @storecampaign.name %></h1>
 </div>
 <div class="row">
 	<div class="col-md-offset-1 col-md-5 col-xs-12">
 		<div class="form-group">
-			<%= f.label :name %>
-			<%= f.text_field :name,class:'form-control' %>
+			<%= f.label :question %>
+			<%= f.text_area :question,class:'form-control' %>
 		</div>
 	</div>
 </div>

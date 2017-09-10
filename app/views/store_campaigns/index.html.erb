@@ -1,3 +1,5 @@
+
+
 <%= render 'layouts/alerts'%>
 </br>
 <div class="row">
@@ -39,10 +41,17 @@
 						<td>
 						<div class="hidden-sm hidden-xs action-buttons">
 							<% if current_store.store_campaign_id == c.id %>
+							
 							 <span class="Green"> <i class="ace-icon fa fa-check bigger-120"></i> Active </span>
+							 
+							 
+							 <% if c.campaign_id == 3%>
+							 <a class="blue" href="<%= edit_poll_path(Question.where(store_campaign_id:c).first ) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> Edit </a>
+							 <%else%>
 
 							<a class="blue" href="<%= edit_store_campaign_path(c) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> Edit </a> |
 							
+							<%end%>
 							
 							
 							<i class="ace-icon fa fa-trash-o bigger-130 "></i> <span style="color:grey">Delete</span>
@@ -51,9 +60,14 @@
 
 							<% else %>
 							<a href="<%= store_activate_path(c)%>" class="tooltip-info" data-rel="tooltip" title="View"> <span class="green"> <i class="ace-icon fa fa-check bigger-120"></i> Make Active   </span> </a> |
+							
+							 <% if c.campaign_id == 3%>
 
+							 <a class="blue" href="<%= edit_poll_path(Question.where(store_campaign_id:c).first ) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> Edit </a>
+							 <%else%>
 							<a class="blue" href="<%= edit_store_campaign_path(c) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> Edit </a> |
 							
+							<% end %>
 							<%= link_to store_campaign_path(c), data: { confirm: "Are you sure?" }, method: :delete, class:'red' do %>
 							
 							<i class="ace-icon fa fa-trash-o bigger-130"></i> Delete

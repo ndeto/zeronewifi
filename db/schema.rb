@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170908052751) do
+ActiveRecord::Schema.define(version: 20170909115019) do
 
   create_table "campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -36,14 +36,21 @@ ActiveRecord::Schema.define(version: 20170908052751) do
     t.index ["store_id"], name: "index_contacts_on_store_id", using: :btree
   end
 
+  create_table "poll_answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "count"
+    t.integer  "question_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "answer"
+    t.index ["question_id"], name: "index_poll_answers_on_question_id", using: :btree
+  end
+
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "question"
     t.integer  "feedback"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.integer  "campaign_id"
     t.integer  "store_campaign_id"
-    t.index ["campaign_id"], name: "index_questions_on_campaign_id", using: :btree
     t.index ["store_campaign_id"], name: "index_questions_on_store_campaign_id", using: :btree
   end
 
@@ -128,7 +135,7 @@ ActiveRecord::Schema.define(version: 20170908052751) do
   end
 
   add_foreign_key "contacts", "stores"
-  add_foreign_key "questions", "campaigns"
+  add_foreign_key "poll_answers", "questions"
   add_foreign_key "questions", "store_campaigns"
   add_foreign_key "store_campaigns", "campaigns"
   add_foreign_key "store_campaigns", "contact_types"
