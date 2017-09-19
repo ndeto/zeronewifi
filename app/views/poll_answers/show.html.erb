@@ -1,0 +1,5 @@
+Campaign Name: <%= @camp.name %><p></p>
+Question: <%= @question.question %><p></p>
+<% @answers.each do |a| %>
+<%= a.answer %> : <%= a.count %> <p></p>
+<% end %>

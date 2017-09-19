@@ -2,7 +2,7 @@
 
 <%= form_for :storecampaign, :url => {:controller => 'store_campaigns', :action => 'update'},method:'put' do |f|%>
 <div class="col-md-6 col-md-offset-3"><h1>Edit <%= @storecampaign.name %></h1></div>
-<div class="row">
+<div class="row" style="background-color: #F3F3F3;padding:1em;margin-top: -2em">
 	<div class="col-md-offset-1 col-md-5 col-xs-12">
 		<div class="form-group">
 			<%= f.label :name %>
@@ -16,7 +16,7 @@
 		</div>
 	</div>
 </div>
-<div class="row">
+<div class="row" style="padding:1em;">
 	<div class="col-md-5 col-md-offset-1">
 		<div class="form-group">
 			<%= f.label "Sponsored Text" %>
@@ -50,6 +50,7 @@
 				<br/>
 				Opacity: <%= f.range_field(:splashimage_opacity, in: 0..1, step: 0.1, id:'op' )%>
 			</div>
+
 		</div>
 		<%if @storecampaign.campaign_id==1%>
 		<div class="col-md-6">
@@ -82,7 +83,7 @@
 </div>
 <br/>
 <br/>
-<div class="row">
+<div class="row" style="background-color: #F3F3F3;padding:1em;">
 	<div class="col-md-5 col-md-offset-1">
 		<div class="col-md-6">
 			<div class="field">
@@ -114,23 +115,25 @@
 				<%= f.text_field :background_color, class:'colorpicker' %>
 			</div>
 		</div>
-		<div id="clrbx" style="height:250px;width:250px;background-color:<%= @storecampaign.background_color %>;" class=" backcolor col-md-6"></div>
+		<div id="clrbx" style="height:250px;width:250px;padding:1em;border-style:solid;border-color:#000000;background-color:<% if !@storecampaign.background_color.nil? %><%= @storecampaign.background_color %><% else %> <%= whitesmoke %> <% end %>;" class=" backcolor col-md-6"></div>
 
 	</div>
 </div>
 <div class="row">
-	<div class="col-md-6">
+    <div class="col-md-5 col-md-offset-1">
+      <p><h3>Needed Contact</h3>
+      </p>
+      <div class="field">
 		<% ContactType.all.each do |c|%>
-		<%= f.radio_button(:contact_type_id, c.id) %> <%= c.display %>
+		<%= f.radio_button(:contact_type_id, c.id) %> <%= c.display %><p></p>
 		<% end %>
-		
-		<p><%= Store.find(@storecampaign.store_id).key %></p>
-	</div>
+      </div>
+    </div>
 	</div>
 <br/>
 <br/>
-<div class="row">
-	<div class="text-center col-md-offset-3 col-md-6">
+<div class="row" style="background-color: #F3F3F3;padding:1em;margin-bottom: -2em">
+	<div class="col-md-offset-1 col-md-5">
 		<p>
 			<%= f.submit 'Save Changes', class:'btn btn-primary'%>
 		</p>

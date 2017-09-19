@@ -9,6 +9,20 @@ class PollAnswersController < ApplicationController
     @question = Question.find(@answer.question_id)
     @answer.destroy
   end
+
+  def update
+    @answer = PollAnswer.find(params[:count][:count])
+    count = @answer.count + 1
+    @answer.update(count:count)
+    redirect_to("https://www.google.com")
+  end
+
+  def show
+    @camp = StoreCampaign.find(params[:id])
+    @question = @camp.question
+    @answers = @question.poll_answer.all
+  set_admin
+  end
   
   
   private

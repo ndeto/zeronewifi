@@ -61,6 +61,17 @@ class StoreCampaignsController < ApplicationController
     redirect_to(request.referer)
   end
 
+  def update_poll
+    @storecampaign = StoreCampaign.find(params[:store_campaign_id])
+    if @storecampaign.update(campaign_params)
+      flash[:notice] = "Campaign Successfully updated!"
+
+    else
+      flash[:alert] = "Something went wrong, try again"
+    end
+    redirect_to(request.referer)
+  end
+
   def test
     render layout:'admin'
   end

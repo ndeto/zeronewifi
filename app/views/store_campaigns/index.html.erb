@@ -46,10 +46,12 @@
 							 
 							 
 							 <% if c.campaign_id == 3%>
-							 <a class="blue" href="<%= edit_poll_path(Question.where(store_campaign_id:c).first ) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> Edit </a>
+							 <a class="blue" href="<%= edit_poll_path(Question.where(store_campaign_id:c).first ) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> Edit </a> |
+                      <a class="green" href="<%= poll_view_path(c) %>"> <i class="ace-icon fa fa-eye bigger-130"></i> View </a>
 							 <%else%>
 
 							<a class="blue" href="<%= edit_store_campaign_path(c) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> Edit </a> |
+
 							
 							<%end%>
 							
@@ -64,9 +66,10 @@
 							 <% if c.campaign_id == 3%>
 
 							 <a class="blue" href="<%= edit_poll_path(Question.where(store_campaign_id:c).first ) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> Edit </a>
+                      <a class="green" href="<%= poll_view_path(c) %>"> <i class="ace-icon fa fa-eye bigger-130"></i> View </a>
 							 <%else%>
 							<a class="blue" href="<%= edit_store_campaign_path(c) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> Edit </a> |
-							
+
 							<% end %>
 							<%= link_to store_campaign_path(c), data: { confirm: "Are you sure?" }, method: :delete, class:'red' do %>
 							
