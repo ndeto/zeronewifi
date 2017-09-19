@@ -12,16 +12,20 @@
 </div>
 	<div class="col-md-6 col-md-offset-3 col-xs-12">
 		<%= form_tag('/pages/submit') do%>
-		
-		<% if @camp.contact_type_id = 2 %>
-		<p><%= text_field_tag :phone, nil, placeholder:'Leave your phone number here', class:'text-center', id:'thenumber', width:'100%' %></p>
-		<% end %>
-		
-		<% if @camp.contact_type_id = 1 %>
-		<p><%= text_field_tag :phone, nil, placeholder:'Leave your email here', class:'text-center', id:'theemail', width:'100%' %></p>
-		<% end %>
-		<p><%= submit_tag 'Browse!', class:'btn btn-lg', style:'font-size:22px; text-align:center;color:#FFFFFF;border-radius:0px;width:"100%";border-style:none;background-color:transparent', id:'signupbtn', type:'submit', 
-		disabled:'disabled' %></p>
+
+        <% if @camp.contact_type_id == 2 %>
+            <p><%= text_field_tag :phone, nil, placeholder:'Leave your phone number here', class:'text-center', id:'thenumber', width:'100%' %></p>
+        <% end %>
+
+        <% if @camp.contact_type_id == 1 %>
+            <p><%= text_field_tag :phone, nil, placeholder:'Leave your email here', class:'text-center', id:'theemail', width:'100%' %></p>
+        <% end %>
+
+        <% if @camp.contact_type_id == 3 %>
+            <p><%= submit_tag 'Browse!', class:'btn btn-lg', style:'font-size:22px; text-align:center;color:#FFFFFF;border-radius:0px;width:"100%";border-style:none;background-color:transparent', id:'signupbtn', type:'submit' %></p>
+        <% else %>
+            <p><%= submit_tag 'Browse!', class:'btn btn-lg', style:'font-size:22px; text-align:center;color:#FFFFFF;border-radius:0px;width:"100%";border-style:none;background-color:transparent', id:'signupbtn', type:'submit', disabled:'disabled'%></p>
+        <% end %>
 		
 		<% end %>
 	</div>
