@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {:registrations => 'user_registrations', :sessions => 'user_sessions', :passwords => 'user_passwords'}
   get 'stores' => 'stores#index'
   get 'store_campaigns/new'
-  get 'store_campaigns/edit'
+  get 'campaign/edit/:id' => 'store_campaigns#edit', as: "campaign_edit"
   get 'store_campaigns/test'
   get 'page/index' => "page#index"
   post 'pages/submit' => "page#submit"
@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   devise_scope :store do
     get 'home/new', to: 'store_registrations#new'
     get 'logout', to: 'store_registrations#destroy'
+    get '/campaigns' => 'store_campaigns#index'
 
   end
 
