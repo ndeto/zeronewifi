@@ -3,7 +3,7 @@ class PageController < ApplicationController
     #@sto = Store.where(key:params[:key])
     #@store = @sto[0]
    
-    @store = Store.includes(:user).find_by(key: params[:key])
+    @store = Store.includes(:user).where(key: params[:key]).first
 
     @camp = StoreCampaign.find(@store.store_campaign_id)
     

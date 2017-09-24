@@ -1,8 +1,8 @@
 User.create!([
-  {:username => 'John Doe', :email => 'test@gmail.com', :password => 'testtest', :password_confirmation => 'testtest', reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: "2017-08-28 11:13:54", last_sign_in_at: "2017-08-10 19:56:50", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", confirmation_token: "Fui73NddqurLp84sQkjB", confirmed_at: "2017-07-31 19:43:21", confirmation_sent_at: "2017-07-31 19:42:42", unconfirmed_email: nil, username: nil, avatar_file_name: "ad.mp4", avatar_content_type: "video/mp4", avatar_file_size: 21907745, avatar_updated_at: "2017-08-04 23:28:47"}
+  {:username => 'John Doe', :email => 'test@gmail.com', :password => 'testtest', :password_confirmation => 'testtest', reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: "2017-08-28 11:13:54", last_sign_in_at: "2017-08-10 19:56:50", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", confirmation_token: "Fui73NddqurLp84sQkjB", confirmed_at: "2017-07-31 19:43:21", confirmation_sent_at: "2017-07-31 19:42:42", unconfirmed_email: nil, avatar_file_name: "ad.mp4", avatar_content_type: "video/mp4", avatar_file_size: 21907745, avatar_updated_at: "2017-08-04 23:28:47"}
 ])
 Store.create!([
-  {:store_name => 'Our Store', :email => 'test@gmail.com', :password => 'testtest', :password_confirmation => 'testtest', reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 15, current_sign_in_at: "2017-09-19 08:38:44", last_sign_in_at: "2017-09-19 08:38:42", current_sign_in_ip: "192.168.7.240", last_sign_in_ip: "192.168.7.239", user_id: 8, username: "mndeto", key: "123", store_name: "ndeto", activecamp: nil, active: true, contact_type: nil},
+  {:store_name => 'Our Store', :email => 'test@gmail.com', :password => 'testtest', :password_confirmation => 'testtest', reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 15, current_sign_in_at: "2017-09-19 08:38:44", last_sign_in_at: "2017-09-19 08:38:42", current_sign_in_ip: "192.168.7.240", last_sign_in_ip: "192.168.7.239", username: "mndeto", key: "123", activecamp: nil, active: true, contact_type: nil},
 ])
 Campaign.create!([
   {name: "imagecampaign", display: "Image"},
@@ -52,6 +52,7 @@ PollAnswer.create!([
 ])
 
 Store.find(1).update({
-                         store_campaign_id:1
+                         store_campaign_id:1,
+                         user_id: 1
                      })
 
