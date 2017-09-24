@@ -13,7 +13,7 @@ class PollsController < ApplicationController
     
     if @question
       flash[:notice] = "Poll Successfully Updated"
-      redirect_to("http://192.168.7.1/login?username=admin&password=root")
+      redirect_to("http://login.after40.com/login?username=admin&password=root")
     else
       flash[:notice] = "Something went wrong! Please try again"
       redirect_to(request.referer)
