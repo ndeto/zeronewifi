@@ -7,53 +7,6 @@
 
 		<script type="text/javascript">
 			window.onload = function () {
-var chart = new CanvasJS.Chart("chartContainer",
-{
-theme: "theme2",
-title:{
-text: "Visits per day"
-},
-animationEnabled: true,
-axisX: {
-valueFormatString: "DDD",
-interval:1,
-intervalType: "day"
-
-},
-axisY:{
-includeZero: false
-
-},
-data: [
-{
-type: "line",
-//lineThickness: 3,
-
-dataPoints: [
-
-<% @contact.each do |c|%>
-	{x: new Date(<%= c.strftime("%Y") %>,<%= c.strftime("%m") %>,<%= c.strftime("%-d") %>) , y:<%= Contact.where(date:c).count %>},<% end %>
-	]
-	// { x: new Date(2012, 00, 1), y: 234 },
-	// { x: new Date(2012, 01, 1), y: 414},
-	// { x: new Date(2012, 02, 1), y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle"},
-	// { x: new Date(2012, 03, 1), y: 460 },
-	// { x: new Date(2012, 04, 1), y: 450 },
-	// { x: new Date(2012, 05, 1), y: 500 },
-	// { x: new Date(2012, 06, 1), y: 480 },
-	// { x: new Date(2012, 07, 1), y: 480 },
-	// { x: new Date(2012, 08, 1), y: 410 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"},
-	// { x: new Date(2012, 09, 1), y: 500 },
-	// { x: new Date(2012, 10, 1), y: 480 },
-	// { x: new Date(2012, 11, 1), y: 510 }
-	//
-	// ]
-	}
-
-	]
-	});
-
-	chart.render();
 	}
 		</script>
 		<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
@@ -101,35 +54,93 @@ dataPoints: [
 
 <script>
     $(function () {
-        var chart = new CanvasJS.Chart("chartContain",
-            {
-                title: {
-                    text: "Visitor Stats"
-                },
-                animationEnabled: true,
-                theme: "theme2",
-                data: [
-                    {
-                        type: "doughnut",
-                        indexLabelFontFamily: "Garamond",
-                        indexLabelFontSize: 20,
-                        startAngle: 0,
-                        indexLabelFontColor: "dimgrey",
-                        indexLabelLineColor: "darkgrey",
-                        toolTipContent: "{y} %",
+        document.addEventListener("turbolinks:load", function () {
 
-                        dataPoints: [
-                            {y: <%= Contact.where(store_id:current_store.id).count %> , indexLabel: "Total Visits {y}%"},
-                            {y: <%= Contact.where(store_id:current_store.id).distinct.pluck(:phone).count %> , indexLabel: "Unique Visits {y}%"},
-                            {y: <%= Contact.where(date:Date.current).count %> , indexLabel: "Today {y}%"},
-                        ]
-                    }
-                ]
-            })
-        ;
+            var chart2 = new CanvasJS.Chart("chartContainer",
+                {
+                    theme: "theme2",
+                    title:{
+                        text: "Visits per day"
+                    },
+                    animationEnabled: true,
+                    axisX: {
+                        valueFormatString: "DDD",
+                        interval:1,
+                        intervalType: "day"
 
-        chart.render();
+                    },
+                    axisY:{
+                        includeZero: false
 
+                    },
+                    data: [
+                        {
+                            type: "line",
+//lineThickness: 3,
+
+                            dataPoints: [
+
+                                <% @contact.each do |c|%>
+                                {x: new Date(<%= c.strftime("%Y") %>,<%= c.strftime("%m") %>,<%= c.strftime("%-d") %>) , y:<%= Contact.where(date:c).count %>},<% end %>
+                            ]
+                            // { x: new Date(2012, 00, 1), y: 234 },
+                            // { x: new Date(2012, 01, 1), y: 414},
+                            // { x: new Date(2012, 02, 1), y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle"},
+                            // { x: new Date(2012, 03, 1), y: 460 },
+                            // { x: new Date(2012, 04, 1), y: 450 },
+                            // { x: new Date(2012, 05, 1), y: 500 },
+                            // { x: new Date(2012, 06, 1), y: 480 },
+                            // { x: new Date(2012, 07, 1), y: 480 },
+                            // { x: new Date(2012, 08, 1), y: 410 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"},
+                            // { x: new Date(2012, 09, 1), y: 500 },
+                            // { x: new Date(2012, 10, 1), y: 480 },
+                            // { x: new Date(2012, 11, 1), y: 510 }
+                            //
+                            // ]
+                        }
+
+                    ]
+                });
+
+            chart2.render();
+
+
+            var chart = new CanvasJS.Chart("chartContain",
+                {
+                    title: {
+                        text: "Visitor Stats"
+                    },
+                    animationEnabled: true,
+                    theme: "theme2",
+                    data: [
+                        {
+                            type: "doughnut",
+                            indexLabelFontFamily: "Garamond",
+                            indexLabelFontSize: 20,
+                            startAngle: 0,
+                            indexLabelFontColor: "dimgrey",
+                            indexLabelLineColor: "darkgrey",
+                            toolTipContent: "{y} %",
+
+                            dataPoints: [
+                                {
+                                    y: <%= Contact.where(store_id:current_store.id).count %>,
+                                    indexLabel: "Total Visits {y}%"
+                                },
+                                {
+                                    y: <%= Contact.where(store_id:current_store.id).distinct.pluck(:phone).count %>,
+                                    indexLabel: "Unique Visits {y}%"
+                                },
+                                {y: <%= Contact.where(date:Date.current).count %>, indexLabel: "Today {y}%"},
+                            ]
+                        }
+                    ]
+                })
+            ;
+
+            chart.render();
+
+        });
     });
 </script>
 
