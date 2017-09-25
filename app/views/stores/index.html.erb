@@ -47,7 +47,7 @@
 				</div><!-- /.widget-main -->
 			</div><!-- /.widget-body -->
 		</div><!-- /.widget-box -->
-    <div id="chartContain" style="height: 300px; width: 100%;">
+    <div id="chartContain" style="height: 300px; width: 100%;margin-bottom:2em;">
     </div>
 	</div><!-- /.col -->
 </div><!-- /.row -->
@@ -83,64 +83,38 @@
                                 <% @contact.each do |c|%>
                                 {x: new Date(<%= c.strftime("%Y") %>,<%= c.strftime("%m") %>,<%= c.strftime("%-d") %>) , y:<%= Contact.where(date:c).count %>},<% end %>
                             ]
-                            // { x: new Date(2012, 00, 1), y: 234 },
-                            // { x: new Date(2012, 01, 1), y: 414},
-                            // { x: new Date(2012, 02, 1), y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle"},
-                            // { x: new Date(2012, 03, 1), y: 460 },
-                            // { x: new Date(2012, 04, 1), y: 450 },
-                            // { x: new Date(2012, 05, 1), y: 500 },
-                            // { x: new Date(2012, 06, 1), y: 480 },
-                            // { x: new Date(2012, 07, 1), y: 480 },
-                            // { x: new Date(2012, 08, 1), y: 410 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"},
-                            // { x: new Date(2012, 09, 1), y: 500 },
-                            // { x: new Date(2012, 10, 1), y: 480 },
-                            // { x: new Date(2012, 11, 1), y: 510 }
-                            //
-                            // ]
                         }
 
                     ]
                 });
 
             chart2.render();
-
-
-            var chart = new CanvasJS.Chart("chartContain",
-                {
-                    title: {
-                        text: "Visitor Stats"
-                    },
-                    animationEnabled: true,
-                    theme: "theme2",
-                    data: [
-                        {
-                            type: "doughnut",
-                            indexLabelFontFamily: "Garamond",
-                            indexLabelFontSize: 20,
-                            startAngle: 0,
-                            indexLabelFontColor: "dimgrey",
-                            indexLabelLineColor: "darkgrey",
-                            toolTipContent: "{y} %",
-
-                            dataPoints: [
-                                {
-                                    y: <%= Contact.where(store_id:current_store.id).count %>,
-                                    indexLabel: "Total Visits {y}%"
-                                },
-                                {
-                                    y: <%= Contact.where(store_id:current_store.id).distinct.pluck(:phone).count %>,
-                                    indexLabel: "Unique Visits {y}%"
-                                },
-                                {y: <%= Contact.where(date:Date.current).count %>, indexLabel: "Today {y}%"},
-                            ]
-                        }
-                    ]
-                })
-            ;
-
-            chart.render();
-
         });
     });
 </script>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Type', 'Numbers'],
+            ["Total Visits",<%= Contact.where(store_id:current_store.id).count %>],
+            ["Unique Visits%",<%= Contact.where(store_id:current_store.id).distinct.pluck(:phone).count %>],
+            ["Today",<%= Contact.where(date:Date.current).count %>]
+        ]);
+
+        var options = {
+            title: 'Visits',
+            pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chartContain'));
+        chart.draw(data, options);
+    }
+</script>
+
+
 
