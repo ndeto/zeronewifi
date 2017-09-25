@@ -44,9 +44,9 @@
 								</li>
 
 								<li>
-									
-									
-									<%if controller_name=='stores' || controller_name=='store_campaigns' || controller_name == 'polls' || controller_name == 'poll_answers' %>
+
+
+                  <%if store_signed_in? && controller_name=='stores' || controller_name=='store_campaigns'  || controller_name == 'polls' || controller_name == 'poll_answers' || (controller_name == 'store_registrations' && action_name == 'edit')%>
 									<%= link_to edit_store_registration_path do %>
 									<i class="ace-icon fa fa-user"></i> Profile
 									<%end%>
@@ -66,14 +66,14 @@
 								<li class="divider"></li>
 
 								<li>
-									
-									<% if controller_name=='home' || controller_name =='user_registrations' || controller_name == 'store_registrations'%>
+
+                  <%if user_signed_in? && controller_name=='home' || controller_name =='user_registrations' || (controller_name == 'store_registrations' && action_name == 'new')%>
 									<%= link_to destroy_user_session_path, method:'delete' do %>
 									<i class="ace-icon fa fa-power-off"></i> Logout
 									<%end%>
 									<%end%>
-									
-									<% if controller_name=='stores' || controller_name=='store_campaigns'%>
+
+                  <%if store_signed_in? && controller_name=='stores' || controller_name=='store_campaigns'  || controller_name == 'polls' || controller_name == 'poll_answers' || (controller_name == 'store_registrations' && action_name == 'edit')%>
 									<%= link_to destroy_store_session_path, method:'delete' do %>
 									<i class="ace-icon fa fa-power-off"></i> Logout
 									<%end%>
@@ -94,11 +94,11 @@
 				} catch(e) {
 				}
 			</script>
-			<%if store_signed_in? && controller_name=='stores' || controller_name=='store_campaigns'  || controller_name == 'polls' || controller_name == 'poll_answers'%>
+			<%if store_signed_in? && controller_name=='stores' || controller_name=='store_campaigns'  || controller_name == 'polls' || controller_name == 'poll_answers' || (controller_name == 'store_registrations' && action_name == 'edit')%>
 			<%= render 'layouts/sidebar' %>
 			<%end%>
 
-			<%if user_signed_in? && controller_name=='home' || controller_name =='user_registrations' || controller_name == 'store_registrations'%>
+			<%if user_signed_in? && controller_name=='home' || controller_name =='user_registrations' || (controller_name == 'store_registrations' && action_name == 'new')%>
 			<%= render 'layouts/usersidebar' %>
 			<%end%>
 

@@ -1,5 +1,58 @@
-Campaign Name: <%= @camp.name %><p></p>
-Question: <%= @question.question %><p></p>
-<% @answers.each do |a| %>
-<%= a.answer %> : <%= a.count %> <p></p>
-<% end %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h2>Campaign Name: <%= @camp.name %></h2>
+    <p></p>
+    <h3>Question: <%= @question.question %></h3>
+    <p></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <ul>
+      <% @answers.each do |a| %>
+          <li><%= a.answer %> : <%= a.count %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<div class="pie row">
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+</div>
+
+<script>
+    $(function () {
+        var chart = new CanvasJS.Chart("chartContainer",
+            {
+                title: {
+                    text: "<%= @question.question %>"
+                },
+                animationEnabled: true,
+                theme: "theme2",
+                data: [
+                    {
+                        type: "doughnut",
+                        indexLabelFontFamily: "Garamond",
+                        indexLabelFontSize: 20,
+                        startAngle: 0,
+                        indexLabelFontColor: "dimgrey",
+                        indexLabelLineColor: "darkgrey",
+                        toolTipContent: "{y} %",
+
+                        dataPoints: [
+                    <% @answers.each do |a| %>
+                            {y: <%= a.count %> , indexLabel: "<%= a.answer %> {y}%"},
+                    <% end %>
+        ]
+    }
+        ]
+    })
+        ;
+
+        chart.render();
+
+    });
+
+</script>

@@ -7,7 +7,7 @@ class StoresController < ApplicationController
   def index
     @store = Store.find(current_store.id)
     #@contacts = Contact.where(store_id:current_store.id)
-    @contact = Contact.where(store_id:current_store.id).where('created_at >= ?',2.week.ago).distinct.pluck(:date)
+    @contact = Contact.where(store_id:current_store.id).where('created_at >= ?',1.week.ago).distinct.pluck(:date)
     set_admin
   end
 

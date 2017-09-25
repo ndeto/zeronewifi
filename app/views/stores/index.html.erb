@@ -94,6 +94,42 @@ dataPoints: [
 				</div><!-- /.widget-main -->
 			</div><!-- /.widget-body -->
 		</div><!-- /.widget-box -->
+    <div id="chartContain" style="height: 300px; width: 100%;">
+    </div>
 	</div><!-- /.col -->
 </div><!-- /.row -->
+
+<script>
+    $(function () {
+        var chart = new CanvasJS.Chart("chartContain",
+            {
+                title: {
+                    text: "Visitor Stats"
+                },
+                animationEnabled: true,
+                theme: "theme2",
+                data: [
+                    {
+                        type: "doughnut",
+                        indexLabelFontFamily: "Garamond",
+                        indexLabelFontSize: 20,
+                        startAngle: 0,
+                        indexLabelFontColor: "dimgrey",
+                        indexLabelLineColor: "darkgrey",
+                        toolTipContent: "{y} %",
+
+                        dataPoints: [
+                            {y: <%= Contact.where(store_id:current_store.id).count %> , indexLabel: "Total Visits {y}%"},
+                            {y: <%= Contact.where(store_id:current_store.id).distinct.pluck(:phone).count %> , indexLabel: "Unique Visits {y}%"},
+                            {y: <%= Contact.where(date:Date.current).count %> , indexLabel: "Today {y}%"},
+                        ]
+                    }
+                ]
+            })
+        ;
+
+        chart.render();
+
+    });
+</script>
 
