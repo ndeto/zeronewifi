@@ -10,6 +10,7 @@
 	}
 		</script>
 		<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<div id="chartContainer" style="height: 300px; width: 100%;"></div>
 
 	</div><!-- /.col -->
@@ -91,11 +92,7 @@
             chart2.render();
         });
     });
-</script>
 
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
     google.charts.load("current", {packages:["corechart"]});
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
@@ -115,6 +112,10 @@
         chart.draw(data, options);
     }
 </script>
+
+
+
+
 
 
 
