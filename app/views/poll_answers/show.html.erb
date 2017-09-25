@@ -17,14 +17,17 @@
   </div>
 </div>
 
-<div class="pie row">
-  <div id="chartContainer" style="height: 300px; width: 100%;">
+<div class="row">
+  <div class="col-md-12">
+  <div id="pollans">
+  </div>
   </div>
 </div>
 
 <script>
     $(function () {
-        var chart = new CanvasJS.Chart("chartContainer",
+        document.addEventListener("turbolinks:load", function() {
+        var chart = new CanvasJS.Chart("pollans",
             {
                 title: {
                     text: "<%= @question.question %>"
@@ -52,7 +55,7 @@
         ;
 
         chart.render();
-
+        });
     });
 
 </script>
