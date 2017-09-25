@@ -31,7 +31,7 @@
         var chart = new CanvasJS.Chart("pollans",
             {
                 title: {
-                    text: "<%= @question.question %>"
+                    text: "<%=(CGI.unescapeHTML @question.question).html_safe %>"
                 },
                 animationEnabled: true,
                 theme: "theme2",
