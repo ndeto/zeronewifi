@@ -1,9 +1,6 @@
 <%= render 'layouts/alerts' %>
-<div class="row">
-	
-	<div class="space-6"></div>
 
-	<div class="col-sm-12">
+	<div class="col-md-12">
 
 		<script type="text/javascript">
 			window.onload = function () {
@@ -11,7 +8,7 @@
 		</script>
 		<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+		<div id="curve_chart" style="height: 300px; width: 100%;"></div>
 
 	</div><!-- /.col -->
 	<div class="vspace-12-sm"></div>
@@ -48,74 +45,62 @@
 				</div><!-- /.widget-main -->
 			</div><!-- /.widget-body -->
 		</div><!-- /.widget-box -->
-    <div id="chartContain" style="height: 300px; width: 100%;margin-bottom:2em;">
-    </div>
-	</div><!-- /.col -->
-</div><!-- /.row -->
+  </div>
+
+
+  <div id="chartContain" class="col-md-6" text-center style="height: 500px; width: 100%;margin-bottom:2em;">
+
 
 <script>
     $(function () {
         document.addEventListener("turbolinks:load", function () {
+            google.charts.load("current", {packages:["corechart"]});
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Type', 'Numbers'],
+                    ["Total Visits",<%= Contact.where(store_id:current_store.id).count %>],
+                    ["Unique Visits",<%= Contact.where(store_id:current_store.id).distinct.pluck(:phone).count %>],
+                    ["Today",<%= Contact.where(date:Date.current).count %>]
+                ]);
 
-            var chart2 = new CanvasJS.Chart("chartContainer",
-                {
-                    theme: "theme2",
-                    title:{
-                        text: "Visits per day"
-                    },
-                    animationEnabled: true,
-                    axisX: {
-                        valueFormatString: "DDD",
-                        interval:1,
-                        intervalType: "day"
+                var options = {
+                    title: 'Visits',
+                    pieHole: 0.4,
+                };
 
-                    },
-                    axisY:{
-                        includeZero: false
+                var chart = new google.visualization.PieChart(document.getElementById('chartContain'));
+                chart.draw(data, options);
+            }
 
-                    },
-                    data: [
-                        {
-                            type: "line",
-//lineThickness: 3,
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart2);
 
-                            dataPoints: [
+            function drawChart2() {
+                var data2 = google.visualization.arrayToDataTable([
+                    ['Day', 'Visits'],
 
-                                <% @contact.each do |c|%>
-                                {x: new Date(<%= c.strftime("%Y") %>,<%= c.strftime("%m") %>,<%= c.strftime("%-d") %>) , y:<%= Contact.where(date:c).count %>},<% end %>
-                            ]
-                        }
+                    <% @contact.each do |c|%>
+                    [new Date(<%= c.strftime("%Y") %>,<%= c.strftime("%m") %>,<%= c.strftime("%-d") %>) , <%= Contact.where(date:c).count %>],
+                    <% end %>
+                ]);
 
-                    ]
-                });
+                var options2 = {
+                    title: 'Visits',
+                    //curveType: 'function',
+                    legend: { position: 'bottom' }
+                };
 
-            chart2.render();
+                var chart2 = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+                chart2.draw(data2, options2);
+            }
         });
     });
 
-    google.charts.load("current", {packages:["corechart"]});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-            ['Type', 'Numbers'],
-            ["Total Visits",<%= Contact.where(store_id:current_store.id).count %>],
-            ["Unique Visits%",<%= Contact.where(store_id:current_store.id).distinct.pluck(:phone).count %>],
-            ["Today",<%= Contact.where(date:Date.current).count %>]
-        ]);
 
-        var options = {
-            title: 'Visits',
-            pieHole: 0.4,
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('chartContain'));
-        chart.draw(data, options);
-    }
-</script>
+    </script>
 
 
 
-
-
-
-
+</div>

@@ -12,7 +12,7 @@
 </div>
 	<div  class="text-left col-md-6 col-md-offset-3">
     <% answers = PollAnswer.where(question_id:question.id) %>
-		<%= form_tag('/poll_answers/update',method:'put') do %>
+		<%= form_tag('/poll_answers/submit_poll',method:'put') do %>
 
         <% answers.each do |a| %>
             <div class="col-xs-6 col-xs-offset-3">

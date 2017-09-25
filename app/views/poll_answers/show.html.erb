@@ -1,4 +1,4 @@
-<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
     <h2>Campaign Name: <%= @camp.name %></h2>
@@ -19,43 +19,34 @@
 </div>
 
 <div class="row">
-  <div class="col-md-12">
-  <div id="pollans" style="height:300px;">
-  </div>
+  <div class="col-md-6 col-md-offset-3" text-center id="pollans" style="width: 900px; height: 500px;">
   </div>
 </div>
 
 <script>
     $(function () {
         document.addEventListener("turbolinks:load", function() {
-        var chart = new CanvasJS.Chart("pollans",
-            {
-                title: {
-                    text: "<%=(CGI.unescapeHTML @question.question).html_safe %>"
-                },
-                animationEnabled: true,
-                theme: "theme2",
-                data: [
-                    {
-                        type: "doughnut",
-                        indexLabelFontFamily: "Garamond",
-                        indexLabelFontSize: 20,
-                        startAngle: 0,
-                        indexLabelFontColor: "dimgrey",
-                        indexLabelLineColor: "darkgrey",
-                        toolTipContent: "{y} %",
-
-                        dataPoints: [
+            google.charts.load("current", {packages:["corechart"]});
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Choice', 'Votes'],
                     <% @answers.each do |a| %>
-                            {y: <%= a.count %> , indexLabel: "<%= a.answer %> {y}%"},
+                    ["<%= a.answer %>",<%= a.count %>],
                     <% end %>
-        ]
-    }
-        ]
-    })
-        ;
+                ]);
 
-        chart.render();
+                var options = {
+                    title: "<%=(CGI.unescapeHTML @question.question).html_safe %>",
+                    pieHole: 0.4,
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('pollans'));
+                chart.draw(data, options);
+            }
+
+
+
         });
     });
 

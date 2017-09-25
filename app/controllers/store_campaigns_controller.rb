@@ -28,7 +28,7 @@ class StoreCampaignsController < ApplicationController
       splashpage_status = false
       campaign_text_status = true
       background = 'color'
-      background_color = '#FFF'
+      background_color = '#000'
       @store = Store.find(current_store.id)
       campaign_text = 'Welcome to ' + @store.store_name
       @campaign = @store.store_campaign.create(campaign_params.merge(splashpage_status:splashpage_status, campaign_text_status:campaign_text_status,campaign_text:campaign_text,background:background,background_color:background_color,contact_type_id:3))
