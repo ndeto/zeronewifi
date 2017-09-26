@@ -15,7 +15,7 @@
 		<%= form_tag('/poll_answers/submit_poll',method:'put') do %>
 
         <% answers.each do |a| %>
-            <div class="col-xs-6 col-xs-offset-3">
+            <div class="text-left col-xs-6 col-xs-offset-3">
               <div class="field">
         <%= radio_button(:count,'count',a.id)%> <b style="padding-left:2em"><%= a.answer %></b><p>
               </p>

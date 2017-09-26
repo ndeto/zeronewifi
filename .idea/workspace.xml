@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9c4c1035-136e-4165-a935-41ba38637a2b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/_imagecampaign.html.erb" afterPath="$PROJECT_DIR$/app/views/page/_imagecampaign.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/_pollcampaign.html.erb" afterPath="$PROJECT_DIR$/app/views/page/_pollcampaign.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/_splash.html.erb" afterPath="$PROJECT_DIR$/app/views/page/_splash.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/_videocampaign.html.erb" afterPath="$PROJECT_DIR$/app/views/page/_videocampaign.html.erb" />
     </list>
@@ -44,8 +45,8 @@
       <file leaf-file-name="_imagecampaign.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/page/_imagecampaign.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="24" column="76" lean-forward="false" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+            <state relative-caret-position="277">
+              <caret line="26" column="131" lean-forward="false" selection-start-line="26" selection-start-column="131" selection-end-line="26" selection-end-column="131" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -53,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_videocampaign.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_videocampaign.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/page/_videocampaign.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
-              <caret line="26" column="84" lean-forward="false" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
+              <caret line="26" column="139" lean-forward="false" selection-start-line="26" selection-start-column="139" selection-end-line="26" selection-end-column="139" />
               <folding />
             </state>
           </provider>
@@ -77,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/page/_splash.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="17" column="110" lean-forward="false" selection-start-line="17" selection-start-column="110" selection-end-line="17" selection-end-column="110" />
+              <caret line="17" column="162" lean-forward="false" selection-start-line="17" selection-start-column="162" selection-end-line="17" selection-end-column="162" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -128,11 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_pollcampaign.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_pollcampaign.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/page/_pollcampaign.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+            <state relative-caret-position="283">
+              <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -216,13 +217,13 @@
         <option value="$PROJECT_DIR$/app/controllers/store_campaigns_controller.rb" />
         <option value="$PROJECT_DIR$/TODO" />
         <option value="$PROJECT_DIR$/app/models/store_campaign.rb" />
-        <option value="$PROJECT_DIR$/app/views/page/_pollcampaign.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/polls_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/poll_answers/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/stores/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/page/_splash.html.erb" />
         <option value="$PROJECT_DIR$/app/views/page/_imagecampaign.html.erb" />
         <option value="$PROJECT_DIR$/app/views/page/_videocampaign.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/page/_pollcampaign.html.erb" />
       </list>
     </option>
   </component>
@@ -791,7 +792,7 @@
       <workItem from="1506023452174" duration="226000" />
       <workItem from="1506057127738" duration="5928000" />
       <workItem from="1506247766203" duration="6772000" />
-      <workItem from="1506314498335" duration="25325000" />
+      <workItem from="1506314498335" duration="26167000" />
     </task>
     <task id="LOCAL-00001" summary="Ndeto working">
       <created>1506323708409</created>
@@ -811,7 +812,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117229000" />
+    <option name="totallyTimeSpent" value="118071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="60" y="-11" width="1861" height="1092" extended-state="6" />
@@ -824,7 +825,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.4980695" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36890244" sideWeight="0.4980695" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37703252" sideWeight="0.4980695" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1165,14 +1166,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/page/_pollcampaign.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/polls_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1229,7 +1222,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/page/_splash.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="17" column="110" lean-forward="false" selection-start-line="17" selection-start-column="110" selection-end-line="17" selection-end-column="110" />
+          <caret line="17" column="162" lean-forward="false" selection-start-line="17" selection-start-column="162" selection-end-line="17" selection-end-column="162" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
@@ -1238,8 +1231,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/page/_imagecampaign.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="24" column="76" lean-forward="false" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+        <state relative-caret-position="277">
+          <caret line="26" column="131" lean-forward="false" selection-start-line="26" selection-start-column="131" selection-end-line="26" selection-end-column="131" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
@@ -1249,7 +1242,15 @@
     <entry file="file://$PROJECT_DIR$/app/views/page/_videocampaign.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="26" column="84" lean-forward="false" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
+          <caret line="26" column="139" lean-forward="false" selection-start-line="26" selection-start-column="139" selection-end-line="26" selection-end-column="139" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/page/_pollcampaign.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
           <folding />
         </state>
       </provider>
