@@ -2,7 +2,7 @@
 
 	<div class="col-md-6 col-md-offset-3">
 		<% if @camp.campaign_text_status %>
-		<p class="text-center" style="color:#FFFFFF; font-size:36px; font-family:'Century Gothic';">
+		<p class="text-center" style="color:#000; font-size:36px; font-family:'Century Gothic';">
 			<strong><%= @camp.campaign_text %></strong>
 		</p>
 		<% end %>
@@ -22,9 +22,9 @@
 		<% end %>
 		
 		<% if @camp.contact_type_id == 3 %>
-		<p><%= submit_tag 'Browse!', class:'btn btn-lg', style:'font-size:22px; text-align:center;color:#FFFFFF;border-radius:0px;width:"100%";border-style:none;background-color:transparent', id:'signupbtn', type:'submit' %></p>
+		<p><%= submit_tag 'Browse!', class:'btn btn-lg', style:'font-size:22px; text-align:center;color:#000;border-radius:0px;width:"100%";border-style:none;background-color:transparent', id:'signupbtn', type:'submit' %></p>
 		<% else %>
-		<p><%= submit_tag 'Browse!', class:'btn btn-lg', style:'font-size:22px; text-align:center;color:#FFFFFF;border-radius:0px;width:"100%";border-style:none;background-color:transparent', id:'signupbtn', type:'submit', disabled:'disabled'%></p>
+		<p><%= submit_tag 'Browse!', class:'btn btn-lg', style:'font-size:22px; text-align:center;color:#000;border-radius:0px;width:"100%";border-style:none;background-color:transparent', id:'signupbtn', type:'submit', disabled:'disabled'%></p>
 		<% end %>
 		
 		
