@@ -11,7 +11,7 @@
     <p style="font-size: x-large"><b><%= question.question %></b></p>
 </div>
 	<div  class="text-left col-md-6 col-md-offset-3">
-    <% answers = PollAnswer.where(question_id:question.id) %>
+    <% answers = PollAnswer.where(question_id:question.id).order(:created_at) %>
 		<%= form_tag('/poll_answers/submit_poll',method:'put') do %>
 
         <% answers.each do |a| %>

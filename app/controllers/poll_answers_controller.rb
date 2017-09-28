@@ -20,7 +20,7 @@ class PollAnswersController < ApplicationController
   def show
     @camp = StoreCampaign.find(params[:id])
     @question = @camp.question
-    @answers = @question.poll_answer.all
+    @answers = @question.poll_answer.all.order(:created_at)
   set_admin
   end
   
