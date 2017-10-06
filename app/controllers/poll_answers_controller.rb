@@ -1,4 +1,7 @@
 class PollAnswersController < ApplicationController
+
+  before_action :authenticate_store!
+
   def create
     @question = Question.find(params[:question_id])
     @answer = @question.poll_answer.create(poll_answer_params.merge(count:0))

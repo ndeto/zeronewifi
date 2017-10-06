@@ -46,7 +46,7 @@
 								<li>
 
 
-                  <%if store_signed_in? && controller_name=='stores' || controller_name=='store_campaigns'  || controller_name == 'polls' || controller_name == 'poll_answers' || (controller_name == 'store_registrations' && action_name == 'edit')%>
+                  <%if store_signed_in? && controller_name=='stores' || controller_name=='store_campaigns'  || controller_name == 'polls' || controller_name == 'poll_answers' || (controller_name == 'store_registrations' && action_name == 'edit') || controller_name == 'tickets'%>
 									<%= link_to edit_store_registration_path do %>
 									<i class="ace-icon fa fa-user"></i> Profile
 									<%end%>
@@ -73,7 +73,7 @@
 									<%end%>
 									<%end%>
 
-                  <%if store_signed_in? && controller_name=='stores' || controller_name=='store_campaigns'  || controller_name == 'polls' || controller_name == 'poll_answers' || (controller_name == 'store_registrations' && action_name == 'edit')%>
+                  <%if store_signed_in? && controller_name=='stores' || controller_name=='store_campaigns'  || controller_name == 'polls' || controller_name == 'poll_answers' || (controller_name == 'store_registrations' && action_name == 'edit') || controller_name == 'tickets'%>
 									<%= link_to destroy_store_session_path, method:'delete' do %>
 									<i class="ace-icon fa fa-power-off"></i> Logout
 									<%end%>
@@ -94,7 +94,7 @@
 				} catch(e) {
 				}
 			</script>
-			<%if store_signed_in? && controller_name=='stores' || controller_name=='store_campaigns'  || controller_name == 'polls' || controller_name == 'poll_answers' || (controller_name == 'store_registrations' && action_name == 'edit')%>
+			<%if store_signed_in? && controller_name=='stores' || controller_name=='store_campaigns'  || controller_name == 'polls' || controller_name == 'poll_answers' || (controller_name == 'store_registrations' && action_name == 'edit') || controller_name == 'tickets'%>
 			<%= render 'layouts/sidebar' %>
 			<%end%>
 
