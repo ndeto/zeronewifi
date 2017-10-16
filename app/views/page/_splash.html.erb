@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			<% if @camp.sponsored_text_status %>
-			<p style="color:#000">
+			<p style="color:<%= @camp.text_color %>;">
 				<%= @camp.sponsored_text %>
 			</p>
 			<% end %>
@@ -15,7 +15,7 @@
 			</div>
 		</div>
 		<div class="col-md-6 col-md-offset-3">
-			<%= link_to "ACCEPT AND CONTINUE", pages_campaign_path, :class=>'btn btn-lg', style:'margin:1em;font-style:bold;font-size:22px; text-align:center;color:#000;border-radius:0px;width:"100%";border-style:none;background-color:#fff;opacity:0.9' %>
+			<%= link_to "ACCEPT AND CONTINUE", pages_campaign_path, :class=>'btn btn-lg', style:"margin:1em;font-style:bold;font-size:22px; text-align:center;color:#{@camp.text_color};border-radius:0px;width:'100%'';border-style:none;background-color:#fff;opacity:0.9" %>
 		</div>
 	</div>
 </div>

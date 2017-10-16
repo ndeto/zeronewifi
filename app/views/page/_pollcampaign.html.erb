@@ -17,7 +17,7 @@
         <% answers.each do |a| %>
             <div class="text-left col-xs-6 col-xs-offset-3">
               <div class="field">
-        <%= radio_button(:count,'count',a.id)%> <b style="padding-left:2em"><%= a.answer %></b><p>
+        <%= radio_button(:count,'count',a.id,required:'required')%> <b style="padding-left:2em"><%= a.answer %></b><p>
               </p>
               </div>
             </div>
