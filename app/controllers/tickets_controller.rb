@@ -1,6 +1,6 @@
 class TicketsController < ApplicationController
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_store!, except:[:new,:create]
+  before_action :authenticate_store!, except:[:new,:create,:verify]
   # GET /tickets
   # GET /tickets.json
   def index
