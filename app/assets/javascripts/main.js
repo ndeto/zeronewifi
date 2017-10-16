@@ -16,6 +16,14 @@ document.addEventListener("turbolinks:load", function() {
 		$('#clrbx').css("background-color", ev.color.toHex());
 	});
 
+
+    $('.colorpicker2').colorpicker();
+
+    $('.colorpicker2').on('changeColor', function(ev) {
+
+        $('#clrbx2').css("background-color", ev.color.toHex());
+    });
+
 	$("#color").click(function() {
 		$(".back").css('display', 'none');
 		$(".backcolor").css('display', 'block');

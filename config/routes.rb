@@ -16,11 +16,13 @@ Rails.application.routes.draw do
   get '/users/sign_up' => 'stores#index'
   put '/store_campaigns/update_poll'
   get '/poll/view/:id' => 'poll_answers#show', as: "poll_view"
+  get '/pages/ticket' => 'page#ticket'
+  post 'tickets/verify' => 'tickets#verify'
+
   devise_scope :store do
     get 'home/new', to: 'store_registrations#new'
     get 'logout', to: 'store_registrations#destroy'
     get '/campaigns' => 'store_campaigns#index'
-
   end
 
   devise_scope :user do

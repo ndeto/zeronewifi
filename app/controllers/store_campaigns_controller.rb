@@ -1,4 +1,5 @@
 class StoreCampaignsController < ApplicationController
+  before_action :authenticate_store!
   def index
     @campaigns = StoreCampaign.where(store_id:current_store.id)
     set_admin
@@ -16,9 +17,10 @@ class StoreCampaignsController < ApplicationController
       campaign_text_status = true
       background = 'color'
       background_color = '#FFF'
+      text_color = '#000'
       @store = Store.find(current_store.id)
       campaign_text = 'Welcome to ' + @store.store_name
-      @campaign = @store.store_campaign.create(campaign_params.merge(splashpage_status:splashpage_status, campaign_text_status:campaign_text_status,campaign_text:campaign_text,background:background,background_color:background_color))
+      @campaign = @store.store_campaign.create(campaign_params.merge(splashpage_status:splashpage_status, campaign_text_status:campaign_text_status,campaign_text:campaign_text,background:background,background_color:background_color,text_color:text_color))
       @savecampaign = @campaign.save
 
       question = "Hello, please give us your opinion"
@@ -91,7 +93,7 @@ class StoreCampaignsController < ApplicationController
 
   def campaign_params
     params.require(:storecampaign).permit(:name, :campaign_id, :campaign_text_status, :campaign_text, :sponsored_text_status, :sponsored_text, :media, :splashimage_opacity , :splashimage, :background_color ,
-    :bg_img, :background, :splashpage_status, :video , :contact_type_id )
+    :bg_img, :background, :splashpage_status, :video , :contact_type_id, :text_color )
   end
 
 end

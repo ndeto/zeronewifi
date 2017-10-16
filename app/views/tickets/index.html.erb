@@ -20,6 +20,7 @@
   <thead>
     <tr>
       <th>Code</th>
+      <th>Number of Use</th>
       <th></th>
     </tr>
   </thead>
@@ -28,7 +29,8 @@
     <% @tickets.each do |ticket| %>
       <tr>
         <td><%= ticket.code %></td>
-        <td><span class="blue"> <%= link_to 'Edit', edit_ticket_path(ticket) %> </span>| <span class="red"> <%= link_to 'Delete', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></span></td>
+        <td><%= ticket.number_of_use %></td>
+        <td><span class="blue"> <%= link_to 'Edit', edit_ticket_path(ticket) %> </span> | <span class="red"> <%= link_to 'Delete', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></span></td>
       </tr>
     <% end %>
   </tbody>

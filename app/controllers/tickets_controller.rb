@@ -1,5 +1,6 @@
 class TicketsController < ApplicationController
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_store!, except:[:new,:create]
   # GET /tickets
   # GET /tickets.json
   def index
@@ -27,18 +28,27 @@ class TicketsController < ApplicationController
   # POST /tickets
   # POST /tickets.json
   def create
-    @ticket = Ticket.new(ticket_params)
+    num = params[:number_of_use].to_i
+    @store = Store.find(1)
+    @code = randy
+    Ticket.create(code:@code,number_of_use:num)
+  end
 
-    respond_to do |format|
-      if @ticket.save
-        format.html { redirect_to @ticket, notice: 'Ticket was successfully created.' }
-        format.json { render :show, status: :created, location: @ticket }
-      else
-        format.html { render :new }
-        format.json { render json: @ticket.errors, status: :unprocessable_entity }
-      end
+  def verify
+    ticket = params[:ticket]
+
+    @ticket = Ticket.where(code:ticket).first
+
+    if @ticket.nil?
+      flash[:alert] = "Invalid Ticket! Please request a ticket from a staff member"
+      redirect_to(request.referer)
+    else
+      nu = @ticket.number_of_use - 1
+      @ticket.update(number_of_use:nu)
+      redirect_to("http://192.168.7.1/login?username=57EDBGH3&password=57EDBGH3")
     end
   end
+
 
   # PATCH/PUT /tickets/1
   # PATCH/PUT /tickets/1.json
@@ -74,4 +84,8 @@ class TicketsController < ApplicationController
     def ticket_params
       params.require(:ticket).permit(:code)
     end
+
+  def randy
+    ref = [*'A'..'Z', *"0".."9"].sample(3).join
+  end
 end

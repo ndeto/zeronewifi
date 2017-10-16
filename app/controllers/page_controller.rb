@@ -34,8 +34,14 @@ class PageController < ApplicationController
   def submit
     @contact = Contact.create(contact_params.merge(store_id:session[:store_id],date:Date.current))
     @contact.save
-      redirect_to("http://192.168.7.1/login?username=57EDBGH3&password=57EDBGH3")
-      #redirect_to("https://www.google.co.ke")
+      #redirect_to("http://192.168.7.1/login?username=57EDBGH3&password=57EDBGH3")
+      redirect_to(pages_ticket_path)
+  end
+
+  def ticket
+    @store = Store.find(session[:store_id])
+    @camp = StoreCampaign.find(@store.store_campaign_id)
+    render :layout=> false
   end
   
   private

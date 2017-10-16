@@ -28,6 +28,7 @@ background-color: <%= @camp.background_color %>;
 <% end %>
   font-family: "Baskerville";
   background-size: cover;
+  color:<%= @camp.text_color %>
 	}
 	video {
 		border-style: solid;
@@ -51,7 +52,7 @@ background-color: <%= @camp.background_color %>;
 	}
 	a {
 		text-decoration: none;
-		color: #FFFFFF;
+		color: <%= @camp.text_color %>;
 	}
 	a:visited {
 		text-decoration: none;

@@ -25,7 +25,8 @@ class PollsController < ApplicationController
     @question = @question.update(question_params)
 
     if @question
-      redirect_to("http://192.168.7.1/login?username=57EDBGH3&password=57EDBGH3")
+      #redirect_to("http://192.168.7.1/login?username=57EDBGH3&password=57EDBGH3")
+      redirect_to(pages_ticket_path)
     else
       redirect_to(request.referer)
     end

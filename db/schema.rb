@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171005130121) do
+ActiveRecord::Schema.define(version: 20171012114135) do
 
   create_table "campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20171005130121) do
     t.string   "video_content_type"
     t.integer  "video_file_size"
     t.datetime "video_updated_at"
+    t.string   "text_color"
     t.index ["campaign_id"], name: "index_store_campaigns_on_campaign_id", using: :btree
     t.index ["contact_type_id"], name: "index_store_campaigns_on_contact_type_id", using: :btree
     t.index ["store_id"], name: "index_store_campaigns_on_store_id", using: :btree
@@ -110,8 +111,9 @@ ActiveRecord::Schema.define(version: 20171005130121) do
 
   create_table "tickets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "code"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "number_of_use"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
