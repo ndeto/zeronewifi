@@ -43,9 +43,15 @@ class TicketsController < ApplicationController
       flash[:alert] = "Invalid Ticket! Please request a ticket from a staff member"
       redirect_to(request.referer)
     else
+      if @ticket.number_of_use < 1
+        flash[:alert] = "Expired Ticket! Please request a ticket from a staff member"
+        @ticket.destroy
+        redirect_to(request.referer)
+      else
       nu = @ticket.number_of_use - 1
       @ticket.update(number_of_use:nu)
       redirect_to("http://192.168.7.1/login?username=57EDBGH3&password=57EDBGH3")
+      end
     end
   end
 
