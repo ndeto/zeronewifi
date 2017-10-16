@@ -17,7 +17,8 @@ class PollAnswersController < ApplicationController
     @answer = PollAnswer.find(params[:count][:count])
     count = @answer.count + 1
     @answer.update(count:count)
-    redirect_to("http://192.168.7.1/login?username=57EDBGH3&password=57EDBGH3")
+    #redirect_to("http://192.168.7.1/login?username=57EDBGH3&password=57EDBGH3")
+    redirect_to(pages_ticket_path)
   end
 
   def show
