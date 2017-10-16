@@ -50,6 +50,9 @@ class TicketsController < ApplicationController
       else
       nu = @ticket.number_of_use - 1
       @ticket.update(number_of_use:nu)
+      if nu == 0
+        @ticket.destroy
+      end
       redirect_to("http://192.168.7.1/login?username=57EDBGH3&password=57EDBGH3")
       end
     end
