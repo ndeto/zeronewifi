@@ -109,6 +109,9 @@
         }
 
     }
+    
+
+
     function phonecheck(phonenumber) {
         //var phoneno = /^(?:(?:254|\+254|0)?(07(?:(?:[12][0-9])|(?:0[0-8])|(9[0-2]))[0-9]{6})|(?:254|\+254|0)?(7(?:(?:[3][0-9])|(?:5[0-6])|(8[5-9]))[0-9        ]{6})    |(?:254|\+254|0)?(77[0-6][0-9]{6})|(?:254|\+254|0)?(76[34][0-9]{6}))$/;
         var phoneno = /^(2547)([0-9|7])(\d){7}$/;
@@ -137,6 +140,8 @@
                 <%= f.number_field :phone, required:"required", id:'p_phone', onchange:'chk()' %>
                 <div class="error"></div>
                 <p><%= submit_tag 'Browse!', class: 'btn btn-lg', style: 'margin:1em;font-style:bold;font-size:22px; text-align:center;color:#000;border-radius:0px;width:"100%";border-style:none;background-color:#fff;opacity:0.9', id: 'br_btn', type: 'submit', disabled:'disabled' %></p>
+
+                <%= link_to "STAFF LOGIN", pages_code_path %>
             <% end %>
           </div>
         </div>
