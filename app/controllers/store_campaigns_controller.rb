@@ -93,7 +93,7 @@ class StoreCampaignsController < ApplicationController
 
   def campaign_params
     params.require(:storecampaign).permit(:name, :campaign_id, :campaign_text_status, :campaign_text, :sponsored_text_status, :sponsored_text, :media, :splashimage_opacity , :splashimage, :background_color ,
-    :bg_img, :background, :splashpage_status, :video , :contact_type_id, :text_color )
+    :bg_img, :background, :splashpage_status, :video , :contact_type_id, :text_color, :sms_status )
   end
 
 end

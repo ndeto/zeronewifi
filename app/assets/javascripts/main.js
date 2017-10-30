@@ -3,6 +3,8 @@ jQuery(document).ready(function($) {
 document.addEventListener("turbolinks:load", function() {
 
 
+
+
 	//alert('Jquery Loaded');
 
 	$('#op').change(function(e) {
@@ -49,3 +51,5 @@ document.addEventListener("turbolinks:load", function() {
 	});
 
 });
+
+

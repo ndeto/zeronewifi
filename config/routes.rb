@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   get '/users/sign_up' => 'stores#index'
   put '/store_campaigns/update_poll'
   get '/poll/view/:id' => 'poll_answers#show', as: "poll_view"
-  get '/pages/ticket' => 'page#ticket'
+  get '/pages/phone' => 'page#phone'
+  post '/pages/ticket' => 'page#ticket'
+  get '/pages/code' => 'page#code'
   post 'tickets/verify' => 'tickets#verify'
 
   devise_scope :store do

@@ -1,6 +1,6 @@
 class PollAnswersController < ApplicationController
 
-  before_action :authenticate_store!
+  before_action :authenticate_store!, except:[:update]
 
   def create
     @question = Question.find(params[:question_id])
@@ -17,8 +17,14 @@ class PollAnswersController < ApplicationController
     @answer = PollAnswer.find(params[:count][:count])
     count = @answer.count + 1
     @answer.update(count:count)
-    #redirect_to("http://192.168.7.1/login?username=57EDBGH3&password=57EDBGH3")
-    redirect_to(pages_ticket_path)
+    @store = Store.find(1);
+    @camp = StoreCampaign.find(@store.store_campaign_id)
+
+    if @camp.sms_status
+      redirect_to(pages_phone_path)
+    else
+      redirect_to(pages_code_path)
+    end
   end
 
   def show

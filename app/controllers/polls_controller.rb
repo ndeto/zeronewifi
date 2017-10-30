@@ -26,7 +26,7 @@ class PollsController < ApplicationController
 
     if @question
       #redirect_to("http://192.168.7.1/login?username=57EDBGH3&password=57EDBGH3")
-      redirect_to(pages_ticket_path)
+      redirect_to(pages_phone_path)
     else
       redirect_to(request.referer)
     end
@@ -37,7 +37,7 @@ class PollsController < ApplicationController
   
   def question_params
     params.require(:question).permit(:question, :name, :campaign_id, :campaign_text_status, :campaign_text, :sponsored_text_status, :sponsored_text, :media, :splashimage_opacity , :splashimage, :background_color ,
-                                     :bg_img, :background, :splashpage_status, :video , :contact_type_id)
+                                     :bg_img, :background, :splashpage_status, :video , :contact_type_id, :sms_status)
   end
   
 end

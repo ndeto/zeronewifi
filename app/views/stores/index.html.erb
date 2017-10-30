@@ -80,9 +80,13 @@
                 var data2 = google.visualization.arrayToDataTable([
                     ['Day', 'Visits'],
 
-                    <% @contact.each do |c|%>
+                    <%
+                    if @contact.nil?
+                    @contact.each do |c|%>
                     [new Date(<%= c.strftime("%Y") %>,<%= c.strftime("%m") %>,<%= c.strftime("%-d") %>) , <%= Contact.where(date:c).count %>],
-                    <% end %>
+                    <%
+                    end
+                    end %>
                 ]);
 
                 var options2 = {
