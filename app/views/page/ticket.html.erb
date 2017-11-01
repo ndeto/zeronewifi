@@ -101,7 +101,7 @@
           <div class="text-center col-md-6 col-md-offset-3">
             <span style="font-size: 20px;color: red;font-weight: bold;"><%= alert %></span>
             <%= form_tag("/tickets/verify", method: "post") do %>
-                <% if @today %>
+                <% if !@today %>
                     <p class="text-center" style="color:#000; font-size:36px; font-family:'Century Gothic';">
                       <strong>Please enter your ticket we sent you to access the internet</strong></p>
                 <% else %>
