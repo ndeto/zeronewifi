@@ -79,7 +79,7 @@ class PageController < ApplicationController
 
       @store = Store.find(1)
       @code = randy
-      Ticket.create(code: @code, number_of_use: 3)
+      Ticket.create(code: @code, number_of_use: 2)
       Contact.create(store_id: 1, phone: params[:ticket][:phone], date: @date)
       # And of course we want our recipients to know what we really do
       message = "Hello, welcome to After40 Hotel, your access code is #{@code}"
@@ -100,7 +100,6 @@ class PageController < ApplicationController
       rescue AfricasTalkingGatewayException => ex
         puts 'Encountered an error: ' + ex.message
       end
-
 # DONE!
     else
       @date2 = @contact.created_at.strftime("%m/%d/%Y")
@@ -139,7 +138,7 @@ class PageController < ApplicationController
           if reports
             @store = Store.find(1)
             @code = randy
-            Ticket.create(code: @code, number_of_use: 1)
+            Ticket.create(code: @code, number_of_use: 2)
             Contact.create(store_id: 1, phone: params[:ticket][:phone], date: @date)
           end
 
