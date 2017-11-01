@@ -70,16 +70,16 @@ class PageController < ApplicationController
       require 'AfricasTalkingGateway'
 
       # Specify your login credentials
-      username = "cnetwifi";
+      username = "cnetwifi"
       apikey = "62152c34660a65163377ddf596f5fbe96dadbd542143b784a240e435dddbc059";
 
       # Specify the numbers that you want to send to in a comma-separated list
       # Please ensure you include the country code (+254 for Kenya in this case, +256 for Uganda)
-      to = "#{params[:ticket][:phone]}";
+      to = "#{params[:ticket][:phone]}"
 
       @store = Store.find(1)
       @code = randy
-      Ticket.create(code: @code, number_of_use: 1)
+      Ticket.create(code: @code, number_of_use: 3)
       Contact.create(store_id: 1, phone: params[:ticket][:phone], date: @date)
       # And of course we want our recipients to know what we really do
       message = "Hello, welcome to After40 Hotel, your access code is #{@code}"
