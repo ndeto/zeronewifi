@@ -49,6 +49,11 @@ class StoresController < ApplicationController
     @store.update(store_campaign_id:params[:id])
     redirect_to(request.referer)
   end
+
+  def clients
+    @contacts = Contact.where(store_id:current_store.id)
+    set_admin
+  end
   
   def secret
     @store = Store.all

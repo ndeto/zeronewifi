@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   post '/pages/ticket' => 'page#ticket'
   get '/pages/code' => 'page#code'
   post 'tickets/verify' => 'tickets#verify'
+  get '/stores/clients' => 'stores#clients'
 
   devise_scope :store do
     get 'home/new', to: 'store_registrations#new'
