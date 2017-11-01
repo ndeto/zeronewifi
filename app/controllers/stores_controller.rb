@@ -51,7 +51,8 @@ class StoresController < ApplicationController
   end
 
   def clients
-    @contacts = Contact.where(store_id:current_store.id)
+    @contacts = Contact.select(:phone,:created_at).where(store_id:current_store.id).distinct
+    #@contacts = Contact.where(store_id:current_store.id).select(:phone).distinct
     set_admin
   end
   
