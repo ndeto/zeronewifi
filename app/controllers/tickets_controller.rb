@@ -41,12 +41,12 @@ class TicketsController < ApplicationController
 
     if @ticket.nil?
       flash[:alert] = "Invalid Ticket! Please request a ticket from a staff member"
-      redirect_to(request.referer)
+      redirect_to(pages_code_path)
     else
       if @ticket.number_of_use < 1
         flash[:alert] = "Expired Ticket! Please request a ticket from a staff member"
         @ticket.destroy
-        redirect_to(request.referer)
+        redirect_to(pages_code_path)
       else
       nu = @ticket.number_of_use - 1
       @ticket.update(number_of_use:nu)
