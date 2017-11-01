@@ -107,7 +107,7 @@ class PageController < ApplicationController
       puts @date
       puts @date2
 
-      if @contact == @date2
+      if @date == @date2
         @today = true
       else
         @today = false
