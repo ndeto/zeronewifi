@@ -22,13 +22,14 @@ end
     key = ref = [*'A'..'Z', *"0".."9"].sample(8).join
     @user = User.find(current_user.id)
     @store = @user.store.create(store_params.merge(key:key,active:false))
-
     if @store.save
-      flash[:notice] = "Done"
+      flash[:notice] = "Your store has been created"
       redirect_to(home_stores_path)
-      else
-      flash[:notice] = "Ooops"
+    else
+      flash[:alert] = "Sorry, Something went wrong"
+      redirect_to(request.referer) and return
     end
+
   end
   
   def edit

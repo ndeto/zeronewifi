@@ -12,7 +12,9 @@
 	<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Store Name </label>
 	<div class="col-sm-9">
 		<%= f.text_field :store_name, class:'col-xs-10 col-sm-5', placeholder:"Store Name", required:'required' %>
-	</div>
+  </div>
+  <span class="store_name_prev"></span>
+
 </div>
 
 <div class="form-group">
@@ -20,14 +22,9 @@
 	<div class="col-sm-9">
 		<%= f.text_field :email, class:'col-xs-10 col-sm-5', placeholder:"Email", required:'required' %>
 	</div>
+  <span class="email_prev"></span>
 </div>
 
-<div class="form-group">
-	<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Username </label>
-	<div class="col-sm-9">
-		<%= f.text_field :username, class:'col-xs-10 col-sm-5', placeholder:"Username", required:'required' %>
-	</div>
-</div>
 
 <div class="form-group">
 	<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Password <i>(leave blank if you don't want to change it)</i></label>
@@ -38,6 +35,7 @@
         <em><%= @minimum_password_length %> characters minimum</em>
     <% end %>
 	</div>
+  <span class="pass_prev"></span>
 </div>
 
   <div class="form-group">
@@ -45,11 +43,13 @@
 	<div class="col-sm-9">
 		<%= f.password_field :password_confirmation, class:'col-xs-10 col-sm-5', placeholder:"Password",  autocomplete: "off" %>
 	</div>
-</div>
+    <span class="pass_conf_prev"></span>
+
+  </div>
 
 <div class="clearfix form-actions">
 	<div class="col-md-offset-3 col-md-9">
-		<%= f.button type:'submit', class:"btn btn-info" do %>
+		<%= f.button type:'submit', class:"btn btn-info", id:'store_sign',disabled:'disabled' do %>
 		<i class="ace-icon fa fa-check bigger-110"></i>
 		Submit
 		<% end %>
