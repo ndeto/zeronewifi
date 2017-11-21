@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   get '/pages/code' => 'page#code'
   post 'tickets/verify' => 'tickets#verify'
   get '/stores/clients' => 'stores#clients'
+  get 'pages/facebook' => 'page#fb'
+  get '/pages/email' => 'page#email'
 
   devise_scope :store do
     get 'home/new', to: 'store_registrations#new'

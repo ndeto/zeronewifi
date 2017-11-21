@@ -133,7 +133,7 @@
 		</div>
 	</div>
 </div>
-<div class="row" style="background-color: #F3F3F3;padding:1em; margin-bottom: -1em;">
+<div class="row" style="background-color: #F3F3F3;padding:1em 0 0 1em; margin: 1em;">
 	<div class="col-md-offset-3 col-md-6">
 		<p>
 			<%= f.submit 'Save Question', class:'btn btn-primary'%>
@@ -144,7 +144,7 @@
 
 <%end%>
 
-<div class="row">
+<div class="row" style="margin: 1em;padding: 1em;">
 	<div class="col-md-offset-1 col-md-5">
 		<h1> Answers</h1>
 		<p>
@@ -161,14 +161,8 @@
 	</div>
 	<div class="col-md-offset-1 col-md-5">
 		<div id="answers">
-
 			<% @question.poll_answer.all.each do |a| %>
-          <div class="col-xs-12">
-            <div class="field">
-			<%= a.answer%> <%= link_to poll_answer_url(a) , method:'delete', remote:true, data: { confirm: "Delete Answer?" } do %> <i class="fa fa-times"></i> <% end %>
-            </div></div>
-              <p>
-      </p>
+			<p><%= a.answer%> <%= link_to poll_answer_url(a) , method:'delete', remote:true, data: { confirm: "Delete Answer?" } do %> <i class="fa fa-times"></i> <% end %></p>
 				<%end%>
 		</div>
 	</div>

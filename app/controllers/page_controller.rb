@@ -159,6 +159,22 @@ class PageController < ApplicationController
     end
   end
 
+  def fb
+    @store = Store.find(session[:store_id])
+    @camp = StoreCampaign.find(@store.store_campaign_id)
+    render :layout => false
+  end
+
+  def email
+    @store = Store.find(session[:store_id])
+    @camp = StoreCampaign.find(@store.store_campaign_id)
+    render :layout => false
+  end
+
+  def regmail
+
+  end
+
   private
 
   def randy

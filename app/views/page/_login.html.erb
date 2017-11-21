@@ -1,1 +1,20 @@
-WELL HERE ARE THE OPTIONS
+
+<div class="row" style="margin-top: 2em;">
+  <div class="col-md-6 col-md-offset-3">
+    <% if @camp.fb_status %>
+        <div class="col-md-4">
+          <a href="<%= pages_facebook_path %>" class="btn btn-primary btn-lg">Facebook</a>
+        </div>
+    <% end %>
+    <% if @camp.sms_status %>
+        <div class="col-md-4">
+          <a href="<%= pages_phone_path %>" class="btn btn-primary btn-lg">SMS Login</a>
+        </div>
+    <% end %>
+    <% if @camp.email_status %>
+        <div class="col-md-4">
+          <a href="<%= pages_email_path %>" class="btn btn-primary btn-lg">Email Login</a>
+        </div>
+    <% end %>
+  </div>
+</div>

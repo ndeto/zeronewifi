@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= @store.store_name %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+  body {
+  <% if @camp.background == 'image' %> background-image: url('<%= @camp.bg_img_url.to_s %>');
+  <% else %> background-color: <%= @camp.background_color %> !important;
+  <% end %> font-family: "Baskerville";
+    background-size: cover;
+  }
+
+  video {
+    border-style: solid;
+    border-color: #FFFFFF;
+    border-width: 1px;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-position: center;
+  }
+
+  button {
+    background-color: #B5252E;
+    color: #000000;
+    font-family: "Century Gothic";
+  }
+
+  a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+
+  a:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #000000;
+  }
+
+  .outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+</style>
+<body>
+<div class="outer">
+  <div class="middle">
+    <div class="inner">
+
+      <div class="col-md-6 col-md-offset-3" style="background-color: white;opacity: 0.8; border-radius: 3px;text-align: center;vertical-align: middle;padding: 5em;">
+
+      <div id="fb-root"></div>
+
+
+      <script>
+          window.fbAsyncInit = function () {
+              FB.init({appId: '1925733261009831', status: true, cookie: true, xfbml: true});
+              FB.Canvas.setSize({width: 520, height: 1500});
+              FB.Event.subscribe('edge.create',
+                  function (response) {
+                      console.log("success!")
+                      // put redirect code here eg
+                      window.location = "http://172.16.16.1";
+                  }
+              );
+              FB.api({
+                      method:     "pages.isFan",
+                      page_id:        100015816849554,
+                  },  function(response) {
+                      console.log(response);
+                      if(response){
+                          alert('You already like this page');
+                          history.go(-1);
+                      } else {
+                          alert('You not Likey :(');
+                      }
+                  }
+              );
+          };
+
+
+
+          //Load the SDK asynchronously
+          (function () {
+              var e = document.createElement('script');
+              e.async = true;
+              e.src = document.location.protocol +
+                  '//connect.facebook.net/en_US/all.js';
+              document.getElementById('fb-root').appendChild(e);
+          }());
+      </script>
+      <!--
+        Below we include the Login Button social plugin. This button uses
+        the JavaScript SDK to present a graphical Login button that triggers
+        the FB.login() function when clicked.
+      -->
+
+      <fb:like href="<%= @camp.fb_link  %>" send="false" width="450" show_faces="true" font="" data-size="large" share="true"></fb:like>
+
+      <div id="status"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

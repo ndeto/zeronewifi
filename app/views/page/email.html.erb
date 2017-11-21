@@ -10,7 +10,7 @@
 </head>
 
 <style>
-  .panel {
+  .panel{
     background: rgba(0, 0, 0, 0.5);
     width: 50%;
     height: 400px;
@@ -27,6 +27,7 @@
   <% else %> background-color: <%= @camp.background_color %>;
   <% end %> font-family: "Baskerville";
     background-size: cover;
+    color:<%= @camp.text_color %>
   }
 
   video {
@@ -44,6 +45,17 @@
     box-sizing: border-box;
     background-position: center;
   }
+
+  input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-position: center;
+  }
+
 
   button {
     background-color: #B5252E;
@@ -88,6 +100,26 @@
     width: 100%;
   }
 </style>
+<script>
+    $(document).ready(function() {
+
+        $("#theemail").keyup(function (event) {
+            email = $('#theemail').val();
+            validateEmail(email);
+
+        });
+    });
+        function validateEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+            if (email.match(re)) {
+                document.getElementById('signupbtn').removeAttribute('disabled');
+            } else {
+
+                document.getElementById('signupbtn').setAttribute('disabled', 'true');
+            }
+        }
+</script>
 
 <body>
 <div class="outer">
@@ -97,16 +129,12 @@
         <div class="condend">
           <div class="text-center col-md-6 col-md-offset-3">
             <span style="font-size: 20px;color: red;font-weight: bold;"><%= alert %></span>
-            <%= form_tag("/tickets/verify", method: "post") do %>
+            <%= form_for :ticket, :url => {:controller=>"page" ,:action=>"ticket"}, method: "post" , remote:true do  |f|%>
                 <p class="text-center" style="color:<%= @camp.text_color %>; font-size:36px; font-family:'Century Gothic';">
-                  <strong>Welcome to After40 Hotel, please enter your internet access code</strong>
-                </p>
-                    <p class="text-center" style="color:<%= @camp.text_color %>; font-size:20px; font-family:'Century Gothic';">
-                      <strong>Please Request an access ticket from staff if you dont have one</strong>
-                    </p>
-
-                <input type="text" name="ticket" required/>
-                <p><%= submit_tag 'Browse!', class: 'btn btn-lg', style: 'margin:1em;font-style:bold;font-size:22px; text-align:center;color:#000;border-radius:0px;width:"100%";border-style:none;background-color:#fff;opacity:0.9', id: 'signupbtn', type: 'submit' %></p>
+                  <strong>Please enter your email address</strong></p>
+                <p><%= text_field_tag :phone, nil, placeholder:'Leave your email here', class:'text-center', id:'theemail', width:'100%', style:'color:#000' %></p>
+                <div class="error"></div>
+                <p><%= submit_tag 'Browse!', class: 'btn btn-lg', style: 'margin:1em;font-style:bold;font-size:22px; text-align:center;color:#000;border-radius:0px;width:"100%";border-style:none;background-color:#fff;opacity:0.9', id:'signupbtn', type: 'submit', disabled:'disabled' %></p>
             <% end %>
           </div>
         </div>

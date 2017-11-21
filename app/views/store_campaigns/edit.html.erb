@@ -14,10 +14,7 @@
 			<%= f.label "Show Splash Page" %>
 			<%= f.check_box :splashpage_status %>
 		</div>
-    <div class="form-group">
-      <%= f.label "Enable SMS OTP access" %>
-      <%= f.check_box :sms_status %>
-    </div>
+
 	</div>
 </div>
 <div class="row" style="padding:1em;">
@@ -134,14 +131,28 @@
 
 	</div>
 </div>
-<div class="row">
-    <div class="col-md-5 col-md-offset-1">
-      <p><h3>Needed Contact</h3>
-      </p>
+<div class="row" style="padding: 1em;">
+    <div class="col-md-4">
       <div class="field">
-		<% ContactType.all.each do |c|%>
-		<%= f.radio_button(:contact_type_id, c.id) %> <%= c.display %><p></p>
-		<% end %>
+        <%= f.label "Enable Login by Facebook Like" %>
+		  <%= f.check_box :fb_status %>
+      </div>
+      <br>
+      <div class="field">
+        <%= f.label "Facebook Page" %>
+        <%= f.text_field :fb_link %>
+      </div>
+    </div>
+  <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label "Enable SMS Login" %>
+        <%= f.check_box :sms_status %>
+      </div>
+  </div>
+  <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label "Enable Email Login" %>
+        <%= f.check_box :email_status %>
       </div>
     </div>
 	</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171030094514) do
+ActiveRecord::Schema.define(version: 20171120134552) do
 
   create_table "campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -57,8 +57,8 @@ ActiveRecord::Schema.define(version: 20171030094514) do
   create_table "store_campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "campaign_id"
     t.string   "name"
-    t.datetime "created_at",                                                     null: false
-    t.datetime "updated_at",                                                     null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
     t.integer  "store_id"
     t.boolean  "sponsored_text_status"
     t.string   "sponsored_text"
@@ -77,7 +77,10 @@ ActiveRecord::Schema.define(version: 20171030094514) do
     t.integer  "video_file_size"
     t.datetime "video_updated_at"
     t.string   "text_color"
-    t.boolean  "sms_status",                                     default: false
+    t.boolean  "fb_status"
+    t.boolean  "sms_status"
+    t.boolean  "email_status"
+    t.string   "fb_link"
     t.index ["campaign_id"], name: "index_store_campaigns_on_campaign_id", using: :btree
     t.index ["contact_type_id"], name: "index_store_campaigns_on_contact_type_id", using: :btree
     t.index ["store_id"], name: "index_store_campaigns_on_store_id", using: :btree
