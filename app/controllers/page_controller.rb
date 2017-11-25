@@ -116,7 +116,7 @@ class PageController < ApplicationController
 
         # Specify your login credentials
         username = "cnetwifi";
-        apikey = "62152c34660a65163377ddf596f5fbe96dadbd542143b784a240e435dddbc059";
+        apikey = "da3fe299dc936e23363959d47738548d597bab7f23f2e8f596352b83eb1742d4";
 
         # Specify the numbers that you want to send to in a comma-separated list
         # Please ensure you include the country code (+254 for Kenya in this case, +256 for Uganda)
