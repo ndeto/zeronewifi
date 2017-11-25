@@ -102,6 +102,7 @@ class PageController < ApplicationController
       end
 # DONE!
     else
+
       @date2 = @contact.created_at.strftime("%m/%d/%Y")
       puts @date
       puts @date2
@@ -110,6 +111,7 @@ class PageController < ApplicationController
         puts "Date is equal to today"
         @today = true
       else
+        @code = randy
         puts "Date is not equal to today"
         # Include the helper gateway class
         require 'AfricasTalkingGateway'
@@ -137,7 +139,6 @@ class PageController < ApplicationController
 
           if reports
             @store = Store.find(1)
-            @code = randy
             Ticket.create(code: @code, number_of_use: 2)
             Contact.create(store_id: 1, phone: params[:ticket][:phone], date: @date)
           end
