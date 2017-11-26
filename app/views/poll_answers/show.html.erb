@@ -1,25 +1,24 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<div class="row">
-  <div class="col-md-8 col-md-offset-2">
-    <h2>Campaign Name: <%= @camp.name %></h2>
-    <p></p>
-    <h3>Question: <%= @question.question %></h3>
-    <p></p>
-  </div>
+<div class="col-md-12">
+<h1 class="myclass text-center"><i class="fa fa-info-circle"></i> Poll Details</h1>
 </div>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <ul>
+<div class="col-md-8 col-md-offset-2 text-center" style="background:#f5f5f5;margin-bottom:8em">
+    <br><br><h2><strong>Campaign Name:<br></strong> <%= @camp.name %></h2>
+    <p></p>
+    <h3><strong>Question:<br></strong> <%= @question.question %></h3>
+    <p><br><br><br></p>
+  <div class="col-md-6 col-md-offset-3" style="margin-bottom:8em">
+    <h4>Answers</h4>
+    <ul style="list-style:circle">
       <% @answers.each do |a| %>
-          <li><%= a.answer %> : <%= a.count %></li>
+          <li class="myclass" style="text-align:left"><%= a.answer %> : <%= a.count %></li>
       <% end %>
     </ul>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3" text-center id="pollans" style="width: 900px; height: 500px;">
+  <div class="col-md-6 col-md-offset-3" text-center id="pollans" style="width:100%; height: 500px;">
   </div>
 </div>
 

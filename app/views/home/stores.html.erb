@@ -1,21 +1,18 @@
 <%= render 'layouts/alerts'%>
 </br>
-<div class="row">
-	<div class="col-md-9 col-md-offset-1">
-		<a href="<%= home_new_path %>" class="btn btn-success"> <i class="ace-icon fa fa-plus"></i> New Store</a> 
-		<a href="<%= stores_path %>" target="_blank" class="btn btn-success"> <i class="ace-icon fa fa-external-link"></i> Store Login</a>
+	<div class="col-md-12">
+		<a href="<%= home_new_path %>" class="my-button"> <i class="ace-icon fa fa-plus"></i> New Store</a>
+		<a href="<%= stores_path %>" target="_blank" class="my-button"> <i class="ace-icon fa fa-external-link"></i> Store Login</a>
 	</div>
-</div>
 
-<div class="row">
-	<div class="col-md-9 col-md-offset-1">
-		<h3 class="header smaller lighter blue"></h3>
+<div class="col-md-12">
+		<h3 class="header smaller lighter myclass">Have a look at your current stores</h3>
 
 		<div class="clearfix">
 			<div class="pull-right tableTools-container"></div>
 		</div>
 		<div class="table-header">
-			Your Stores
+			<i class="fa fa-shopping-bag"></i> Your Stores
 		</div>
 
 		<!-- div.table-responsive -->
@@ -26,9 +23,9 @@
 				<thead>
 
 					<tr>
-						<th class="center"><label class="pos-rel">
+						<!-- <th class="center"><label class="pos-rel">
 							<input type="checkbox" class="ace" />
-							<span class="lbl"></span> </label></th>
+							<span class="lbl"></span> </label></th> -->
 						<th>Name</th>
 						<th>Email</th>
 						<th>Status</th>
@@ -40,18 +37,18 @@
 				<tbody>
 					<% @stores.each do |s| %>
 					<tr>
-						<td class="center"><label class="pos-rel">
+						<!-- <td class="center"><label class="pos-rel">
 							<input type="checkbox" class="ace" />
-							<span class="lbl"></span> </label></td>
+							<span class="lbl"></span> </label></td> -->
 
-						<td><a href="#"><%= s.store_name %></a></td>
+						<td><a href="<%= stores_path %>"><%= s.store_name %></a></td>
 						<td><%= s.email %></td>
 						<td><%= s.active %></td>
 						<td>
 						<div class="hidden-sm hidden-xs action-buttons">
 							<a class="blue" href="#"> <i class="ace-icon fa fa-search-plus bigger-130"></i> </a>
 
-							<a class="green" href="<%=  %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> </a>
+							<a class="green" href="<%= stores_path %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> </a>
 
 							<a class="red" href="#"> <i class="ace-icon fa fa-trash-o bigger-130"></i> </a>
 						</div>
@@ -67,7 +64,7 @@
 									</li>
 
 									<li>
-										<a href="<%=  %>" class="tooltip-success" data-rel="tooltip" title="Edit"> <span class="green"> <i class="ace-icon fa fa-pencil-square-o bigger-120"></i> </span> </a>
+										<a href="<%= stores_path %>" class="tooltip-success" data-rel="tooltip" title="Edit"> <span class="green"> <i class="ace-icon fa fa-pencil-square-o bigger-120"></i> </span> </a>
 									</li>
 
 									<li>
@@ -81,6 +78,4 @@
 				</tbody>
 			</table>
 		</div>
-	</div>
 </div>
-

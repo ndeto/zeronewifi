@@ -56,13 +56,20 @@ Store.find(1).update({
                          store_campaign_id:1,
                          user_id: 1
                      })
+
+                     Store.create!([
+                                       {:store_name => 'Brook Lounge', :email => 'i.t@samchi.co.ke', :password => 'brooklounge', :password_confirmation => 'brooklounge', reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 15, current_sign_in_at: "2017-09-19 08:38:44", last_sign_in_at: "2017-09-19 08:38:42", current_sign_in_ip: "192.168.7.240", last_sign_in_ip: "192.168.7.239", username: "brook", key: "ABC", activecamp: nil, active: true, contact_type: nil},
+                                   ])
+
+                     Store.find(1).update({
+                                              store_campaign_id:1,
+                                              user_id: 1
+                                          })
 =end
 
-Store.create!([
-                  {:store_name => 'Brook Lounge', :email => 'i.t@samchi.co.ke', :password => 'brooklounge', :password_confirmation => 'brooklounge', reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 15, current_sign_in_at: "2017-09-19 08:38:44", last_sign_in_at: "2017-09-19 08:38:42", current_sign_in_ip: "192.168.7.240", last_sign_in_ip: "192.168.7.239", username: "brook", key: "ABC", activecamp: nil, active: true, contact_type: nil},
-              ])
 
-Store.find(1).update({
-                         store_campaign_id:1,
-                         user_id: 1
-                     })
+ContactType.create!([
+  {name: "email", description: "Require Email", display: "Email"},
+  {name: "phone", description: "Require Phone Number", display: "Phone"},
+  {name: "none", description: "Require No Contacts", display: "None"}
+])

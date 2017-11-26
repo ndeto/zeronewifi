@@ -1,19 +1,18 @@
 class UserRegistrationsController < Devise::RegistrationsController
     # GET /resource/sign_up
   def new
-    
-=begin
+
+
     build_resource({})
     yield resource if block_given?
     respond_with resource do |format|
       format.html { set_admin }
     end
-=end
 
-  redirect_to(stores_path)
+  #redirect_to(stores_path)
 
   end
-  
+
   def private
     build_resource({})
     yield resource if block_given?
@@ -21,7 +20,7 @@ class UserRegistrationsController < Devise::RegistrationsController
       format.html { set_admin }
     end
   end
-  
+
 
     # POST /resource
   def create
@@ -46,11 +45,11 @@ class UserRegistrationsController < Devise::RegistrationsController
       respond_with resource
     end
   end
-  
+
   def edit
     set_admin
   end
-  
+
   # PUT /resource
   # We need to use a copy of the resource because we don't want to change
   # the current user in place.
@@ -77,9 +76,9 @@ class UserRegistrationsController < Devise::RegistrationsController
 
 
   private
-  
+
   def user_params
     params.require(:user).permit(:avatar, :current_password, :email, :password, :confirm_password)
   end
-  
+
 end

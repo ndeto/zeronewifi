@@ -1,60 +1,55 @@
-
-<div style="margin-bottom: 3em;" class="col-md-6 col-md-offset-3"><h2>New Store</h2></div>
-
-<div class="col-md-9 col-md-offset-1">
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html =>{:class => 'form-horizontal'}) do |f| %>
+<div class="col-md-12">
+<h1 class="myclass text-center"><i class="fa fa-plus"></i> Create New Store</h1>
+</div>
+<div class="col-md-8 col-md-offset-2 col-xs-12" style="background:#f5f5f5;margin-bottom:8em">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html =>{:class => ''}) do |f| %>
   <%= devise_error_messages! %>
-  
+
   <%= render 'layouts/alerts'%>
-  
+
 <div class="form-group">
-	<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Store Name </label>
-	<div class="col-sm-9">
-		<%= f.text_field :store_name, class:'col-xs-10 col-sm-5', placeholder:"Store Name", required:'required' %>
+	<label style="margin-top:2em" class="col-sm-12 control-label no-padding-right" for="form-field-1"> Store Name </label>
+	<div class="col-sm-12">
+		<%= f.text_field :store_name, class:'col-xs-12 col-sm-12', placeholder:"Store Name", required:'required' %>
   </div>
   <span class="store_name_prev"></span>
 
 </div>
 
 <div class="form-group">
-	<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Email </label>
-	<div class="col-sm-9">
-		<%= f.text_field :email, class:'col-xs-10 col-sm-5', placeholder:"Email", required:'required' %>
+	<label style="margin-top:2em" class="col-sm-12 control-label no-padding-right" for="form-field-1"> Email </label>
+	<div class="col-sm-12">
+		<%= f.text_field :email, class:'col-xs-12 col-sm-12', placeholder:"Email", required:'required' %>
 	</div>
   <span class="email_prev"></span>
 </div>
 
 
 <div class="form-group">
-	<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Password <i>(leave blank if you don't want to change it)</i></label>
-	<div class="col-sm-9">
-		<%= f.password_field :password, class:'col-xs-10 col-sm-5', placeholder:"Password" %>
-		<% if @minimum_password_length %>
-      <br />
-        <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
+	<label style="margin-top:2em" class="col-sm-12 control-label no-padding-right" for="form-field-1"> Password - <% if @minimum_password_length %><em style="color:red"><%= @minimum_password_length %> characters minimum</em><% end %> <i>.</i></label>
+	<div class="col-sm-12">
+		<%= f.password_field :password, class:'col-xs-12 col-sm-12', placeholder:"Password" %>
 	</div>
   <span class="pass_prev"></span>
 </div>
-
-  <div class="form-group">
-	<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Confirm Password </label>
-	<div class="col-sm-9">
-		<%= f.password_field :password_confirmation, class:'col-xs-10 col-sm-5', placeholder:"Password",  autocomplete: "off" %>
+<div class="form-group">
+	<label style="margin-top:2em" class="col-sm-12 control-label no-padding-right" for="form-field-1"> Confirm Password </label>
+	<div class="col-sm-12">
+		<%= f.password_field :password_confirmation, class:'col-xs-12 col-sm-12', placeholder:"Password",  autocomplete: "off" %>
 	</div>
     <span class="pass_conf_prev"></span>
 
   </div>
 
-<div class="clearfix form-actions">
-	<div class="col-md-offset-3 col-md-9">
-		<%= f.button type:'submit', class:"btn btn-info", id:'store_sign',disabled:'disabled' do %>
-		<i class="ace-icon fa fa-check bigger-110"></i>
-		Submit
-		<% end %>
-	</div>
-</div>
+  <div class="col-md-12" style="margin-top:4em;margin-bottom:8em;">
+  	<div class="col-md-12 text-center">
+  		<%= f.button type:'submit', class:"submit-button" do %>
+  		<i class="ace-icon fa fa-save bigger-110"></i>
+  		Submit Store Details
+  		<% end %>
+  	</div>
+  </div>
+  <div class="clearfix"></div>
 <% end %>
 
 

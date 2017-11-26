@@ -3,11 +3,11 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>Dashboard - Cards</title>
+		<title>CNET Portal Dashboard</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
-		
+
 		<%= csrf_meta_tags %>
 
 		<meta name="description" content="overview &amp; stats" />
@@ -15,7 +15,7 @@
 	</head>
 
 	<body class="no-skin">
-		<div id="navbar" class="navbar navbar-default          ace-save-state">
+		<div id="navbar" class="navbar navbar-default ace-save-state">
 			<div class="navbar-container ace-save-state" id="navbar-container">
 				<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
 					<span class="sr-only">Toggle sidebar</span>
@@ -28,15 +28,19 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="<%= root_path %>" class="navbar-brand"> <small> <i class="fa fa-leaf"></i> <% if store_signed_in? %> <%= current_store.store_name.upcase%> <%else%> CARDS <%end%> </small> </a>
-					
+					<a href="<%= root_path %>" class="navbar-brand"> <small class="mywhite"> <i class="fa fa-user"></i> <% if store_signed_in? %> <%= current_store.store_name.upcase%> <%else%> USER ACCOUNT <%end%> </small> </a>
+
 				</div>
 
 				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
-
 						<li class="light-blue dropdown-modal">
-							<a data-toggle="dropdown" href="#" class="dropdown-toggle"> <i class="fa fa-user fa-2x"></i> <span class="user-info"> Profile </span> <i class="ace-icon fa fa-caret-down"></i> </a>
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" style="background:#fff" src="/assets/user.png" alt="User" />
+								<span class="user-info">
+									<small>User</small>
+									Account
+								</span> <i class="ace-icon fa fa-caret-down"></i> </a>
 
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								<li>
@@ -50,15 +54,15 @@
 									<%= link_to edit_store_registration_path do %>
 									<i class="ace-icon fa fa-user"></i> Profile
 									<%end%>
-									
+
 									<%end%>
-									
+
 									<%if controller_name=='home'%>
-									
+
 									<%= link_to edit_user_registration_path do %>
 									<i class="ace-icon fa fa-user"></i> Profile
 									<%end%>
-									
+
 									<%end%>
 
 								</li>
@@ -116,11 +120,11 @@
 
 		<div class="footer">
 			<div class="footer-inner">
-				<div class="footer-content">
-					<span class="bigger-120"> <span class="blue bolder">C-NET</span> Wifi &copy; 2015- <%= Date.current.strftime('%Y') %></span>
+				<div class="footer-content text-center">
+					<span class="bigger-120">Copyright &copy; 2015 - <%= Date.current.strftime('%Y') %> <span class="blue bolder" style="color:#016d6f !important;">C-NET Wifi</span>. All rights reserved.  </span>
 
-					&nbsp; &nbsp;
-					<span class="action-buttons"> <a href="#"> <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i> </a> <a href="#"> <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i> </a> <a href="#"> <i class="ace-icon fa fa-rss-square orange bigger-150"></i> </a> </span>
+					<br>
+					<span class="action-buttons"> <a href="#"> <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i> </a> <a href="#"> <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i> </a> </span>
 				</div>
 			</div>
 		</div>
@@ -138,6 +142,6 @@
 		<!--[if IE]>
 		<script src="assets/js/jquery-1.11.3.min.js"></script>
 		<![endif]-->
-		
+
 	</body>
 </html>
