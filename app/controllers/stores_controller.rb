@@ -51,7 +51,9 @@ class StoresController < ApplicationController
   end
 
   def clients
-    @contacts = Contact.select(:phone,:created_at).where(store_id:current_store.id).distinct
+    @contacts = Contact.where(store_id:current_store.id).where("contacts.phone IS NOT NULL").distinct(:phone)
+    @emails = Contact.where(store_id:current_store.id).where("contacts.email IS NOT NULL").distinct(:email)
+    #@contacts = Contact.select(:phone,:created_at,:email).where(store_id:current_store.id).distinct
     #@contacts = Contact.where(store_id:current_store.id).select(:phone).distinct
     set_admin
   end
@@ -63,7 +65,7 @@ class StoresController < ApplicationController
   private
   
   def store_params
-    params.require(:store).permit(:store_name,:username, :active)
+    params.require(:store).permit(:store_name,:username, :active, :network_ip)
   end
   
 end

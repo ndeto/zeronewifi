@@ -83,55 +83,42 @@
 
       <div class="col-md-6 col-md-offset-3" style="background-color: white;opacity: 0.8; border-radius: 3px;text-align: center;vertical-align: middle;padding: 5em;">
 
-      <div id="fb-root"></div>
+        <div id="fb-root"></div>
 
 
-      <script>
-          window.fbAsyncInit = function () {
-              FB.init({appId: '1925733261009831', status: true, cookie: true, xfbml: true});
-              FB.Canvas.setSize({width: 520, height: 1500});
-              FB.Event.subscribe('edge.create',
-                  function (response) {
-                      console.log("success!")
-                      // put redirect code here eg
-                      window.location = "http://172.16.16.1";
-                  }
-              );
-              FB.api({
-                      method:     "pages.isFan",
-                      page_id:        100015816849554,
-                  },  function(response) {
-                      console.log(response);
-                      if(response){
-                          alert('You already like this page');
-                          history.go(-1);
-                      } else {
-                          alert('You not Likey :(');
-                      }
-                  }
-              );
-          };
+        <script type="text/javascript">
+            window.fbAsyncInit = function () {
+                //change to your facebook app id
+                FB.init({appId: '1925733261009831', status: true, cookie: true, xfbml: true});
+                FB.Canvas.setSize({width: 520, height: 1500});
+                FB.Event.subscribe('edge.create',
+                    function (response) {
+                // change pagetoredirectto
+                        alert("You liked this page!")
+                        window.location = "<%= "http://#{@store.network_ip}/login?username=57EDBGH3&password=57EDBGH3" %>";
+                    }
+                );
+            };
+
+            (function () {
+                var e = document.createElement('script');
+                e.async = true;
+                e.src = document.location.protocol +
+                    '//connect.facebook.net/en_US/all.js';
+                document.getElementById('fb-root').appendChild(e);
+            }());
+        </script>
+        <!--
+          Below we include the Login Button social plugin. This button uses
+          the JavaScript SDK to present a graphical Login button that triggers
+          the FB.login() function when clicked.
+        -->
 
 
+        <fb:like href="http://www.facebook.com/cnetwifi" send="false" width="450" show_faces="false" font=""></fb:like>
 
-          //Load the SDK asynchronously
-          (function () {
-              var e = document.createElement('script');
-              e.async = true;
-              e.src = document.location.protocol +
-                  '//connect.facebook.net/en_US/all.js';
-              document.getElementById('fb-root').appendChild(e);
-          }());
-      </script>
-      <!--
-        Below we include the Login Button social plugin. This button uses
-        the JavaScript SDK to present a graphical Login button that triggers
-        the FB.login() function when clicked.
-      -->
 
-      <fb:like href="<%= @camp.fb_link  %>" send="false" width="450" show_faces="true" font="" data-size="large" share="true"></fb:like>
-
-      <div id="status"></div>
+        <div id="status"></div>
 
       </div>
     </div>

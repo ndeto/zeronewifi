@@ -35,6 +35,7 @@ class TicketsController < ApplicationController
   end
 
   def verify
+    @store = Store.find(session[:store_id])
     ticket = params[:ticket]
 
     @ticket = Ticket.where(code:ticket).first
@@ -53,7 +54,7 @@ class TicketsController < ApplicationController
       if nu == 0
         @ticket.destroy
       end
-      redirect_to("http://192.168.7.1/login?username=57EDBGH3&password=57EDBGH3")
+      redirect_to("http://#{@store.network_ip}/login?username=57EDBGH3&password=57EDBGH3")
       end
     end
   end

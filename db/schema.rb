@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120134552) do
+ActiveRecord::Schema.define(version: 20171125120720) do
 
   create_table "campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -33,7 +33,16 @@ ActiveRecord::Schema.define(version: 20171120134552) do
     t.date     "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "email"
     t.index ["store_id"], name: "index_contacts_on_store_id", using: :btree
+  end
+
+  create_table "emails", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "email"
+    t.integer  "store_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["store_id"], name: "index_emails_on_store_id", using: :btree
   end
 
   create_table "poll_answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -107,6 +116,7 @@ ActiveRecord::Schema.define(version: 20171120134552) do
     t.integer  "store_campaign_id"
     t.boolean  "active"
     t.string   "contact_type"
+    t.string   "network_ip"
     t.index ["email"], name: "index_stores_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_stores_on_reset_password_token", unique: true, using: :btree
     t.index ["store_campaign_id"], name: "index_stores_on_store_campaign_id", using: :btree
@@ -147,6 +157,7 @@ ActiveRecord::Schema.define(version: 20171120134552) do
   end
 
   add_foreign_key "contacts", "stores"
+  add_foreign_key "emails", "stores"
   add_foreign_key "poll_answers", "questions"
   add_foreign_key "questions", "store_campaigns"
   add_foreign_key "store_campaigns", "campaigns"
