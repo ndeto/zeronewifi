@@ -35,15 +35,15 @@
 		<![endif]-->
 	</head>
 
-	<body class="login-layout">
+	<body class="login-layout" style="background:#fff !important">
 		<div class="main-container">
 			<div class="main-content">
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1">
 						<div class="login-container">
+							<br><br>
 							<div class="center">
-								<h1><i class="ace-icon fa fa-leaf green"></i><span class="red"> Cards</span><span class="white" id="id-text2">Wi-Fi</span></h1>
-								<h4 class="blue" id="id-company-text">&copy; C-NET</h4>
+								<h1 style="text-align:center"><img style="max-height:100px" src="/assets/logo.png"></h1>
 							</div>
 
 							<div class="space-6"></div>
@@ -52,7 +52,7 @@
 								<div id="forgot-box" class="forgot-box visible widget-box no-border">
 									<div class="widget-body">
 										<div class="widget-main">
-											<h4 class="header red lighter bigger"><i class="ace-icon fa fa-key"></i> Retrieve Password </h4>
+											<h4 style="text-align:center" class="header myclass lighter bigger"><i class="ace-icon fa fa-key"></i> Retrieve Password </h4>
 
 											<div class="space-6"></div>
 											<p>
@@ -67,12 +67,12 @@
 												<%= devise_error_messages! %>
 											</p>
 											<fieldset>
-												<label class="block clearfix"> <span class="block input-icon input-icon-right"> <%= f.email_field :email, autofocus: true, class:'form-control', placeholder:'Email' %> <i class="ace-icon fa fa-envelope"></i> </span> </label>
+												<label class="block clearfix"> <span class="block input-icon input-icon-right"> <%= f.email_field :email, autofocus: true, class:'form-control', placeholder:'Email',style:'text-align:center' %> <i class="ace-icon fa fa-envelope"></i> </span> </label>
 
-												<div class="clearfix">
-													<%= f.button type:'submit', class:'width-35 pull-right btn btn-sm btn-danger' do %>
+												<div class="clearfix" style="text-align:center !important">
+													<%= f.button type:'submit', class:'login-button' do %>
 
-													<i class="ace-icon fa fa-lightbulb-o"></i>
+													<i class="ace-icon fa fa-send"></i>
 													<span class="bigger-110">Send!</span>
 													<%end%>
 												</div>
@@ -80,32 +80,20 @@
 											<%end%>
 										</div><!-- /.widget-main -->
 
-										<div class="toolbar center">
+										<div class="toolbar center mybackground">
 											<a href="<%= new_user_session_path %>"  class="back-to-login-link"> Back to login </a>
 										</div>
 									</div><!-- /.widget-body -->
 								</div><!-- /.forgot-box -->
 
 							</div><!-- /.position-relative -->
-
-							<div class="navbar-fixed-top align-right">
-								<br />
-								&nbsp;
-								<a id="btn-login-dark" href="#">Dark</a>
-								&nbsp;
-								<span class="blue">/</span>
-								&nbsp;
-								<a id="btn-login-blur" href="#">Blur</a>
-								&nbsp;
-								<span class="blue">/</span>
-								&nbsp;
-								<a id="btn-login-light" href="#">Light</a>
-								&nbsp; &nbsp; &nbsp;
-							</div>
 						</div>
 					</div><!-- /.col -->
 				</div><!-- /.row -->
 			</div><!-- /.main-content -->
+			<p class="text-center"><br><br>Copyright &copy; 2015 - <%= Date.current.strftime('%Y') %> <span class="blue bolder" style="color:#016d6f !important;">C-NET Wifi</span>. All rights reserved.
+				<br>
+				<span class="action-buttons"> <a href="#"> <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i> </a> <a href="#"> <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i> </a> </span> <br><br></p>
 		</div><!-- /.main-container -->
 
 		<!-- basic scripts -->

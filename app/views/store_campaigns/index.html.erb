@@ -1,23 +1,20 @@
-
-
 <%= render 'layouts/alerts'%>
-
-</br>
-<div class="row">
-	<div class="col-md-10 col-md-offset-1">
-		<a href="<%= new_store_campaign_path %>" class="btn btn-success"> <i class="ace-icon fa fa-plus"></i> New Campaign</a>
-	</div>
+<div class="col-md-12">
+<h1 class="myclass"><i class="fa fa-desktop"></i> Your Campaigns</h1></br><br>
 </div>
 
-<div class="row">
-	<div class="col-xs-9 col-md-offset-1">
-		<h3 class="header smaller lighter blue"></h3>
+	<div class="col-md-12">
+		<a href="<%= new_store_campaign_path %>" class="my-button"> <i class="ace-icon fa fa-plus"></i> New Campaign</a>
+	</div>
+
+	<div class="col-md-12">
+		<h3 class="header smaller lighter myclass">Have a look at your campaigns</h3>
 
 		<div class="clearfix">
 			<div class="pull-right tableTools-container"></div>
 		</div>
 		<div class="table-header">
-			Campaigns
+			<i class="fa fa-desktop"></i> Campaigns
 		</div>
 
 		<!-- div.table-responsive -->
@@ -37,15 +34,15 @@
 				<tbody>
 					<% @campaigns.each do |c| %>
 					<tr>
-						<td><a href="<%= edit_store_campaign_path(c) %>"><%= c.name %></a></td>
+						<td><a href="<%= campaign_edit_path(c) %>"><%= c.name %></a></td>
 						<td><%= Campaign.find(c.campaign_id).display%></td>
 						<td>
 						<div class="hidden-sm hidden-xs action-buttons">
 							<% if current_store.store_campaign_id == c.id %>
-							
+
 							 <span class="Green"> <i class="ace-icon fa fa-check bigger-120"></i> Active </span>
-							 
-							 
+
+
 							 <% if c.campaign_id == 3%>
 							 <a class="blue" href="<%= edit_poll_path(Question.where(store_campaign_id:c).first ) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> Edit </a> |
                       <a class="green" href="<%= poll_view_path(c) %>"> <i class="ace-icon fa fa-eye bigger-130"></i> View </a>
@@ -53,17 +50,17 @@
 
 							<a class="blue" href="<%= campaign_edit_path(c) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> Edit </a> |
 
-							
+
 							<%end%>
-							
-							
+
+
 							<i class="ace-icon fa fa-trash-o bigger-130 "></i> <span style="color:grey">Delete</span>
-							
-							
+
+
 
 							<% else %>
 							<a href="<%= store_activate_path(c)%>" class="tooltip-info" data-rel="tooltip" title="View"> <span class="green"> <i class="ace-icon fa fa-check bigger-120"></i> Make Active   </span> </a> |
-							
+
 							 <% if c.campaign_id == 3%>
 
 							 <a class="blue" href="<%= edit_poll_path(Question.where(store_campaign_id:c).first ) %>"> <i class="ace-icon fa fa-pencil bigger-130"></i> Edit </a>
@@ -73,7 +70,7 @@
 
 							<% end %>
 							<%= link_to store_campaign_path(c), data: { confirm: "Are you sure?" }, method: :delete, class:'red' do %>
-							
+
 							<i class="ace-icon fa fa-trash-o bigger-130"></i> Delete
 
 							<% end %>
@@ -107,5 +104,3 @@
 			</table>
 		</div>
 	</div>
-</div>
-

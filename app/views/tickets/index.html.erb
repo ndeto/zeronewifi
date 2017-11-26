@@ -1,19 +1,18 @@
 <%= render 'layouts/alerts'%>
-<div class="row">
-  <div class="col-md-10 col-md-offset-1">
-    <a href="<%= new_ticket_path %>" class="btn btn-success"> <i class="ace-icon fa fa-plus"></i> New Ticket</a>
-  </div>
+<div class="col-md-12">
+<h1 class="myclass"><i class="fa fa-ticket"></i> Your Tickets</h1></br><br>
 </div>
-
-<div class="row">
-  <div class="col-xs-9 col-md-offset-1">
-    <h3 class="header smaller lighter blue"></h3>
+  <div class="col-md-12">
+    <a href="<%= new_ticket_path %>" class="my-button"> <i class="ace-icon fa fa-plus"></i> New Ticket</a>
+  </div>
+  <div class="col-md-12">
+    <h3 class="header smaller lighter myclass">Have a look at your Tickets</h3>
 
     <div class="clearfix">
       <div class="pull-right tableTools-container"></div>
     </div>
     <div class="table-header">
-      <h1>Tickets</h1>
+      <i class="fa fa-ticket"></i> Tickets
     </div>
 
 <table class="table table-striped table-bordered table-hover">
@@ -21,7 +20,7 @@
     <tr>
       <th>Code</th>
       <th>Number of Use</th>
-      <th></th>
+      <th>Delete</th>
     </tr>
   </thead>
 
@@ -30,7 +29,7 @@
       <tr>
         <td><%= ticket.code %></td>
         <td><%= ticket.number_of_use %></td>
-        <td><span class="blue"> <%= link_to 'Edit', edit_ticket_path(ticket) %> </span> | <span class="red"> <%= link_to 'Delete', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></span></td>
+        <td><span class="blue"><i class="fa fa-edit"></i> <%= link_to 'Edit', edit_ticket_path(ticket) %> </span> | <span class="red"><i class="fa fa-trash"></i> <%= link_to 'Delete', ticket, method: :delete, data: { confirm: 'Are you sure?' },class:'red' %></span></td>
       </tr>
     <% end %>
   </tbody>
@@ -42,4 +41,3 @@
 </br>
 
   </div>
-</div>

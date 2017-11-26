@@ -1,16 +1,16 @@
-<div style="margin-bottom: 1em;margin-bottom: 1em;" class="row">
-	<div class="col-md-9 col-md-offset-1">
+<div style="margin-bottom: 1em;margin-top: 1em;" class="col-md-12">
+	<div style="width:100% !important">
 <% if !flash[:alert].nil? %>
-	<div class="alert alert-info alert-dismissable">
+	<div class="alert alert-info alert-dismissable fade-in fade-out">
 		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-		 <%= flash[:alert] %>
+		 <strong><%= flash[:alert] %></strong>
 	</div>
 	<%end %>
-	
+
 	<% if !flash[:notice].nil? %>
-	<div class="alert alert-success alert-dismissable">
+	<div class="alert alert-success alert-dismissable fade-in fade-out">
 		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-		 <%= flash[:notice] %>
+		 <strong><%= flash[:notice] %></strong>
 	</div>
 	<%end %>
 	</div>
