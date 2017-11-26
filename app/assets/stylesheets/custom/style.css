@@ -147,3 +147,8 @@ input[type="file"] {
     box-shadow: none !important;
     -webkit-transition-duration: .1s;
     transition-duration: .1s;
+}
+.no-skin .navbar .navbar-toggle {
+    background-color: #011f1f !important;
+    color: #fff !important;
+}

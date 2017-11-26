@@ -1,4 +1,7 @@
 <%= render 'layouts/alerts'%>
+<div class="col-md-12">
+<h1 class="myclass"><i class="fa fa-shopping-bag"></i> Your Stores</h1></br><br>
+</div>
 </br>
 	<div class="col-md-12">
 		<a href="<%= home_new_path %>" class="my-button"> <i class="ace-icon fa fa-plus"></i> New Store</a>
@@ -41,7 +44,7 @@
 							<input type="checkbox" class="ace" />
 							<span class="lbl"></span> </label></td> -->
 
-						<td><a href="<%= stores_path %>"><%= s.store_name %></a></td>
+						<td><a target="_blank" href="<%= stores_path %>"><%= s.store_name %></a></td>
 						<td><%= s.email %></td>
 						<td><%= s.active %></td>
 						<td>
