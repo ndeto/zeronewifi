@@ -61,7 +61,7 @@ class PageController < ApplicationController
     @store = Store.find(session[:store_id])
     @camp = StoreCampaign.find(@store.store_campaign_id)
 
-    @contact = Contact.where(phone: params[:ticket][:phone]).order('created_at desc').first
+    @contact = Contact.where(phone: params[:ticket][:phone],store_id:@store.id).order('created_at desc').first
     @date = Time.now.strftime("%Y-%m-%d")
 
     if @contact.nil?
