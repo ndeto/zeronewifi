@@ -1,9 +1,23 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Code:</strong>
-  <%= @ticket.code %>
-</p>
-
-<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
-<%= link_to 'Back', tickets_path %>
+<div class="col-md-12">
+<% if !flash[:notice].nil? %>
+	<div class="alert alert-success alert-dismissable fade-in fade-out">
+		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		 <strong><%= flash[:notice] %></strong>
+	</div>
+<%end %>
+</div>
+<div class="col-md-12">
+<h1 class="myclass text-center">
+  <i class="fa fa-info-circle"></i> Ticket Details
+</h1>
+</div>
+<div class="col-md-8 col-md-offset-2" style="background:#f5f5f5;margin-bottom:8em">
+<h3 class="text-center"><br><br>
+  <strong>Ticket Code:</strong>
+  <span class="myclass"><%= @ticket.code %></span>
+</h3><br><br><br><br>
+<div class="text-center" style="margin-bottom:8em">
+<%= link_to 'Edit', edit_ticket_path(@ticket),:class=>'submit-button' %>
+<%= link_to 'Back to Tickets', tickets_path,:class=>'submit-button' %>
+</div>
+</div>

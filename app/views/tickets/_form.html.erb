@@ -12,11 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :code %>
-    <%= f.text_field :code %>
+    <%= f.label :code,class:'col-sm-12 col-md-12',style:'margin-top:2em' %>
+    <%= f.text_field :code,class:'col-sm-12 col-md-12',placeholder:'Code' %><br><br><br>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions text-center" style="margin-top:4em">
+    <%= f.button type:'submit', class:"submit-button" do %>
+		<i class="ace-icon fa fa-save bigger-110"></i>
+		Update Ticket
+		<% end %>
   </div>
 <% end %>

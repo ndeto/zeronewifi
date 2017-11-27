@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   get '/pages/code' => 'page#code'
   post 'tickets/verify' => 'tickets#verify'
   get '/stores/clients' => 'stores#clients'
+  get 'pages/facebook' => 'page#fb'
+  get '/pages/email' => 'page#email'
+  get '/tickets/:ticket_key' => 'tickets#new', as: "key_ticket"
 
   devise_scope :store do
     get 'home/new', to: 'store_registrations#new'
@@ -45,6 +48,7 @@ Rails.application.routes.draw do
   resources :polls
   resources :poll_answers
   resources :tickets
+  resources :emails
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 get '*path' => redirect('/')
 end

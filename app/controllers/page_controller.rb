@@ -65,22 +65,23 @@ class PageController < ApplicationController
     @date = Time.now.strftime("%m/%d/%Y")
 
     if @contact.nil?
+      @code = randy
       @today = false
       # Include the helper gateway class
       require 'AfricasTalkingGateway'
 
       # Specify your login credentials
-      username = "cnetwifi"
-      apikey = "da3fe299dc936e23363959d47738548d597bab7f23f2e8f596352b83eb1742d4";
-
+      if Rails.env.development?
+        username = "cnetwifi";
+        apikey = "da3fe299dc936e23363959d47738548d597bab7f23f2e8f596352b83eb1742d4";
+      else
+        username = "sandbox";
+        apikey = "975c3c12bb8d96457d74b88085350fb5f4732d7c88d6c2dbf27640be9363d8b9";
+      end
       # Specify the numbers that you want to send to in a comma-separated list
       # Please ensure you include the country code (+254 for Kenya in this case, +256 for Uganda)
       to = "#{params[:ticket][:phone]}"
 
-      @store = Store.find(1)
-      @code = randy
-      Ticket.create(code: @code, number_of_use: 2)
-      Contact.create(store_id: 1, phone: params[:ticket][:phone], date: @date)
       # And of course we want our recipients to know what we really do
       message = "Hello, welcome to After40 Hotel, your access code is #{@code}"
 
@@ -93,6 +94,11 @@ class PageController < ApplicationController
         # Thats it, hit send and we'll take care of the rest.
         reports = gateway.sendMessage(to, message)
 
+        if reports
+          Ticket.create(code: @code, number_of_use: 2)
+          Contact.create(store_id: @store.id, phone: params[:ticket][:phone], date: @date)
+        end
+
         reports.each {|x|
           # status is either "Success" or "error message"
           puts 'number=' + x.number + ';status=' + x.status + ';messageId=' + x.messageId + ';cost=' + x.cost
@@ -102,7 +108,6 @@ class PageController < ApplicationController
       end
 # DONE!
     else
-
       @date2 = @contact.created_at.strftime("%m/%d/%Y")
       puts @date
       puts @date2
@@ -117,8 +122,14 @@ class PageController < ApplicationController
         require 'AfricasTalkingGateway'
 
         # Specify your login credentials
-        username = "cnetwifi";
-        apikey = "da3fe299dc936e23363959d47738548d597bab7f23f2e8f596352b83eb1742d4";
+
+        if Rails.env.development?
+          username = "cnetwifi";
+          apikey = "da3fe299dc936e23363959d47738548d597bab7f23f2e8f596352b83eb1742d4";
+        else
+          username = "sandbox";
+          apikey = "975c3c12bb8d96457d74b88085350fb5f4732d7c88d6c2dbf27640be9363d8b9";
+        end
 
         # Specify the numbers that you want to send to in a comma-separated list
         # Please ensure you include the country code (+254 for Kenya in this case, +256 for Uganda)
@@ -138,9 +149,8 @@ class PageController < ApplicationController
           reports = gateway.sendMessage(to, message)
 
           if reports
-            @store = Store.find(1)
             Ticket.create(code: @code, number_of_use: 2)
-            Contact.create(store_id: 1, phone: params[:ticket][:phone], date: @date)
+            Contact.create(store_id: @store.id, phone: params[:ticket][:phone], date: @date)
           end
 
           reports.each {|x|
@@ -158,6 +168,22 @@ class PageController < ApplicationController
       render :layout => false
 #redirect_to(pages_ticket_path)
     end
+  end
+
+  def fb
+    @store = Store.find(session[:store_id])
+    @camp = StoreCampaign.find(@store.store_campaign_id)
+    render :layout => false
+  end
+
+  def email
+    @store = Store.find(session[:store_id])
+    @camp = StoreCampaign.find(@store.store_campaign_id)
+    render :layout => false
+  end
+
+  def regmail
+
   end
 
   private

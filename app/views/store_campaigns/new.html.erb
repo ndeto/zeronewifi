@@ -1,44 +1,35 @@
 
 <%= render 'layouts/alerts' %>
-<div class="row" >
-<div class="col-md-6 col-md-offset-3">
-<h1>New Campaign</h1>	
-</div>
+<div class="col-md-12">
+<h1 class="myclass text-center">Create New Campaign</h1>
 </div>
 
-<br/>
-
-<%= form_for :storecampaign, url:{controller:'store_campaigns', action:'create'}, html:{class:'form-horizontal'} do |f|%>
-
+<%= form_for :storecampaign, url:{controller:'store_campaigns', action:'create'}, html:{class:''} do |f|%>
+<div class="col-md-8 col-md-offset-2 col-xs-12">
 <div class="form-group">
-	<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Name</label>
-
-	<div class="col-sm-9">
-		<%= f.text_field :name, class:'form-control', class:"col-xs-10 col-sm-5", required:'required' %></p>
+	<label style="margin-top:4em" class="col-sm-12 control-label no-padding-right" for="form-field-1"> Name</label>
+	<div class="col-sm-12">
+		<%= f.text_field :name, class:'form-control', class:"col-xs-12 col-sm-12", required:'required' %></p>
 		<!-- <input type="text" id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5" /> -->
 	</div>
 </div>
 
 <div class="form-group">
-	<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Campaign Type</label>
-
-	<div class="col-sm-9">
-		<%= f.select :campaign_id, options_from_collection_for_select(Campaign.all, 'id','display'),{} ,{:class=>'col-xs-10 col-sm-5'} %></p>
+	<label style="margin-top:2em" class="col-sm-12 control-label no-padding-right" for="form-field-1"> Campaign Type</label>
+	<div class="col-sm-12">
+		<%= f.select :campaign_id, options_from_collection_for_select(Campaign.all, 'id','display'),{} ,{:class=>'col-xs-12 col-sm-12'} %></p>
 		<!-- <input type="text" id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5" /> -->
 	</div>
 </div>
 
-<div class="clearfix form-actions">
-	<div class="col-md-offset-3 col-md-9">
-		
-		<%= f.button type: 'submit', class: "btn btn-info", id: "register-button" do %>
-        <i class="ace-icon fa fa-check bigger-110"></i> Save
-    <% end %>
-    
-		
+<div class="col-md-12" style="margin-top:4em;margin-bottom:8em">
+	<div class="col-md-12 text-center">
+		<%= f.button type:'submit', class:"submit-button" do %>
+		<i class="ace-icon fa fa-save bigger-110"></i>
+		Save Campaign Details
+		<% end %>
 	</div>
 </div>
-
-
-
+<div class="clearfix"></div>
 <%end%>
+</div>

@@ -1,6 +1,11 @@
-<h1>Editing Ticket</h1>
-
+<div class="col-md-12">
+<h1 class="myclass text-center"><i class="fa fa-edit"></i> Edit Existing Ticket</h1>
+</div>
+<div class="col-md-8 col-md-offset-2 col-xs-12" style="background:#f5f5f5;margin-bottom:8em">
 <%= render 'form', ticket: @ticket %>
-
-<%= link_to 'Show', @ticket %> |
-<%= link_to 'Back', tickets_path %>
+<br><br><br>
+<div class="text-center" style="margin-bottom:8em">
+<%= link_to 'Show This Ticket', @ticket, :class=>'submit-button'%> &nbsp;
+<%= link_to 'Back to Tickets', tickets_path,:class=>'submit-button' %>
+</div>
+</div>

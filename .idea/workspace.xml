@@ -2,7 +2,508 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c4c1035-136e-4165-a935-41ba38637a2b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/chosen-sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/chosen-sprite@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/select2-spinner.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/select2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/select2x2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/logo-small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/user.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/10/Screenshot_from_2017-11-12_09-23-52.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/10/thumb_Screenshot_from_2017-11-12_09-23-52.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/9/banner-1090835__340.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/9/thumb_banner-1090835__340.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/media/9/java.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/media/9/thumb_java.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/10/kdukalogo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/10/thumb_kdukalogo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/11/kdukalogo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/11/thumb_kdukalogo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/3/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/3/thumb_logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/tmp/1511197416-5000-0001-1436/kdukalogo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/tmp/1511197416-5000-0001-1436/thumb_kdukalogo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/tmp/1511197417-5000-0002-8660/Screenshot_from_2017-11-12_09-23-52.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/tmp/1511197417-5000-0002-8660/thumb_Screenshot_from_2017-11-12_09-23-52.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/tmp/1511198245-5000-0005-3709/java.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/tmp/1511198245-5000-0005-3709/thumb_java.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/emails.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/colorpicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/colorpicker.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/datepicker.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/ui.jqgrid.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/emails.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/emails_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/emails_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/email.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/page/_login.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/page/email.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/page/fb.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20171120133914_add_statuses_to_store_campaign.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20171120134552_add_fb_link_to_store_campaign.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20171124102414_create_emails.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20171124122742_add_network_ip_to_store.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20171125120720_add_email_to_contact.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20171127024238_add_ticket_key_to_store.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/emails_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/emails.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/email_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/.keep" afterPath="$PROJECT_DIR$/app/assets/images/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/bananasf.jpg" afterPath="$PROJECT_DIR$/app/assets/images/bananasf.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/bg.jpg" afterPath="$PROJECT_DIR$/app/assets/images/bg.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/channels/.keep" afterPath="$PROJECT_DIR$/app/assets/javascripts/channels/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/concerns/.keep" afterPath="$PROJECT_DIR$/app/controllers/concerns/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/concerns/.keep" afterPath="$PROJECT_DIR$/app/models/concerns/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/assets/.keep" afterPath="$PROJECT_DIR$/lib/assets/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/.keep" afterPath="$PROJECT_DIR$/lib/tasks/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/.keep" afterPath="$PROJECT_DIR$/log/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/apple-touch-icon-precomposed.png" afterPath="$PROJECT_DIR$/public/apple-touch-icon-precomposed.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/apple-touch-icon.png" afterPath="$PROJECT_DIR$/public/apple-touch-icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/alpha-d0d1b42617b82f34ac9d0362ee4563d58b535bf7b785ed475e388b4a2a2106b2.png" afterPath="$PROJECT_DIR$/public/assets/alpha-d0d1b42617b82f34ac9d0362ee4563d58b535bf7b785ed475e388b4a2a2106b2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-06b1921a6e9aa603dc9badfbe2a88b59f355a3a15b0f2cf9ae6b7f8977091222.css.gz" afterPath="$PROJECT_DIR$/public/assets/application-06b1921a6e9aa603dc9badfbe2a88b59f355a3a15b0f2cf9ae6b7f8977091222.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-0d99b6cab37427f3444d86755b73b71341b88ecd757f7ac2afabf1ca634af197.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-0d99b6cab37427f3444d86755b73b71341b88ecd757f7ac2afabf1ca634af197.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-1c20278c236c789829f212942d765612082165759dcbddfbba2f963e88b58af8.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-1c20278c236c789829f212942d765612082165759dcbddfbba2f963e88b58af8.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-21e888ad45f6d73d89964392d43ebe352d6f230952dd11ba021529c77a91dbd3.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-21e888ad45f6d73d89964392d43ebe352d6f230952dd11ba021529c77a91dbd3.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-232552d9c5830c107ac891eb0093ee5f33f767297847a4e5f7657a796eb81654.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-232552d9c5830c107ac891eb0093ee5f33f767297847a4e5f7657a796eb81654.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-2687f498eb0422e540bab1e04f282fcd946eefa0ffd4c4d613b31281759baaa7.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-2687f498eb0422e540bab1e04f282fcd946eefa0ffd4c4d613b31281759baaa7.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-272d46ed9ccfb3e9c85b0b2ad1beb2cea27810970d5f92f9e7efafcc2c30df95.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-272d46ed9ccfb3e9c85b0b2ad1beb2cea27810970d5f92f9e7efafcc2c30df95.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-47c511e28d2cd75ad2a60c4cab7eb24a8cb1d071b849a505a84e88ff7f8724be.css.gz" afterPath="$PROJECT_DIR$/public/assets/application-47c511e28d2cd75ad2a60c4cab7eb24a8cb1d071b849a505a84e88ff7f8724be.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-63663188b5784a9ab772370f0620897b53f8101443f027d5e5c8a80b7885008b.css.gz" afterPath="$PROJECT_DIR$/public/assets/application-63663188b5784a9ab772370f0620897b53f8101443f027d5e5c8a80b7885008b.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-6a6ca3acd6199f24b8588993ef54225e8533b26cf0e502d05c76705c43090d68.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-6a6ca3acd6199f24b8588993ef54225e8533b26cf0e502d05c76705c43090d68.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-7261d29c8575316cae252fb2e793cb8a5e44ec174817206a809c80974208aefa.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-7261d29c8575316cae252fb2e793cb8a5e44ec174817206a809c80974208aefa.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-8a66d970d9f9148a5427012d1543b2abccdafbaf526eb07eba58a35775e2174f.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-8a66d970d9f9148a5427012d1543b2abccdafbaf526eb07eba58a35775e2174f.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-ac23ed1a490928ecf64e0d5c8f437bb8b02b080d04b845236b18b750e6acea0b.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-ac23ed1a490928ecf64e0d5c8f437bb8b02b080d04b845236b18b750e6acea0b.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-b33c6e03045298b16c007e1debd560d72124f27db354112b378188a6cef85051.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-b33c6e03045298b16c007e1debd560d72124f27db354112b378188a6cef85051.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-b44109a32f5f61af466c482c7ff96ae9a3b69c9f42dfafdcfc86d92605afc7d4.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-b44109a32f5f61af466c482c7ff96ae9a3b69c9f42dfafdcfc86d92605afc7d4.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-e2867a2e43a238c42dff226c2b4a4b4e188fe9bc9efd464602385392bb1acee7.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-e2867a2e43a238c42dff226c2b4a4b4e188fe9bc9efd464602385392bb1acee7.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-e3308ead5c31b8e4f9b93b0d339dd724d26f341e3651778e8de6e874d273729e.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-e3308ead5c31b8e4f9b93b0d339dd724d26f341e3651778e8de6e874d273729e.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-e9fffc3ca151a9c513e28a7696b3b6ffefde19fbff14d3120ac18da38fd38d9e.css.gz" afterPath="$PROJECT_DIR$/public/assets/application-e9fffc3ca151a9c513e28a7696b3b6ffefde19fbff14d3120ac18da38fd38d9e.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-f7daee33b45f466200a265e08294fd041798c57ab96d48e7d963b521c34a4209.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-f7daee33b45f466200a265e08294fd041798c57ab96d48e7d963b521c34a4209.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bananasf-3b2a75f1ae66d977261f081621834ceab67246f345999f70085622a3f260e9bd.jpg" afterPath="$PROJECT_DIR$/public/assets/bananasf-3b2a75f1ae66d977261f081621834ceab67246f345999f70085622a3f260e9bd.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bg-9cb4ee1b8fa63216b1a0587ba1060ce19c57b54b2a5ad0fb88bd3bbcfd179990.jpg" afterPath="$PROJECT_DIR$/public/assets/bg-9cb4ee1b8fa63216b1a0587ba1060ce19c57b54b2a5ad0fb88bd3bbcfd179990.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot.gz" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg.gz" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742.woff" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456.ttf" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456.ttf.gz" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456.ttf.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" afterPath="$PROJECT_DIR$/public/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot" afterPath="$PROJECT_DIR$/public/assets/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot.gz" afterPath="$PROJECT_DIR$/public/assets/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf" afterPath="$PROJECT_DIR$/public/assets/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf.gz" afterPath="$PROJECT_DIR$/public/assets/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg.gz" afterPath="$PROJECT_DIR$/public/assets/fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff" afterPath="$PROJECT_DIR$/public/assets/fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/hue-76f600a164cf16262dd78abfd05bca52315ac9ef660a962bc86145322f43072a.png" afterPath="$PROJECT_DIR$/public/assets/hue-76f600a164cf16262dd78abfd05bca52315ac9ef660a962bc86145322f43072a.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/saturation-373292b9226296d598f0827e253a3ed87fa1aee38cfebb0620fb380c682186bd.png" afterPath="$PROJECT_DIR$/public/assets/saturation-373292b9226296d598f0827e253a3ed87fa1aee38cfebb0620fb380c682186bd.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/1/istock-466472771.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/1/istock-466472771.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/1/thumb_istock-466472771.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/1/thumb_istock-466472771.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/11/istock-466472771.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/11/istock-466472771.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/11/thumb_istock-466472771.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/11/thumb_istock-466472771.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/3/istock-466472771.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/3/istock-466472771.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/3/thumb_istock-466472771.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/3/thumb_istock-466472771.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/7/istock-466472771.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/7/istock-466472771.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/7/thumb_istock-466472771.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/bg_img/7/thumb_istock-466472771.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/media/1/javahouse.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/media/1/javahouse.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/media/1/thumb_javahouse.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/media/1/thumb_javahouse.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/media/3/istock-466472771.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/media/3/istock-466472771.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/media/3/thumb_istock-466472771.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/media/3/thumb_istock-466472771.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/media/5/bananasf.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/media/5/bananasf.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/media/7/javahouse.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/media/7/javahouse.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/media/7/thumb_javahouse.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/media/7/thumb_javahouse.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/media/9/Plain-Logo.png" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/media/9/Plain-Logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/media/9/thumb_Plain-Logo.png" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/media/9/thumb_Plain-Logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/1/javahouse.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/1/javahouse.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/1/thumb_javahouse.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/1/thumb_javahouse.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/11/javahouse.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/11/javahouse.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/11/thumb_javahouse.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/11/thumb_javahouse.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/3/javahouse.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/3/javahouse.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/3/thumb_javahouse.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/3/thumb_javahouse.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/7/javahouse.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/7/javahouse.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/7/thumb_javahouse.jpg" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/7/thumb_javahouse.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/9/Plain-Logo-white.png" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/9/Plain-Logo-white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/9/thumb_Plain-Logo-white.png" afterPath="$PROJECT_DIR$/public/uploads/store_campaign/splashimage/9/thumb_Plain-Logo-white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/tmp/1505811716-26611-0001-9379/Wifi_images.JPG" afterPath="$PROJECT_DIR$/public/uploads/tmp/1505811716-26611-0001-9379/Wifi_images.JPG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/tmp/1505811716-26611-0001-9379/thumb_Wifi_images.JPG" afterPath="$PROJECT_DIR$/public/uploads/tmp/1505811716-26611-0001-9379/thumb_Wifi_images.JPG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/tmp/1505811884-26611-0002-0675/Wifi_images.JPG" afterPath="$PROJECT_DIR$/public/uploads/tmp/1505811884-26611-0002-0675/Wifi_images.JPG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/tmp/1505811884-26611-0002-0675/thumb_Wifi_images.JPG" afterPath="$PROJECT_DIR$/public/uploads/tmp/1505811884-26611-0002-0675/thumb_Wifi_images.JPG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/tmp/1505811894-26611-0003-1358/Wifi_images.JPG" afterPath="$PROJECT_DIR$/public/uploads/tmp/1505811894-26611-0003-1358/Wifi_images.JPG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/tmp/1505811894-26611-0003-1358/thumb_Wifi_images.JPG" afterPath="$PROJECT_DIR$/public/uploads/tmp/1505811894-26611-0003-1358/thumb_Wifi_images.JPG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/tmp/1505812046-26611-0004-3555/Wifi_images.JPG" afterPath="$PROJECT_DIR$/public/uploads/tmp/1505812046-26611-0004-3555/Wifi_images.JPG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/tmp/1505812046-26611-0004-3555/thumb_Wifi_images.JPG" afterPath="$PROJECT_DIR$/public/uploads/tmp/1505812046-26611-0004-3555/thumb_Wifi_images.JPG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/tmp/1505812245-26611-0005-7477/Wifi_images.JPG" afterPath="$PROJECT_DIR$/public/uploads/tmp/1505812245-26611-0005-7477/Wifi_images.JPG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/tmp/1505812245-26611-0005-7477/thumb_Wifi_images.JPG" afterPath="$PROJECT_DIR$/public/uploads/tmp/1505812245-26611-0005-7477/thumb_Wifi_images.JPG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/tmp/1505812661-26611-0006-3931/Wifi_images.JPG" afterPath="$PROJECT_DIR$/public/uploads/tmp/1505812661-26611-0006-3931/Wifi_images.JPG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/tmp/1505812661-26611-0006-3931/thumb_Wifi_images.JPG" afterPath="$PROJECT_DIR$/public/uploads/tmp/1505812661-26611-0006-3931/thumb_Wifi_images.JPG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/.keep" afterPath="$PROJECT_DIR$/test/controllers/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/.keep" afterPath="$PROJECT_DIR$/test/fixtures/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/files/.keep" afterPath="$PROJECT_DIR$/test/fixtures/files/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/.keep" afterPath="$PROJECT_DIR$/test/helpers/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/integration/.keep" afterPath="$PROJECT_DIR$/test/integration/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mailers/.keep" afterPath="$PROJECT_DIR$/test/mailers/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/.keep" afterPath="$PROJECT_DIR$/test/models/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/.keep" afterPath="$PROJECT_DIR$/tmp/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/.keep" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/.keep" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cards.iml" afterPath="$PROJECT_DIR$/.idea/cards.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODO" afterPath="$PROJECT_DIR$/TODO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.yaml" afterPath="$PROJECT_DIR$/app.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/config/manifest.js" afterPath="$PROJECT_DIR$/app/assets/config/manifest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/cable.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/cable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/ace-elements.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/ace-elements.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/ace-extra.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/ace-extra.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/ace.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/ace.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/autosize.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/autosize.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/bootbox.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/bootbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap-colorpicker.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap-colorpicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap-editable.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap-editable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap-markdown.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap-markdown.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap-multiselect.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap-multiselect.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap-tag.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap-tag.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap-timepicker.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap-timepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap-wysiwyg.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap-wysiwyg.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/canvasjs.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/canvasjs.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/chosen.jquery.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/chosen.jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/dropzone.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/dropzone.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/excanvas.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/excanvas.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/grid.locale-en.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/grid.locale-en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/holder.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/holder.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/html5shiv.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/html5shiv.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery-typeahead.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery-typeahead.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery-ui.custom.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery-ui.custom.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery-ui.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery-ui.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.bootstrap-duallistbox.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.bootstrap-duallistbox.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.canvasjs.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.canvasjs.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.colorbox.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.colorbox.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.easypiechart.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.easypiechart.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.flot.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.flot.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.flot.pie.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.flot.pie.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.flot.resize.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.flot.resize.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.gritter.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.gritter.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.hotkeys.index.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.hotkeys.index.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.inputlimiter.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.inputlimiter.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.jqGrid.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.jqGrid.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.knob.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.knob.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.maskedinput.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.maskedinput.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.mobile.custom.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.mobile.custom.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.nestable.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.nestable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.raty.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.raty.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.sparkline.index.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.sparkline.index.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.ui.touch-punch.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.ui.touch-punch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.validate.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/jquery.validate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/markdown.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/markdown.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/moment.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/moment.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/piechart.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/piechart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/prettify.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/prettify.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/respond.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/respond.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/select2.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/select2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/spin.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/spin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/spinbox.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/spinbox.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/tree.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/tree.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom/wizard.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom/wizard.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/main.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/poll_answers.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/poll_answers.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/questions.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/questions.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/ace-ie.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/ace-ie.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/ace-part2.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/ace-part2.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/ace-rtl.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/ace-rtl.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/ace-skins.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/ace-skins.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/ace.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/ace.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap-colorpicker.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap-colorpicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap-datepicker3.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap-datepicker3.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap-datetimepicker.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap-datetimepicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap-duallistbox.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap-duallistbox.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap-editable.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap-editable.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap-multiselect.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap-multiselect.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap-timepicker.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/bootstrap-timepicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/chosen.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/chosen.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/colorbox.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/colorbox.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/daterangepicker.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/daterangepicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/dropzone.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/dropzone.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/font-awesome.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/fonts.googleapis.com.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/fonts.googleapis.com.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/fullcalendar.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/fullcalendar.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/jquery-ui.custom.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/jquery-ui.custom.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/jquery-ui.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/jquery-ui.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/jquery.gritter.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/jquery.gritter.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/prettify.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/prettify.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/select2.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/select2.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom/ui.jqgrid.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom/ui.jqgrid.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/poll_answers.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/poll_answers.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/questions.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/questions.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/store_passwords.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/store_passwords.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/store_sessions.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/store_sessions.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/user_passwords.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/user_passwords.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/user_registrations.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/user_registrations.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/user_sessions.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/user_sessions.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/channels/application_cable/channel.rb" afterPath="$PROJECT_DIR$/app/channels/application_cable/channel.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/channels/application_cable/connection.rb" afterPath="$PROJECT_DIR$/app/channels/application_cable/connection.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/page_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/page_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/poll_answers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/poll_answers_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/polls_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/polls_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/store_campaigns_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/store_campaigns_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/store_passwords_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/store_passwords_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/store_registrations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/store_registrations_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/store_sessions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/store_sessions_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/stores_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/stores_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tickets_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tickets_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/user_passwords_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/user_passwords_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/user_registrations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/user_registrations_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/user_sessions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/user_sessions_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/home_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/home_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/page_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/page_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/poll_answers_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/poll_answers_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/questions_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/questions_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/registrations_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/registrations_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/store_campaigns_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/store_campaigns_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/store_passwords_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/store_passwords_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/store_registrations_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/store_registrations_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/store_sessions_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/store_sessions_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/stores_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/stores_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/tickets_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/tickets_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/user_passwords_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/user_passwords_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/user_registrations_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/user_registrations_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/user_sessions_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/user_sessions_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/jobs/application_job.rb" afterPath="$PROJECT_DIR$/app/jobs/application_job.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/application_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/application_mailer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/user_notifier_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/user_notifier_mailer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/application_record.rb" afterPath="$PROJECT_DIR$/app/models/application_record.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/campaign.rb" afterPath="$PROJECT_DIR$/app/models/campaign.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/contact.rb" afterPath="$PROJECT_DIR$/app/models/contact.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/contact_type.rb" afterPath="$PROJECT_DIR$/app/models/contact_type.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/poll_answer.rb" afterPath="$PROJECT_DIR$/app/models/poll_answer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/question.rb" afterPath="$PROJECT_DIR$/app/models/question.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/store.rb" afterPath="$PROJECT_DIR$/app/models/store.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/store_campaign.rb" afterPath="$PROJECT_DIR$/app/models/store_campaign.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ticket.rb" afterPath="$PROJECT_DIR$/app/models/ticket.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/uploaders/bg_img_uploader.rb" afterPath="$PROJECT_DIR$/app/uploaders/bg_img_uploader.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/uploaders/media_uploader.rb" afterPath="$PROJECT_DIR$/app/uploaders/media_uploader.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/uploaders/splashimage_uploader.rb" afterPath="$PROJECT_DIR$/app/uploaders/splashimage_uploader.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/campaigns.html.erb" afterPath="$PROJECT_DIR$/app/views/home/campaigns.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/home.html.erb" afterPath="$PROJECT_DIR$/app/views/home/home.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/stores.html.erb" afterPath="$PROJECT_DIR$/app/views/home/stores.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_alerts.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_alerts.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_sidebar.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_sidebar.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_usersidebar.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_usersidebar.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/admin.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/admin.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/_imagecampaign.html.erb" afterPath="$PROJECT_DIR$/app/views/page/_imagecampaign.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/_pollcampaign.html.erb" afterPath="$PROJECT_DIR$/app/views/page/_pollcampaign.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/_splash.html.erb" afterPath="$PROJECT_DIR$/app/views/page/_splash.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/_videocampaign.html.erb" afterPath="$PROJECT_DIR$/app/views/page/_videocampaign.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/campaign.html.erb" afterPath="$PROJECT_DIR$/app/views/page/campaign.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/code.html.erb" afterPath="$PROJECT_DIR$/app/views/page/code.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/index.html.erb" afterPath="$PROJECT_DIR$/app/views/page/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/lost.html.erb" afterPath="$PROJECT_DIR$/app/views/page/lost.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/phone.html.erb" afterPath="$PROJECT_DIR$/app/views/page/phone.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/problem.html.erb" afterPath="$PROJECT_DIR$/app/views/page/problem.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/ticket.html.erb" afterPath="$PROJECT_DIR$/app/views/page/ticket.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/poll_answers/_answers.html.erb" afterPath="$PROJECT_DIR$/app/views/poll_answers/_answers.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/poll_answers/create.js.erb" afterPath="$PROJECT_DIR$/app/views/poll_answers/create.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/poll_answers/destroy.js.erb" afterPath="$PROJECT_DIR$/app/views/poll_answers/destroy.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/poll_answers/show.html.erb" afterPath="$PROJECT_DIR$/app/views/poll_answers/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/polls/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/polls/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/store_campaigns/create.html.erb" afterPath="$PROJECT_DIR$/app/views/store_campaigns/create.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/store_campaigns/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/store_campaigns/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/store_campaigns/index.html.erb" afterPath="$PROJECT_DIR$/app/views/store_campaigns/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/store_campaigns/new.html.erb" afterPath="$PROJECT_DIR$/app/views/store_campaigns/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/store_campaigns/poll.html.erb" afterPath="$PROJECT_DIR$/app/views/store_campaigns/poll.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/store_campaigns/test.html.erb" afterPath="$PROJECT_DIR$/app/views/store_campaigns/test.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/store_passwords/new.html.erb" afterPath="$PROJECT_DIR$/app/views/store_passwords/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/store_registrations/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/store_registrations/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/store_registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/store_registrations/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/store_sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/store_sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stores/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/stores/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stores/_store.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/stores/_store.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stores/clients.html.erb" afterPath="$PROJECT_DIR$/app/views/stores/clients.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stores/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/stores/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stores/index.html.erb" afterPath="$PROJECT_DIR$/app/views/stores/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stores/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/stores/index.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stores/new.html.erb" afterPath="$PROJECT_DIR$/app/views/stores/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stores/secret.html.erb" afterPath="$PROJECT_DIR$/app/views/stores/secret.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stores/settings.html.erb" afterPath="$PROJECT_DIR$/app/views/stores/settings.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stores/show.html.erb" afterPath="$PROJECT_DIR$/app/views/stores/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stores/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/stores/show.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tickets/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/tickets/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tickets/_ticket.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/tickets/_ticket.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tickets/create.js.erb" afterPath="$PROJECT_DIR$/app/views/tickets/create.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tickets/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/tickets/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tickets/index.html.erb" afterPath="$PROJECT_DIR$/app/views/tickets/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tickets/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/tickets/index.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tickets/new.html.erb" afterPath="$PROJECT_DIR$/app/views/tickets/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tickets/show.html.erb" afterPath="$PROJECT_DIR$/app/views/tickets/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tickets/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/tickets/show.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_notifier_mailer/send_signup_email.html.erb" afterPath="$PROJECT_DIR$/app/views/user_notifier_mailer/send_signup_email.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_passwords/new.html.erb" afterPath="$PROJECT_DIR$/app/views/user_passwords/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_registrations/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/user_registrations/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/user_sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.ru" afterPath="$PROJECT_DIR$/config.ru" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/boot.rb" afterPath="$PROJECT_DIR$/config/boot.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/cable.yml" afterPath="$PROJECT_DIR$/config/cable.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/test.rb" afterPath="$PROJECT_DIR$/config/environments/test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/application_controller_renderer.rb" afterPath="$PROJECT_DIR$/config/initializers/application_controller_renderer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/assets.rb" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/carrierwave.rb" afterPath="$PROJECT_DIR$/config/initializers/carrierwave.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/cookies_serializer.rb" afterPath="$PROJECT_DIR$/config/initializers/cookies_serializer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/devise.rb" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" afterPath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/inflections.rb" afterPath="$PROJECT_DIR$/config/initializers/inflections.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/new_framework_defaults.rb" afterPath="$PROJECT_DIR$/config/initializers/new_framework_defaults.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/paperclip.rb" afterPath="$PROJECT_DIR$/config/initializers/paperclip.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/session_store.rb" afterPath="$PROJECT_DIR$/config/initializers/session_store.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/devise.en.yml" afterPath="$PROJECT_DIR$/config/locales/devise.en.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/puma.rb" afterPath="$PROJECT_DIR$/config/puma.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/secrets.yml" afterPath="$PROJECT_DIR$/config/secrets.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/spring.rb" afterPath="$PROJECT_DIR$/config/spring.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/20170615112438_add_user_id_to_stores.rb" afterPath="$PROJECT_DIR$/db/20170615112438_add_user_id_to_stores.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/20170615112440_add_user_id_to_store.rb" afterPath="$PROJECT_DIR$/db/20170615112440_add_user_id_to_store.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/20170616114944_fixnametoemail.rb" afterPath="$PROJECT_DIR$/db/20170616114944_fixnametoemail.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/20170616115110_fixstorepasstoecnryptedpass.rb" afterPath="$PROJECT_DIR$/db/20170616115110_fixstorepasstoecnryptedpass.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170615112433_devise_create_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20170615112433_devise_create_users.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170615112434_add_username_to_user.rb" afterPath="$PROJECT_DIR$/db/migrate/20170615112434_add_username_to_user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170615112435_change_name_to_username.rb" afterPath="$PROJECT_DIR$/db/migrate/20170615112435_change_name_to_username.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170615112436_fixname.rb" afterPath="$PROJECT_DIR$/db/migrate/20170615112436_fixname.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170615112437_devise_create_stores.rb" afterPath="$PROJECT_DIR$/db/migrate/20170615112437_devise_create_stores.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170616122934_add_username_to_stores.rb" afterPath="$PROJECT_DIR$/db/migrate/20170616122934_add_username_to_stores.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170622081423_add_key_to_store.rb" afterPath="$PROJECT_DIR$/db/migrate/20170622081423_add_key_to_store.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170622120516_add_store_name_to_store.rb" afterPath="$PROJECT_DIR$/db/migrate/20170622120516_add_store_name_to_store.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170630123944_create_contacts.rb" afterPath="$PROJECT_DIR$/db/migrate/20170630123944_create_contacts.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170712102527_add_activecamp_to_store.rb" afterPath="$PROJECT_DIR$/db/migrate/20170712102527_add_activecamp_to_store.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170712105052_create_campaigns.rb" afterPath="$PROJECT_DIR$/db/migrate/20170712105052_create_campaigns.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170712132813_create_store_campaigns.rb" afterPath="$PROJECT_DIR$/db/migrate/20170712132813_create_store_campaigns.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170712145422_add_store_to_store_campaign.rb" afterPath="$PROJECT_DIR$/db/migrate/20170712145422_add_store_to_store_campaign.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170717112125_add_texts_to_store_campaign.rb" afterPath="$PROJECT_DIR$/db/migrate/20170717112125_add_texts_to_store_campaign.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170717165916_add_fields_to_store_campaign.rb" afterPath="$PROJECT_DIR$/db/migrate/20170717165916_add_fields_to_store_campaign.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170717165954_create_contact_types.rb" afterPath="$PROJECT_DIR$/db/migrate/20170717165954_create_contact_types.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170717170022_add_contact_type_to_store_campaign.rb" afterPath="$PROJECT_DIR$/db/migrate/20170717170022_add_contact_type_to_store_campaign.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170717180628_add_active_campaign_to_store.rb" afterPath="$PROJECT_DIR$/db/migrate/20170717180628_add_active_campaign_to_store.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170717190007_add_splash_image_to_store_campaign.rb" afterPath="$PROJECT_DIR$/db/migrate/20170717190007_add_splash_image_to_store_campaign.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170719110545_add_background_color_to_store_campaign.rb" afterPath="$PROJECT_DIR$/db/migrate/20170719110545_add_background_color_to_store_campaign.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170719143619_add_background_to_store_campaign.rb" afterPath="$PROJECT_DIR$/db/migrate/20170719143619_add_background_to_store_campaign.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170719184018_add_bg_img_to_store_campaign.rb" afterPath="$PROJECT_DIR$/db/migrate/20170719184018_add_bg_img_to_store_campaign.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170721061549_add_splashimage_opacity_to_store_campaign.rb" afterPath="$PROJECT_DIR$/db/migrate/20170721061549_add_splashimage_opacity_to_store_campaign.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170721070703_change_data_type_for_splashimage_o_pacity.rb" afterPath="$PROJECT_DIR$/db/migrate/20170721070703_change_data_type_for_splashimage_o_pacity.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170724115634_add_display_to_campaign.rb" afterPath="$PROJECT_DIR$/db/migrate/20170724115634_add_display_to_campaign.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170724160821_change_dateto_date.rb" afterPath="$PROJECT_DIR$/db/migrate/20170724160821_change_dateto_date.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170728125313_add_active_to_store.rb" afterPath="$PROJECT_DIR$/db/migrate/20170728125313_add_active_to_store.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170804223606_add_attachment_avatar_to_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20170804223606_add_attachment_avatar_to_users.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170804233526_add_attachment_video_to_store_campaigns.rb" afterPath="$PROJECT_DIR$/db/migrate/20170804233526_add_attachment_video_to_store_campaigns.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170906073754_add_contact_type_to_store.rb" afterPath="$PROJECT_DIR$/db/migrate/20170906073754_add_contact_type_to_store.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170906075313_add_fields_to_contact_type.rb" afterPath="$PROJECT_DIR$/db/migrate/20170906075313_add_fields_to_contact_type.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170906075955_add_display_to_contact_type.rb" afterPath="$PROJECT_DIR$/db/migrate/20170906075955_add_display_to_contact_type.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170907215155_create_questions.rb" afterPath="$PROJECT_DIR$/db/migrate/20170907215155_create_questions.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170908052751_add_store_campaign_to_question.rb" afterPath="$PROJECT_DIR$/db/migrate/20170908052751_add_store_campaign_to_question.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170909113729_create_poll_answers.rb" afterPath="$PROJECT_DIR$/db/migrate/20170909113729_create_poll_answers.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170909115019_add_answer_to_poll_answer.rb" afterPath="$PROJECT_DIR$/db/migrate/20170909115019_add_answer_to_poll_answer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20171005130121_create_tickets.rb" afterPath="$PROJECT_DIR$/db/migrate/20171005130121_create_tickets.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20171012101730_add_number_of_use_to_ticket.rb" afterPath="$PROJECT_DIR$/db/migrate/20171012101730_add_number_of_use_to_ticket.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20171012114135_add_text_color_to_store_campaign.rb" afterPath="$PROJECT_DIR$/db/migrate/20171012114135_add_text_color_to_store_campaign.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20171030091749_change_phone_to_string.rb" afterPath="$PROJECT_DIR$/db/migrate/20171030091749_change_phone_to_string.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20171030094514_add_sms_status_to_store_campaign.rb" afterPath="$PROJECT_DIR$/db/migrate/20171030094514_add_sms_status_to_store_campaign.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/AfricasTalkingGateway.rb" afterPath="$PROJECT_DIR$/lib/AfricasTalkingGateway.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/404.html" afterPath="$PROJECT_DIR$/public/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/422.html" afterPath="$PROJECT_DIR$/public/422.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/500.html" afterPath="$PROJECT_DIR$/public/500.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-fe21886e876a38d546ee4002dc849a04.json" afterPath="$PROJECT_DIR$/public/assets/.sprockets-manifest-fe21886e876a38d546ee4002dc849a04.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-06b1921a6e9aa603dc9badfbe2a88b59f355a3a15b0f2cf9ae6b7f8977091222.css" afterPath="$PROJECT_DIR$/public/assets/application-06b1921a6e9aa603dc9badfbe2a88b59f355a3a15b0f2cf9ae6b7f8977091222.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-0d99b6cab37427f3444d86755b73b71341b88ecd757f7ac2afabf1ca634af197.js" afterPath="$PROJECT_DIR$/public/assets/application-0d99b6cab37427f3444d86755b73b71341b88ecd757f7ac2afabf1ca634af197.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-1c20278c236c789829f212942d765612082165759dcbddfbba2f963e88b58af8.js" afterPath="$PROJECT_DIR$/public/assets/application-1c20278c236c789829f212942d765612082165759dcbddfbba2f963e88b58af8.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-21e888ad45f6d73d89964392d43ebe352d6f230952dd11ba021529c77a91dbd3.js" afterPath="$PROJECT_DIR$/public/assets/application-21e888ad45f6d73d89964392d43ebe352d6f230952dd11ba021529c77a91dbd3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-232552d9c5830c107ac891eb0093ee5f33f767297847a4e5f7657a796eb81654.js" afterPath="$PROJECT_DIR$/public/assets/application-232552d9c5830c107ac891eb0093ee5f33f767297847a4e5f7657a796eb81654.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-2687f498eb0422e540bab1e04f282fcd946eefa0ffd4c4d613b31281759baaa7.js" afterPath="$PROJECT_DIR$/public/assets/application-2687f498eb0422e540bab1e04f282fcd946eefa0ffd4c4d613b31281759baaa7.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-272d46ed9ccfb3e9c85b0b2ad1beb2cea27810970d5f92f9e7efafcc2c30df95.js" afterPath="$PROJECT_DIR$/public/assets/application-272d46ed9ccfb3e9c85b0b2ad1beb2cea27810970d5f92f9e7efafcc2c30df95.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-47c511e28d2cd75ad2a60c4cab7eb24a8cb1d071b849a505a84e88ff7f8724be.css" afterPath="$PROJECT_DIR$/public/assets/application-47c511e28d2cd75ad2a60c4cab7eb24a8cb1d071b849a505a84e88ff7f8724be.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-63663188b5784a9ab772370f0620897b53f8101443f027d5e5c8a80b7885008b.css" afterPath="$PROJECT_DIR$/public/assets/application-63663188b5784a9ab772370f0620897b53f8101443f027d5e5c8a80b7885008b.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-6a6ca3acd6199f24b8588993ef54225e8533b26cf0e502d05c76705c43090d68.js" afterPath="$PROJECT_DIR$/public/assets/application-6a6ca3acd6199f24b8588993ef54225e8533b26cf0e502d05c76705c43090d68.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-7261d29c8575316cae252fb2e793cb8a5e44ec174817206a809c80974208aefa.js" afterPath="$PROJECT_DIR$/public/assets/application-7261d29c8575316cae252fb2e793cb8a5e44ec174817206a809c80974208aefa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-8a66d970d9f9148a5427012d1543b2abccdafbaf526eb07eba58a35775e2174f.js" afterPath="$PROJECT_DIR$/public/assets/application-8a66d970d9f9148a5427012d1543b2abccdafbaf526eb07eba58a35775e2174f.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-ac23ed1a490928ecf64e0d5c8f437bb8b02b080d04b845236b18b750e6acea0b.js" afterPath="$PROJECT_DIR$/public/assets/application-ac23ed1a490928ecf64e0d5c8f437bb8b02b080d04b845236b18b750e6acea0b.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-b33c6e03045298b16c007e1debd560d72124f27db354112b378188a6cef85051.js" afterPath="$PROJECT_DIR$/public/assets/application-b33c6e03045298b16c007e1debd560d72124f27db354112b378188a6cef85051.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-b44109a32f5f61af466c482c7ff96ae9a3b69c9f42dfafdcfc86d92605afc7d4.js" afterPath="$PROJECT_DIR$/public/assets/application-b44109a32f5f61af466c482c7ff96ae9a3b69c9f42dfafdcfc86d92605afc7d4.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-e2867a2e43a238c42dff226c2b4a4b4e188fe9bc9efd464602385392bb1acee7.js" afterPath="$PROJECT_DIR$/public/assets/application-e2867a2e43a238c42dff226c2b4a4b4e188fe9bc9efd464602385392bb1acee7.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-e3308ead5c31b8e4f9b93b0d339dd724d26f341e3651778e8de6e874d273729e.js" afterPath="$PROJECT_DIR$/public/assets/application-e3308ead5c31b8e4f9b93b0d339dd724d26f341e3651778e8de6e874d273729e.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-e9fffc3ca151a9c513e28a7696b3b6ffefde19fbff14d3120ac18da38fd38d9e.css" afterPath="$PROJECT_DIR$/public/assets/application-e9fffc3ca151a9c513e28a7696b3b6ffefde19fbff14d3120ac18da38fd38d9e.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-f7daee33b45f466200a265e08294fd041798c57ab96d48e7d963b521c34a4209.js" afterPath="$PROJECT_DIR$/public/assets/application-f7daee33b45f466200a265e08294fd041798c57ab96d48e7d963b521c34a4209.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg" afterPath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg" afterPath="$PROJECT_DIR$/public/assets/fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sendgrid" afterPath="$PROJECT_DIR$/sendgrid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/home_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/home_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/page_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/page_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/poll_answers_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/poll_answers_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/questions_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/questions_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/registrations_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/registrations_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/store_campaigns_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/store_campaigns_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/store_passwords_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/store_passwords_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/store_registrations_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/store_registrations_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/store_sessions_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/store_sessions_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/stores_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/stores_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/tickets_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/tickets_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/user_passwords_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/user_passwords_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/user_registrations_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/user_registrations_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/user_sessions_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/user_sessions_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/campaigns.yml" afterPath="$PROJECT_DIR$/test/fixtures/campaigns.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/contact_types.yml" afterPath="$PROJECT_DIR$/test/fixtures/contact_types.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/contacts.yml" afterPath="$PROJECT_DIR$/test/fixtures/contacts.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/poll_answers.yml" afterPath="$PROJECT_DIR$/test/fixtures/poll_answers.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/questions.yml" afterPath="$PROJECT_DIR$/test/fixtures/questions.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/store_campaigns.yml" afterPath="$PROJECT_DIR$/test/fixtures/store_campaigns.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/stores.yml" afterPath="$PROJECT_DIR$/test/fixtures/stores.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/tickets.yml" afterPath="$PROJECT_DIR$/test/fixtures/tickets.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/users.yml" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mailers/previews/user_notifier_mailer_preview.rb" afterPath="$PROJECT_DIR$/test/mailers/previews/user_notifier_mailer_preview.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mailers/user_notifier_mailer_test.rb" afterPath="$PROJECT_DIR$/test/mailers/user_notifier_mailer_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/campaign_test.rb" afterPath="$PROJECT_DIR$/test/models/campaign_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/contact_test.rb" afterPath="$PROJECT_DIR$/test/models/contact_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/contact_type_test.rb" afterPath="$PROJECT_DIR$/test/models/contact_type_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/poll_answer_test.rb" afterPath="$PROJECT_DIR$/test/models/poll_answer_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/question_test.rb" afterPath="$PROJECT_DIR$/test/models/question_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/store_campaign_test.rb" afterPath="$PROJECT_DIR$/test/models/store_campaign_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/store_test.rb" afterPath="$PROJECT_DIR$/test/models/store_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/ticket_test.rb" afterPath="$PROJECT_DIR$/test/models/ticket_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/user_test.rb" afterPath="$PROJECT_DIR$/test/models/user_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_helper.rb" afterPath="$PROJECT_DIR$/test/test_helper.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -28,88 +529,28 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="phone.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/page/phone.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2840">
-              <caret line="142" column="56" lean-forward="false" selection-start-line="142" selection-start-column="56" selection-end-line="142" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page_controller.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/page_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="120" column="82" lean-forward="false" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="82" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tickets_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/tickets_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="clients.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/stores/clients.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ticket.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/page/ticket.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2120">
-              <caret line="106" column="22" lean-forward="false" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="stores_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/stores_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="48" column="38" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+            <state relative-caret-position="1220">
+              <caret line="61" column="96" lean-forward="false" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="96" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/stores/index.html.erb">
+      <file leaf-file-name="emails_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/emails_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1240">
-              <caret line="62" column="104" lean-forward="false" selection-start-line="62" selection-start-column="81" selection-end-line="62" selection-end-column="104" />
+            <state relative-caret-position="120">
+              <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/stores/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/stores/settings.html.erb">
+      <file leaf-file-name="email.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/email.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -118,17 +559,83 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/store_campaigns/index.html.erb">
+      <file leaf-file-name="store_campaigns_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/store_campaigns_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+            <state relative-caret-position="1600">
+              <caret line="80" column="13" lean-forward="false" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TODO" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TODO">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="store_campaign.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/store_campaign.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/store_campaigns/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1600">
+              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>chartContain3</find>
+      <find>scope</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -165,57 +672,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/store_registrations_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/stores.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/page/pollcampaign.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/db/migrate/20170615112437_devise_create_stores.rb" />
-        <option value="$PROJECT_DIR$/app/models/store.rb" />
-        <option value="$PROJECT_DIR$/app/views/stores/settings.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/store_registrations/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/custom/piechart.js" />
-        <option value="$PROJECT_DIR$/app/models/store_campaign.rb" />
-        <option value="$PROJECT_DIR$/app/views/poll_answers/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/question.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_alerts.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
-        <option value="$PROJECT_DIR$/app/views/layouts/admin.html.erb" />
-        <option value="$PROJECT_DIR$/TODO" />
-        <option value="$PROJECT_DIR$/app/views/tickets/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/page/campaign.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/page/_imagecampaign.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/page/_videocampaign.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/tickets/create.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/tickets/new.html.erb" />
-        <option value="$PROJECT_DIR$/db/seeds.rb" />
-        <option value="$PROJECT_DIR$/app/views/page/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/page/_splash.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/page/_pollcampaign.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/page/sms.js.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20171030091749_change_phone_to_string.rb" />
         <option value="$PROJECT_DIR$/app/views/page/sms.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20171030094514_add_sms_status_to_store_campaign.rb" />
         <option value="$PROJECT_DIR$/app/views/page/_code.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/poll_answers_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/page/code.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/stores/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/polls_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/store_campaigns_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/polls/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/main.js" />
-        <option value="$PROJECT_DIR$/app/views/store_campaigns/edit.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_sidebar.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/store_campaigns/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/stores/clients.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/stores_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/page/phone.html.erb" />
         <option value="$PROJECT_DIR$/app/views/page/ticket.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/tickets_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/store_registrations/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/main.js" />
+        <option value="$PROJECT_DIR$/app/views/page/_imagecampaign.html.erb" />
+        <option value="$PROJECT_DIR$/config/environments/development.rb" />
+        <option value="$PROJECT_DIR$/app/views/page/phone.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/page/code.html.erb" />
+        <option value="$USER_HOME$/Desktop/checkout.html" />
+        <option value="$PROJECT_DIR$/app/controllers/store_campaigns_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/page/_login.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/page/_videocampaign.html.erb" />
+        <option value="$PROJECT_DIR$/app/uploaders/bg_img_uploader.rb" />
+        <option value="$PROJECT_DIR$/app/uploaders/splashimage_uploader.rb" />
+        <option value="$PROJECT_DIR$/app/views/page/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/page/campaign.html.erb" />
+        <option value="$PROJECT_DIR$/app/uploaders/media_uploader.rb" />
+        <option value="$PROJECT_DIR$/app/views/page/_pollcampaign.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/poll_answers/_answers.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/polls/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/page/email.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/page/fb.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/emails_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/user_registrations_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/store_campaigns/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/store.rb" />
+        <option value="$PROJECT_DIR$/app/models/store_campaign.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/stores.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/stores/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
+        <option value="$PROJECT_DIR$/app/views/store_registrations/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/stores/settings.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/admin.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/stores/clients.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/page_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/tickets/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/tickets_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/stores_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/store_registrations_controller.rb" />
+        <option value="$PROJECT_DIR$/TODO" />
+        <option value="$PROJECT_DIR$/app/views/store_campaigns/edit.html.erb" />
+        <option value="$PROJECT_DIR$/public/stylesheets/bootstrap.css" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom/style.css" />
       </list>
     </option>
   </component>
@@ -254,21 +761,85 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="intense-sands-76808" />
+              <option name="myItemId" value="cards" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="intense-sands-76808" />
+              <option name="myItemId" value="cards" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="intense-sands-76808" />
+              <option name="myItemId" value="cards" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="intense-sands-76808" />
+              <option name="myItemId" value="cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cards" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -278,29 +849,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="intense-sands-76808" />
+              <option name="myItemId" value="cards" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="intense-sands-76808" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="intense-sands-76808" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="intense-sands-76808" />
+              <option name="myItemId" value="cards" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -309,6 +862,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -322,16 +923,18 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="rout&#9;FILE&#9;file:///home/ndeto/workspace/cards/config/routes.rb&#10;rou&#9;FILE&#9;file:///home/ndeto/workspace/cards/config/routes.rb&#10;route&#9;FILE&#9;file:///home/ndeto/workspace/cards/config/routes.rb&#10;todo&#9;FILE&#9;file:///home/ndeto/workspace/cards/TODO" />
+    <property name="SearchEverywhereHistoryKey" value="rout&#9;FILE&#9;file:///home/ndeto/workspace/cards/config/routes.rb&#10;routes&#9;FILE&#9;file:///home/ndeto/workspace/cards/config/routes.rb&#10;oute&#9;FILE&#9;file:///home/ndeto/workspace/cards/config/routes.rb&#10;rou&#9;FILE&#9;file:///home/ndeto/workspace/cards/config/routes.rb&#10;route&#9;FILE&#9;file:///home/ndeto/workspace/cards/config/routes.rb&#10;todo&#9;FILE&#9;file:///home/ndeto/workspace/cards/TODO" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/stylesheets" />
+      <recent name="$PROJECT_DIR$/app/views/page" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/app/assets/images/custom" />
       <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
-      <recent name="$PROJECT_DIR$/app/assets/stylesheets/custom" />
-      <recent name="$PROJECT_DIR$/app/assets/javascripts/custom" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/db" />
@@ -700,11 +1303,34 @@
       <workItem from="1508600301099" duration="54000" />
       <workItem from="1509278438573" duration="20927000" />
       <workItem from="1509382437722" duration="1249000" />
-      <workItem from="1509521183399" duration="6422000" />
-      <workItem from="1511614805888" duration="1659000" />
-      <workItem from="1511616759041" duration="5000" />
-      <workItem from="1511687782833" duration="8000" />
-      <workItem from="1511777544705" duration="60000" />
+      <workItem from="1509521183399" duration="7113000" />
+      <workItem from="1509620074790" duration="172000" />
+      <workItem from="1509675019183" duration="56000" />
+      <workItem from="1509703504159" duration="272000" />
+      <workItem from="1509704786392" duration="156000" />
+      <workItem from="1509708857013" duration="181000" />
+      <workItem from="1509889823209" duration="16000" />
+      <workItem from="1510126338237" duration="629000" />
+      <workItem from="1510496301562" duration="191000" />
+      <workItem from="1510720370827" duration="2102000" />
+      <workItem from="1510722985461" duration="7163000" />
+      <workItem from="1510773403993" duration="4093000" />
+      <workItem from="1510903456995" duration="1272000" />
+      <workItem from="1511084962922" duration="642000" />
+      <workItem from="1511113632567" duration="9227000" />
+      <workItem from="1511171947082" duration="10312000" />
+      <workItem from="1511196305330" duration="5817000" />
+      <workItem from="1511250404172" duration="441000" />
+      <workItem from="1511276018023" duration="1611000" />
+      <workItem from="1511335897576" duration="284000" />
+      <workItem from="1511341448323" duration="617000" />
+      <workItem from="1511347295133" duration="8000" />
+      <workItem from="1511459633742" duration="1644000" />
+      <workItem from="1511515763259" duration="1275000" />
+      <workItem from="1511518914776" duration="6777000" />
+      <workItem from="1511611480102" duration="32477000" />
+      <workItem from="1511748896596" duration="13744000" />
+      <workItem from="1511777738174" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="Ndeto working">
       <created>1506323708409</created>
@@ -731,18 +1357,27 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201128000" />
+    <option name="totallyTimeSpent" value="301271000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12935324" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31199187" sideWeight="0.5019305" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19845219" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3343496" sideWeight="0.5041459" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984003" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286004" sideWeight="0.4980695" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3699187" sideWeight="0.4980695" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21239838" sideWeight="0.4980695" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5050813" sideWeight="0.49585405" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -784,24 +1419,143 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/uploaders/splashimage_uploader.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        <state relative-caret-position="140">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/app/uploaders/media_uploader.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="33" />
+        <state relative-caret-position="220">
+          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+    <entry file="file://$PROJECT_DIR$/config/initializers/paperclip.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/page/_imagecampaign.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/poll_answers/create.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/poll_answers/_answers.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/page/_pollcampaign.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/mime_types.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/page/code.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="98" column="12" lean-forward="true" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/page/phone.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="142" column="47" lean-forward="false" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/page/email.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="144" column="58" lean-forward="true" selection-start-line="144" selection-start-column="58" selection-end-line="144" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/poll_answers_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/store_passwords_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/store_sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/user_passwords_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/user_sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/page/fb.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="97" column="118" lean-forward="false" selection-start-line="97" selection-start-column="118" selection-end-line="97" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/user_registrations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/polls_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="39" column="107" lean-forward="false" selection-start-line="39" selection-start-column="107" selection-end-line="39" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/polls/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2700">
+          <caret line="135" column="82" lean-forward="false" selection-start-line="135" selection-start-column="82" selection-end-line="135" selection-end-column="82" />
         </state>
       </provider>
     </entry>
@@ -812,56 +1566,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/contact.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/admin.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1920">
-          <caret line="96" column="265" lean-forward="false" selection-start-line="96" selection-start-column="265" selection-end-line="96" selection-end-column="265" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TODO">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tickets/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="2" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ticket.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="32" lean-forward="true" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tickets/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="31" column="44" lean-forward="true" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tickets/create.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/campaign.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -870,8 +1582,177 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/store.rb">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/stores.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="76" column="155" lean-forward="false" selection-start-line="76" selection-start-column="155" selection-end-line="76" selection-end-column="155" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/store_campaigns/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/stores/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="177" column="24" lean-forward="false" selection-start-line="177" selection-start-column="24" selection-end-line="177" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="231" column="41" lean-forward="true" selection-start-line="231" selection-start-column="41" selection-end-line="231" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_usersidebar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-662">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/store_registrations/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/admin.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="42" column="60" lean-forward="false" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/stores/clients.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/page_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-519">
+          <caret line="118" column="21" lean-forward="false" selection-start-line="118" selection-start-column="21" selection-end-line="118" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tickets/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/stores/settings.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#3;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_alerts.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/tickets_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/store_registrations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/store_campaigns_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1600">
+          <caret line="80" column="13" lean-forward="false" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TODO">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/stores_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1220">
+          <caret line="61" column="96" lean-forward="false" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/emails_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/email.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -879,278 +1760,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="65" column="44" lean-forward="true" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tickets/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/page/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/page/_splash.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="262" lean-forward="false" selection-start-line="17" selection-start-column="262" selection-end-line="17" selection-end-column="262" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/store_campaigns/poll.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="33" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="4" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/backtrace_silencers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/page/campaign.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1528">
-          <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/page/_videocampaign.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="239" lean-forward="false" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="239" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20171030091749_change_phone_to_string.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="44" lean-forward="false" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20171030094514_add_sms_status_to_store_campaign.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/page/_pollcampaign.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/poll_answers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/polls_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="39" column="107" lean-forward="false" selection-start-line="39" selection-start-column="107" selection-end-line="39" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/store_campaigns_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="91" column="9" lean-forward="true" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/polls/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/page/code.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1980">
-          <caret line="99" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/page/_imagecampaign.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/store_campaigns/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+        <state relative-caret-position="1600">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_sidebar.html.erb">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        <state relative-caret-position="120">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/stores/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/stores/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/stores/settings.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/store_campaigns/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/stores/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1240">
-          <caret line="62" column="104" lean-forward="false" selection-start-line="62" selection-start-column="81" selection-end-line="62" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/stores/clients.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/stores_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="48" column="38" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/page/phone.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2840">
-          <caret line="142" column="56" lean-forward="false" selection-start-line="142" selection-start-column="56" selection-end-line="142" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/page/ticket.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2120">
-          <caret line="106" column="22" lean-forward="false" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/tickets_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/page_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="120" column="82" lean-forward="false" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="82" />
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
           <folding />
         </state>
       </provider>

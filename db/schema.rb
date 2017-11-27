@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171030094514) do
+ActiveRecord::Schema.define(version: 20171127024238) do
 
   create_table "campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -33,7 +33,16 @@ ActiveRecord::Schema.define(version: 20171030094514) do
     t.date     "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "email"
     t.index ["store_id"], name: "index_contacts_on_store_id", using: :btree
+  end
+
+  create_table "emails", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "email"
+    t.integer  "store_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["store_id"], name: "index_emails_on_store_id", using: :btree
   end
 
   create_table "poll_answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -57,8 +66,8 @@ ActiveRecord::Schema.define(version: 20171030094514) do
   create_table "store_campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "campaign_id"
     t.string   "name"
-    t.datetime "created_at",                                                     null: false
-    t.datetime "updated_at",                                                     null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
     t.integer  "store_id"
     t.boolean  "sponsored_text_status"
     t.string   "sponsored_text"
@@ -77,7 +86,10 @@ ActiveRecord::Schema.define(version: 20171030094514) do
     t.integer  "video_file_size"
     t.datetime "video_updated_at"
     t.string   "text_color"
-    t.boolean  "sms_status",                                     default: false
+    t.boolean  "fb_status"
+    t.boolean  "sms_status"
+    t.boolean  "email_status"
+    t.string   "fb_link"
     t.index ["campaign_id"], name: "index_store_campaigns_on_campaign_id", using: :btree
     t.index ["contact_type_id"], name: "index_store_campaigns_on_contact_type_id", using: :btree
     t.index ["store_id"], name: "index_store_campaigns_on_store_id", using: :btree
@@ -104,6 +116,8 @@ ActiveRecord::Schema.define(version: 20171030094514) do
     t.integer  "store_campaign_id"
     t.boolean  "active"
     t.string   "contact_type"
+    t.string   "network_ip"
+    t.string   "ticket_key"
     t.index ["email"], name: "index_stores_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_stores_on_reset_password_token", unique: true, using: :btree
     t.index ["store_campaign_id"], name: "index_stores_on_store_campaign_id", using: :btree
@@ -144,6 +158,7 @@ ActiveRecord::Schema.define(version: 20171030094514) do
   end
 
   add_foreign_key "contacts", "stores"
+  add_foreign_key "emails", "stores"
   add_foreign_key "poll_answers", "questions"
   add_foreign_key "questions", "store_campaigns"
   add_foreign_key "store_campaigns", "campaigns"

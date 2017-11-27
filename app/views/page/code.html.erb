@@ -98,10 +98,10 @@
           <div class="text-center col-md-6 col-md-offset-3">
             <span style="font-size: 20px;color: red;font-weight: bold;"><%= alert %></span>
             <%= form_tag("/tickets/verify", method: "post") do %>
-                <p class="text-center" style="color:#000; font-size:36px; font-family:'Century Gothic';">
+                <p class="text-center" style="color:<%= @camp.text_color %>; font-size:36px; font-family:'Century Gothic';">
                   <strong>Welcome to After40 Hotel, please enter your internet access code</strong>
                 </p>
-                    <p class="text-center" style="color:#000; font-size:20px; font-family:'Century Gothic';">
+                    <p class="text-center" style="color:<%= @camp.text_color %>; font-size:20px; font-family:'Century Gothic';">
                       <strong>Please Request an access ticket from staff if you dont have one</strong>
                     </p>
 
