@@ -34,6 +34,14 @@ class StoresController < ApplicationController
   def update
     @store = Store.find(current_store.id)
 
+    ticket = params[:store][:ticket_key]
+    @tick = Store.where(ticket_key:ticket).first
+
+    if !@tick.nil?
+      flash[:alert] = "This key isn't allowed, try another one"
+      redirect_to(request.referer) and return
+      end
+
     if @store.update(store_params)
       flash[:notice] = "Store has been Updated"
       redirect_to(stores_settings_path)
@@ -77,7 +85,7 @@ class StoresController < ApplicationController
   private
 
   def store_params
-    params.require(:store).permit(:store_name, :username, :active, :network_ip)
+    params.require(:store).permit(:store_name, :username, :active, :network_ip,:ticket_key)
   end
 
 end

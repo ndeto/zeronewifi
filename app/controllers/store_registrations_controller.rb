@@ -21,9 +21,17 @@ end
   def create
     key = ref = [*'A'..'Z', *"0".."9"].sample(8).join
     @user = User.find(current_user.id)
-    @store = @user.store.create(store_params.merge(key:key,active:false))
+
+    ticket = params[:store][:store_name]
+    @tick = Store.where(store_name:ticket).first
+
+    if !@tick.nil?
+      flash[:alert] = "Choose a different store name, That one is already taken"
+      redirect_to(request.referer) and return
+    end
+    @store = @user.store.create(store_params.merge(key:key,active:false,ticket_key:santize(ticket)))
     if @store.save
-      flash[:notice] = "Your store has been created"
+      flash[:notice] = "Your store has been created! Login to create your campaigns"
       redirect_to(home_stores_path)
     else
       flash[:alert] = "Sorry, Something went wrong"
@@ -41,7 +49,13 @@ end
   private
 
   def store_params
-    params.require(:store).permit(:email, :username, :password, :password_confirmation, :store_name)
+    params.require(:store).permit(:email, :username, :password, :password_confirmation, :store_name, :ticket_key)
+  end
+
+  def santize(name)
+    lower = name.downcase
+    nospace = lower.gsub(/[^0-9a-z]/i, "")
+    return nospace
   end
 
 end

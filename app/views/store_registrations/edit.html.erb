@@ -9,13 +9,6 @@
     <%= devise_error_messages! %>
 
     <div class="form-group">
-      <%= f.label :store_name, class:"col-sm-12 control-label no-padding-right", style:"margin-top:2em" %><br/>
-      <div class="col-sm-12">
-        <%= f.text_field :store_name, class: 'col-xs-12 col-sm-12', placeholder: "Store Name", autofocus: true %>
-      </div>
-    </div>
-
-    <div class="form-group">
       <%= f.label :email, class:"col-sm-12 control-label no-padding-right", style:"margin-top:2em" %><br/>
       <div class="col-sm-12">
         <%= f.email_field :email, autofocus: true, class: 'col-xs-12 col-sm-12', placeholder: "Email" %>
