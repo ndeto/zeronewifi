@@ -1,13 +1,14 @@
 <div class="container">
 <div class="row">
-	<div class="col-md-6 col-md-offset-3">
+	<div class="col-md-6 col-md-offset-3"><br><br><br>
 		<% if @camp.campaign_text_status %>
-		<p class="text-center" style="color:<%= @camp.text_color %>; font-size:36px; font-family:'Century Gothic';">
-			<strong><%= @camp.campaign_text %></strong>
-		</p>
+		<p class="text-center" style="color:<%= @camp.text_color %>; font-size:35px; font-family:'Arial';">
+			<%= @camp.campaign_text %>
+		</p><br><br>
 		<% end %>
 		<%= image_tag(@camp.media_url.to_s , width:'100%') %>
     </div>
 </div>
   <%= render 'login' %>
+	<br><br><br>
 </div>

@@ -25,7 +25,7 @@
   body {
   <% if @camp.background == 'image' %> background-image: url('<%= @camp.bg_img_url.to_s %>');
   <% else %> background-color: <%= @camp.background_color %>;
-  <% end %> font-family: "Baskerville";
+  <% end %> font-family: "Arial";
     background-size: cover;
     color:<%= @camp.text_color %>
   }
@@ -60,7 +60,7 @@
   button {
     background-color: #B5252E;
     color: #000000;
-    font-family: "Century Gothic";
+    font-family: "Arial";
   }
 
   a {
@@ -99,6 +99,36 @@
     margin-right: auto;
     width: 100%;
   }
+  .submit-button{
+		display: inline-block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 0px;
+		border: 2px solid grey !important;
+		background: #fff !important;
+		color: #016d6f !important;
+		transition: all 0.5s;
+		font-weight: 700;
+		padding: 0.7em;
+		text-align: center;
+		text-decoration: none;
+	}
+	.submit-button:hover{
+		display: inline-block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 0px;
+		border: 2px solid #000 !important;
+		background: grey !important;
+		color: #fff !important;
+		transition: all 0.5s;
+		font-weight: 700;
+		padding: 0.7em;
+		text-align: center;
+		text-decoration: none;
+	}
 </style>
 <script>
     function chk(){
@@ -110,7 +140,7 @@
         }
 
     }
-    
+
 
 
     function phonecheck(phonenumber) {
@@ -135,17 +165,21 @@
           <div class="text-center col-md-6 col-md-offset-3">
             <span style="font-size: 20px;color: red;font-weight: bold;"><%= alert %></span>
             <%= form_for :ticket, :url => {:controller=>"page" ,:action=>"ticket"}, method: "post" , remote:true do  |f|%>
-                <p class="text-center" style="color:<%= @camp.text_color %>; font-size:36px; font-family:'Century Gothic';">
+                <p class="text-center" style="color:<%= @camp.text_color %>; font-size:36px; font-family:'Arial';">
                   <strong>Please enter your phone number, we'll SMS you your access code</strong></p>
-                <p class="text-center" style="color:<%= @camp.text_color %>; font-size:20px; font-family:'Century Gothic';">Use international format please e.g Kenya: 2547xxxxxxxx, Uganda: 256xxxxxxxxx</p>
-                <%= f.number_field :phone, required:"required", id:'p_phone' %>
+                <p class="text-center" style="color:<%= @camp.text_color %>; font-size:15px; font-family:'Arial';">Use international format please e.g Kenya: 2547xxxxxxxx, Uganda: 256xxxxxxxxx</p>
+                <%= f.number_field :phone, required:"required", id:'p_phone' %><br><br>
                 <div class="error"></div>
-                <p><%= submit_tag 'Browse!', class: 'btn btn-lg', style: 'margin:1em;font-style:bold;font-size:22px; text-align:center;color:#000;border-radius:0px;width:"100%";border-style:none;background-color:#fff;opacity:0.9', id: 'br_btn', type: 'submit' %></p>
-                <%= link_to "DO YOU HAVE A CODE ALREADY?", pages_code_path %>
+                <div class=""><%= submit_tag 'CONNECT !', class: 'submit-button', id: 'br_btn', type: 'submit' %><br><br><br></div>
+                <div class="col-md-12 text-center"><%= link_to "DO YOU HAVE A CODE ALREADY ?", pages_code_path %></div>
             <% end %>
           </div>
+
         </div>
       </div>
+    </div>
+    <div class="col-md-12"><br><br><br>
+      <p style="color:#000;text-align:center;font-weight:900">Powered by <a target="_blank" href="http://www.cnetwifi.com" style="color:#016d6f;font-weight:900">C-NET Wifi</a></p>
     </div>
   </div>
 </div>

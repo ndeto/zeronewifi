@@ -13,7 +13,7 @@
   body {
   <% if @camp.background == 'image' %> background-image: url('<%= @camp.bg_img_url.to_s %>');
   <% else %> background-color: <%= @camp.background_color %> !important;
-  <% end %> font-family: "Baskerville";
+  <% end %> font-family: "Arial";
     background-size: cover;
   }
 
@@ -36,7 +36,7 @@
   button {
     background-color: #B5252E;
     color: #000000;
-    font-family: "Century Gothic";
+    font-family: "Arial";
   }
 
   a {
@@ -121,6 +121,9 @@
         <div id="status"></div>
 
       </div>
+    </div>
+    <div class="col-md-12"><br><br><br>
+      <p style="color:#000;text-align:center;font-weight:900">Powered by <a target="_blank" href="http://www.cnetwifi.com" style="color:#016d6f;font-weight:900">C-NET Wifi</a></p>
     </div>
   </div>
 </div>
