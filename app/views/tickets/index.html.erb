@@ -3,7 +3,7 @@
 <h1 class="myclass"><i class="fa fa-ticket"></i> Your Tickets</h1></br><br>
 </div>
   <div class="col-md-12">
-    <a href="<%= new_ticket_path %>" class="my-button"> <i class="ace-icon fa fa-plus"></i> New Ticket</a>
+    <a href="<%= key_ticket_path(current_store.ticket_key) %>" class="my-button"> <i class="ace-icon fa fa-plus"></i> New Ticket</a>
   </div>
   <div class="col-md-12">
     <h3 class="header smaller lighter myclass">Have a look at your Tickets</h3>

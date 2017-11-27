@@ -22,12 +22,21 @@
 </div>
 
     <div class="form-group">
-      <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Hotspot Address/Default Gateway </label>
+      <label style="margin-top:2em" class="col-sm-12 control-label no-padding-right" for="form-field-1"> Hotspot Address/Default Gateway </label>
 
-      <div class="col-sm-9">
-        <%= f.text_field :network_ip, class:'col-xs-10 col-sm-5', placeholder:"e.g 192.168.10.1, hotel.login.com" %>
+      <div class="col-sm-12">
+        <%= f.text_field :network_ip, class:'col-xs-12 col-sm-12', placeholder:"e.g 192.168.10.1, hotel.login.com" %>
       </div>
     </div>
+
+
+      <div class="form-group">
+        <label style="margin-top:2em" class="col-sm-12 control-label no-padding-right" for="form-field-1"> Ticket Key </label>
+
+        <div class="col-sm-12">
+          <%= f.text_field :ticket_key, class:'col-xs-12 col-sm-12', placeholder:"ticketkey" %>
+        </div>
+      </div>
 
 <div class="form-group">
 	<label style="margin-top:2em" class="col-sm-12 control-label no-padding-right text-left" for="form-field-1"> Activate Store</label>

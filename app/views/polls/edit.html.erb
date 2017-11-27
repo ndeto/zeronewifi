@@ -1,17 +1,15 @@
 <%= render 'layouts/alerts' %>
-
+<div class="col-md-12">
+<h1 class="myclass text-center"><i class="fa fa-edit"></i> Edit <%= @storecampaign.name %></h1>
+</div>
+<div class="col-md-10 col-md-offset-1 col-xs-12" style="background:#f5f5f5;margin-bottom:8em;padding-top:2em;padding-bottom:2em;">
 <%= form_for :storecampaign, :url => {:controller => 'store_campaigns', :action => 'update_poll'},method:'put' do |f|%>
-    <div class="col-md-6 col-md-offset-3"><h1>Edit <%= @storecampaign.name %></h1></div>
-    <input name="store_campaign_id" type="hidden" value="<%= @storecampaign.id %>">
-<div class="row"  style="background-color: #F3F3F3;padding:1em;margin-top: -2em">
-  <div class="col-md-offset-1 col-md-5 col-xs-12">
+<input name="store_campaign_id" type="hidden" value="<%= @storecampaign.id %>">
+  <div class="col-md-6">
     <div class="form-group">
       <%= f.label :name %>
       <%= f.text_field :name,class:'form-control' %>
     </div>
-  </div>
-  <div class="col-md-offset-1 col-md-5 col-xs-12">
-
     <div class="form-group">
       <%= f.label "Show Splash Page" %>
       <%= f.check_box :splashpage_status %>
@@ -21,22 +19,13 @@
       <%= f.label "Enable SMS OTP access" %>
       <%= f.check_box :sms_status %>
     </div>
-  </div>
-</div>
-<div class="row"  style="padding:1em">
-  <div class="col-md-5 col-md-offset-1">
-    <div class="col-md-6">
     <div class="form-group">
       <%= f.label "Text Color" %>
       <%= f.text_field :text_color, class:'colorpicker2' %>
     </div>
+    <div class="form-group">
+    <div id="clrbx2" style="display:block;height:10px;width:250px;padding:1em;border-style:solid;border-color:#000000;background-color:<% if !@storecampaign.text_color.nil? %><%= @storecampaign.text_color %><% else %> <%= 'whitesmoke' %> <% end %>;" class="backcolor2"></div>
     </div>
-      <div class="col-md-6">
-        <div id="clrbx2" style="display:block;height:10px;width:250px;padding:1em;border-style:solid;border-color:#000000;background-color:<% if !@storecampaign.text_color.nil? %><%= @storecampaign.text_color %><% else %> <%= 'whitesmoke' %> <% end %>;" class="form-group backcolor2 col-md-6"></div>
-      </div>
-
-    </div>
-  <div class="col-md-5 col-md-offset-1">
     <div class="form-group">
       <%= f.label "Sponsored Text" %>
       <%= f.check_box :sponsored_text_status %>
@@ -44,32 +33,21 @@
 
     <div class="form-group">
       <%= f.label "Sponsored Text" %>
-      <%= f.text_area :sponsored_text, class:'form-control' %>
+      <%= f.text_area :sponsored_text, class:'form-control',style:'height:13em' %>
     </div>
   </div>
-  </div>
-
-
-
-  <div class="col-md-5 col-md-offset-1">
   <div class="col-md-6">
     <div class="form-group">
       <%= f.label "Splash Image" %>
-      <p>
         <%= f.file_field :splashimage %>
     </div>
 
     <div id='splash' class="field" style="opacity:<%= @storecampaign.splashimage_opacity %>">
       <%= image_tag(@storecampaign.splashimage_url(:thumb).to_s ) %>
       <br/>
-      Opacity: <%= f.range_field(:splashimage_opacity, in: 0..1, step: 0.1, id:'op' )%>
+
     </div>
-  </div>
-  </div>
-</div>
-    <div class="row"  style="background-color: #F3F3F3;padding:1em;margin-top:2em">
-      <div class="col-md-5 col-md-offset-1">
-        <div class="col-md-6">
+    Opacity: <%= f.range_field(:splashimage_opacity, in: 0..1, step: 0.1, id:'op' )%>
           <div class="field">
             <%= f.label "Image Background" %>
             <%= f.radio_button(:background, 'image', id:'back')%>
@@ -79,16 +57,10 @@
             <%= f.label "Choose background Image" %>
             <%= f.file_field :bg_img %>
           </div>
-        </div>
-        <div class="col-md-6 back">
           <div class="field">
             <%= image_tag(@storecampaign.bg_img_url(:thumb).to_s) %>
 
           </div>
-        </div>
-      </div>
-      <div class="col-md-5 col-md-offset-1">
-        <div class="col-md-6">
           <div class="field">
             <%= f.label "Color Background" %>
             <%= f.radio_button(:background, "color", id:'color') %>
@@ -98,73 +70,43 @@
             <%= f.label "Background Color" %>
             <%= f.text_field :background_color, class:'colorpicker' %>
           </div>
-        </div>
-        <div id="clrbx" style="height:250px;width:250px;background-color:<%= @storecampaign.background_color %>;" class=" backcolor col-md-6"></div>
-
-      </div>
-    </div>
-    <div class="row" style="background-color: #F3F3F3;padding:1em;">
-      <div class="text-left col-md-offset-5 col-md-1">
-        <div class="col-md-6">
           <div class="field">
-        <p>
-          <%= f.submit 'Save Campaign Settings', class:'btn btn-primary'%>
-        </p>
+            <div id="clrbx" style="height:250px;width:250px;background-color:<%= @storecampaign.background_color %>;" class=" backcolor col-md-6"></div><br>
           </div>
         </div>
-      </div>
-
-    </div>
-
-
-<% end %>
-
-
-<%= form_for :question , url:{controller:'polls',action:'update'}, method:'put' do |f| %>
-<div class="col-md-6 col-md-offset-3">
-	<h1>Edit <%= StoreCampaign.find(@question.store_campaign_id).name %></h1>
-</div>
-
-<div class="row" style="padding:1em;">
-	<div class="col-md-offset-1 col-md-5 col-xs-12">
-		<div class="form-group">
-			<%= f.label :question %><p></p>
-			<%= f.text_area :question, style:'width:700px' %><p></p>
-		</div>
-	</div>
-</div>
-<div class="row" style="background-color: #F3F3F3;padding:1em 0 0 1em; margin: 1em;">
-	<div class="col-md-offset-3 col-md-6">
-		<p>
-			<%= f.submit 'Save Question', class:'btn btn-primary'%>
-		</p>
-	</div>
-
-</div>
-
-<%end%>
-
-<div class="row" style="margin: 1em;padding: 1em;">
-	<div class="col-md-offset-1 col-md-5">
+          <div class="col-md-12 text-center" style="margin-bottom:8em;margin-top:8em">
+          	<%= f.button type:'submit', class:"submit-button" do %>
+          	<i class="ace-icon fa fa-save bigger-110"></i>
+          	Save Campaign Changes
+          	<% end %>
+          </div>
+    <% end %>
+    <div class="col-md-12">
+      <h1> Question</h1>
+    <%= form_for :question , url:{controller:'polls',action:'update'}, method:'put' do |f| %>
+    		<div class="form-group">
+    			<%= f.text_area :question, style:'width:700px' %><p></p>
+    		</div>
+    		<p>
+    			<%= f.submit 'Save Question', class:'submit-button'%>
+    		</p>
+    <%end%>
+  </div>
+  <div class="col-md-12">
 		<h1> Answers</h1>
-		<p>
-
 			<%= form_for :poll_answer, url:{controller:'poll_answers', action:'create'}, remote:true, method:'post' do |f| %>
 
 			<input type="hidden" name="question_id" value="<%= @question.id %>" />
 
 			<%= f.label :answer %>
 			<%= f.text_field :answer%>
-		<p></p>
 		<%= f.submit %>
 		<% end %>
-	</div>
-	<div class="col-md-offset-1 col-md-5">
 		<div id="answers">
+      <br><br>
 			<% @question.poll_answer.all.each do |a| %>
 			<p><%= a.answer%> <%= link_to poll_answer_url(a) , method:'delete', remote:true, data: { confirm: "Delete Answer?" } do %> <i class="fa fa-times"></i> <% end %></p>
 				<%end%>
 		</div>
-	</div>
+  </div>
 </div>
-

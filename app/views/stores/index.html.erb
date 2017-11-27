@@ -78,13 +78,15 @@
               function weekly() {
                   var weeklydata = google.visualization.arrayToDataTable([
                       ['Type', 'Numbers'],
-                      ["Email Visits", <%= Contact.where(store_id:current_store.id).where('created_at >= ?',1.week.ago).distinct.pluck(:email).count.to_i - 1 %>],
-                      ["Phone Visits", <%= Contact.where(store_id:current_store.id).where('created_at >= ?',1.week.ago).distinct.pluck(:phone).count.to_i - 1 %>],
+                      ["Email Visits", <% nume = Contact.where(store_id:current_store.id).where('created_at <= ?',1.week.ago).distinct.pluck(:email).count.to_i %> <% if nume == 0 %><%= nume %><% else %><%= nume - 1 %><% end %>],
+                      ["Phone Visits", <% nump = Contact.where(store_id:current_store.id).where('created_at <= ?',1.week.ago).distinct.pluck(:phone).count.to_i %> <% if nump == 0 %><%= nump %><% else %><%= nump - 1 %><% end %>],
                   ]);
 
                   var weeklyoptions = {
                       title: 'Unique Visits This week',
-                      pieHole: 0.4
+                      pieHole: 0.4,
+                      sliceVisibilityThreshold: 0,
+                      is3D:true
                   };
 
                   var chart = new google.visualization.PieChart(document.getElementById('weekly'));
@@ -96,13 +98,15 @@
 
                   var allvisitsweekdata = google.visualization.arrayToDataTable([
                       ['Type', 'Numbers'],
-                      ["Email Visits", <%= Contact.where(store_id:current_store.id).where("contacts.email IS NOT NULL").where('created_at >= ?',1.week.ago).count %>],
-                      ["Phone Visits", <%= Contact.where(store_id:current_store.id).where("contacts.phone IS NOT NULL").where('created_at >= ?',1.week.ago).count %>],
+                      ["Email Visits", <%= Contact.where(store_id:current_store.id).where("contacts.email IS NOT NULL").where('created_at <= ?',1.week.ago).count %>],
+                      ["Phone Visits", <%= Contact.where(store_id:current_store.id).where("contacts.phone IS NOT NULL").where('created_at <= ?',1.week.ago).count %>],
                   ]);
 
                   var allvisitsweekoptions = {
                       title: 'All Visits this week',
-                      pieHole: 0.4
+                      pieHole: 0.4,
+                      sliceVisibilityThreshold: 0,
+                      is3D:true
                   };
 
                   var chart = new google.visualization.PieChart(document.getElementById('allvisitsweek'));
@@ -119,7 +123,9 @@
 
                   var alluniqueoptions = {
                       title: 'All Unique Visits',
-                      pieHole: 0.4
+                      pieHole: 0.4,
+                      sliceVisibilityThreshold: 0,
+                      is3D:true
                   };
 
                   var chart = new google.visualization.PieChart(document.getElementById('allunique'));
@@ -136,7 +142,9 @@
 
                   var alloptions = {
                       title: 'Total Visits',
-                      pieHole: 0.4
+                      pieHole: 0.4,
+                      sliceVisibilityThreshold: 0,
+                      is3D:true
                   };
 
                   var chart = new google.visualization.PieChart(document.getElementById('all'));
@@ -167,7 +175,7 @@
                       },
                       vAxis: {
                           title: 'Logins'
-                      }
+                      },
                   };
                   var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 

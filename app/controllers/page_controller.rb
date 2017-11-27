@@ -65,6 +65,7 @@ class PageController < ApplicationController
     @date = Time.now.strftime("%m/%d/%Y")
 
     if @contact.nil?
+      @code = randy
       @today = false
       # Include the helper gateway class
       require 'AfricasTalkingGateway'
@@ -81,9 +82,6 @@ class PageController < ApplicationController
       # Please ensure you include the country code (+254 for Kenya in this case, +256 for Uganda)
       to = "#{params[:ticket][:phone]}"
 
-      @code = randy
-      Ticket.create(code: @code, number_of_use: 2)
-      Contact.create(store_id:@store.id , phone: params[:ticket][:phone], date: @date)
       # And of course we want our recipients to know what we really do
       message = "Hello, welcome to After40 Hotel, your access code is #{@code}"
 
@@ -95,6 +93,11 @@ class PageController < ApplicationController
       begin
         # Thats it, hit send and we'll take care of the rest.
         reports = gateway.sendMessage(to, message)
+
+        if reports
+          Ticket.create(code: @code, number_of_use: 2)
+          Contact.create(store_id: @store.id, phone: params[:ticket][:phone], date: @date)
+        end
 
         reports.each {|x|
           # status is either "Success" or "error message"
@@ -113,6 +116,7 @@ class PageController < ApplicationController
         puts "Date is equal to today"
         @today = true
       else
+        @code = randy
         puts "Date is not equal to today"
         # Include the helper gateway class
         require 'AfricasTalkingGateway'
@@ -145,8 +149,6 @@ class PageController < ApplicationController
           reports = gateway.sendMessage(to, message)
 
           if reports
-            @store = Store.find(1)
-            @code = randy
             Ticket.create(code: @code, number_of_use: 2)
             Contact.create(store_id: @store.id, phone: params[:ticket][:phone], date: @date)
           end

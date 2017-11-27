@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171125120720) do
+ActiveRecord::Schema.define(version: 20171127024238) do
 
   create_table "campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -66,8 +66,8 @@ ActiveRecord::Schema.define(version: 20171125120720) do
   create_table "store_campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "campaign_id"
     t.string   "name"
-    t.datetime "created_at",                                                     null: false
-    t.datetime "updated_at",                                                     null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
     t.integer  "store_id"
     t.boolean  "sponsored_text_status"
     t.string   "sponsored_text"
@@ -86,8 +86,8 @@ ActiveRecord::Schema.define(version: 20171125120720) do
     t.integer  "video_file_size"
     t.datetime "video_updated_at"
     t.string   "text_color"
-    t.boolean  "sms_status",                                     default: false
     t.boolean  "fb_status"
+    t.boolean  "sms_status"
     t.boolean  "email_status"
     t.string   "fb_link"
     t.index ["campaign_id"], name: "index_store_campaigns_on_campaign_id", using: :btree
@@ -117,6 +117,7 @@ ActiveRecord::Schema.define(version: 20171125120720) do
     t.boolean  "active"
     t.string   "contact_type"
     t.string   "network_ip"
+    t.string   "ticket_key"
     t.index ["email"], name: "index_stores_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_stores_on_reset_password_token", unique: true, using: :btree
     t.index ["store_campaign_id"], name: "index_stores_on_store_campaign_id", using: :btree
@@ -164,5 +165,4 @@ ActiveRecord::Schema.define(version: 20171125120720) do
   add_foreign_key "store_campaigns", "contact_types"
   add_foreign_key "store_campaigns", "stores"
   add_foreign_key "stores", "store_campaigns"
-  add_foreign_key "stores", "users"
 end
