@@ -83,7 +83,7 @@ class PageController < ApplicationController
       to = "#{params[:ticket][:phone]}"
 
       # And of course we want our recipients to know what we really do
-      message = "Hello, welcome to After40 Hotel, your access code is #{@code}"
+      message = "Hello, welcome to #{@store.store_name}, your access code is #{@code}"
 
       # Create a new instance of our awesome gateway class
       gateway = AfricasTalkingGateway.new(username, apikey)
@@ -95,7 +95,7 @@ class PageController < ApplicationController
         reports = gateway.sendMessage(to, message)
 
         if reports
-          Ticket.create(code: @code, number_of_use: 2)
+          Ticket.create(code: @code, number_of_use: 2,store_id:@store.id)
           Contact.create(store_id: @store.id, phone: params[:ticket][:phone], date: @date)
         end
 
@@ -149,7 +149,7 @@ class PageController < ApplicationController
           reports = gateway.sendMessage(to, message)
 
           if reports
-            Ticket.create(code: @code, number_of_use: 2)
+            Ticket.create(code: @code, number_of_use: 2,store_id:@store.id)
             Contact.create(store_id: @store.id, phone: params[:ticket][:phone], date: @date)
           end
 

@@ -49,7 +49,7 @@ class TicketsController < ApplicationController
     num = params[:number_of_use].to_i
     @store = Store.find(session[:store_key])
     @code = randy
-    Ticket.create(code: @code, number_of_use: num)
+    Ticket.create(code: @code, number_of_use: num,store_id:@store.id)
   end
 
   def verify
