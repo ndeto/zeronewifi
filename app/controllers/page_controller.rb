@@ -71,7 +71,7 @@ class PageController < ApplicationController
       require 'AfricasTalkingGateway'
 
       # Specify your login credentials
-      if Rails.env.development?
+      if Rails.env.production?
         username = "cnetwifi";
         apikey = "da3fe299dc936e23363959d47738548d597bab7f23f2e8f596352b83eb1742d4";
       else
@@ -123,7 +123,7 @@ class PageController < ApplicationController
 
         # Specify your login credentials
 
-        if Rails.env.development?
+        if Rails.env.production?
           username = "cnetwifi";
           apikey = "da3fe299dc936e23363959d47738548d597bab7f23f2e8f596352b83eb1742d4";
         else
