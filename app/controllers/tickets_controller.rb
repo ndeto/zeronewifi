@@ -15,7 +15,7 @@ class TicketsController < ApplicationController
         d.destroy
       end
     end
-    @tickets = Ticket.all
+    @tickets = Ticket.where(store_id:current_store.id)
     set_admin
   end
 
