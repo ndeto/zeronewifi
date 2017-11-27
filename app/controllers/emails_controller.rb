@@ -1,7 +1,7 @@
 class EmailsController < ApplicationController
   def create
     @store = Store.find(session[:store_id])
-    @email = Contact.create(email_params.merge(store_id:@store.id,date:Time.now.strftime("%m/%d/%Y")))
+    @email = Contact.create(email_params.merge(store_id:@store.id,date:Time.now.strftime("%Y-%m-%d")))
     if @email.save
       redirect_to("http://#{@store.network_ip}/login?username=57EDBGH3&password=57EDBGH3")
     else

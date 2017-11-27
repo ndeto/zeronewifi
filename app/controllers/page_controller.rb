@@ -62,7 +62,7 @@ class PageController < ApplicationController
     @camp = StoreCampaign.find(@store.store_campaign_id)
 
     @contact = Contact.where(phone: params[:ticket][:phone]).order('created_at desc').first
-    @date = Time.now.strftime("%m/%d/%Y")
+    @date = Time.now.strftime("%Y-%m-%d")
 
     if @contact.nil?
       @code = randy
