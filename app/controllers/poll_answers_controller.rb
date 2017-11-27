@@ -17,7 +17,7 @@ class PollAnswersController < ApplicationController
     @answer = PollAnswer.find(params[:count][:count])
     count = @answer.count + 1
     @answer.update(count:count)
-    @store = Store.find(1);
+    @store = Store.find(session[:store_id])
     @camp = StoreCampaign.find(@store.store_campaign_id)
 
     if @camp.sms_status
