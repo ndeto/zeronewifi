@@ -137,7 +137,7 @@ class PageController < ApplicationController
 
 
         # And of course we want our recipients to know what we really do
-        message = "Hello, welcome to After40 Hotel, your access code is #{@code}"
+        message = "Hello, welcome to #{@store.store_name}, your access code is #{@code}"
 
         # Create a new instance of our awesome gateway class
         gateway = AfricasTalkingGateway.new(username, apikey)

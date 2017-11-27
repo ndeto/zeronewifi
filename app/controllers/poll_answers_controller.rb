@@ -23,7 +23,7 @@ class PollAnswersController < ApplicationController
     if @camp.sms_status
       redirect_to(pages_phone_path)
     else
-      redirect_to(pages_code_path)
+      redirect_to("http://#{@store.network_ip}/login?username=57EDBGH3&password=57EDBGH3")
     end
   end
 
