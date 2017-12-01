@@ -82,6 +82,13 @@ class StoresController < ApplicationController
 
   end
 
+  def contacts
+      @phones = Contact.where(store_id:current_store.id).where('contacts.phone IS NOT NULL')
+      @emails = Contact.where(store_id:current_store.id).where('contacts.email IS NOT NULL')
+
+      respond_to :xls
+  end
+
   private
 
   def store_params

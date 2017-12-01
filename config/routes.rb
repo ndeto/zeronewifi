@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   get 'pages/facebook' => 'page#fb'
   get '/pages/email' => 'page#email'
   get '/tickets/:ticket_key' => 'tickets#new', as: "key_ticket"
+  get '/stores/contacts' => 'stores#contacts'
+
 
   devise_scope :store do
     get 'home/new', to: 'store_registrations#new'
