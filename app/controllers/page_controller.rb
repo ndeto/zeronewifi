@@ -94,14 +94,16 @@ class PageController < ApplicationController
         # Thats it, hit send and we'll take care of the rest.
         reports = gateway.sendMessage(to, message)
 
-        if reports
-          Ticket.create(code: @code, number_of_use: 2,store_id:@store.id)
-          Contact.create(store_id: @store.id, phone: params[:ticket][:phone], date: @date)
-        end
-
         reports.each {|x|
-          # status is either "Success" or "error message"
-          puts 'number=' + x.number + ';status=' + x.status + ';messageId=' + x.messageId + ';cost=' + x.cost
+          if x.status == "Success"
+            Ticket.create(code: @code, number_of_use: 2,store_id:@store.id)
+            Contact.create(store_id: @store.id, phone: params[:ticket][:phone], date: @date)
+            # status is either "Success" or "error message"
+            puts 'number=' + x.number + ';status=' + x.status + ';messageId=' + x.messageId + ';cost=' + x.cost
+          else
+            flash[:alert] = "We couldn't send a code to #{params[:ticket][:phone]}, please try again"
+            redirect_to(request.referer) and return
+          end
         }
       rescue AfricasTalkingGatewayException => ex
         puts 'Encountered an error: ' + ex.message
@@ -145,30 +147,32 @@ class PageController < ApplicationController
         # Any gateway error will be captured by our custom Exception class below,
         # so wrap the call in a try-catch block
         begin
-          # Thats it, hit send and we'll take care of the rest.
-          reports = gateway.sendMessage(to, message)
 
-          if reports
-            Ticket.create(code: @code, number_of_use: 2,store_id:@store.id)
-            Contact.create(store_id: @store.id, phone: params[:ticket][:phone], date: @date)
-          end
+            # Thats it, hit send and we'll take care of the rest.
+            reports = gateway.sendMessage(to, message)
 
-          reports.each {|x|
-            # status is either "Success" or "error message"
-            puts 'number=' + x.number + ';status=' + x.status + ';messageId=' + x.messageId + ';cost=' + x.cost
-          }
-        rescue AfricasTalkingGatewayException => ex
-          puts 'Encountered an error: ' + ex.message
-        end
-
+            reports.each {|x|
+              if x.status == "Success"
+                Ticket.create(code: @code, number_of_use: 2,store_id:@store.id)
+                Contact.create(store_id: @store.id, phone: params[:ticket][:phone], date: @date)
+                # status is either "Success" or "error message"
+                puts 'number=' + x.number + ';status=' + x.status + ';messageId=' + x.messageId + ';cost=' + x.cost
+              else
+                flash[:alert] = "We couldn't send a code to #{params[:ticket][:phone]}, please try a different one"
+                redirect_to(request.referer) and return
+              end
+            }
+          rescue AfricasTalkingGatewayException => ex
+            puts 'Encountered an error: ' + ex.message
         # DONE!
-        @today = false
-      end
+          @today = false
+          end
       puts @today
       render :layout => false
 #redirect_to(pages_ticket_path)
+      end
     end
-  end
+    end
 
   def fb
     @store = Store.find(session[:store_id])
