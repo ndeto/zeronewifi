@@ -108,7 +108,7 @@ class PageController < ApplicationController
       end
 # DONE!
     else
-      @date2 = @contact.created_at.strftime("%m/%d/%Y")
+      @date2 = @contact.created_at.strftime("%Y-%m-%d")
       puts @date
       puts @date2
 
