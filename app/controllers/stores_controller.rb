@@ -37,9 +37,9 @@ class StoresController < ApplicationController
     ticket = params[:store][:ticket_key]
     @tick = Store.where(ticket_key:ticket).first
 
-    if !@tick.nil?
-      flash[:alert] = "This key isn't allowed, try another one"
-      redirect_to(request.referer) and return
+    if !@tick.nil? && @tick.id != current_store.id
+        flash[:alert] = "This key isn't allowed, try another one"
+        redirect_to(request.referer) and return
       end
 
     if @store.update(store_params)
