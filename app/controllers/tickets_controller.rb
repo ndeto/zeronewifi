@@ -56,7 +56,7 @@ class TicketsController < ApplicationController
     @store = Store.find(session[:store_id])
     ticket = params[:ticket]
 
-    @ticket = Ticket.where(code: ticket,store_id:@store.id).first
+    @ticket = Ticket.where(code: ticket.upcase,store_id:@store.id).first
 
     if @ticket.nil?
       flash[:alert] = "Invalid Ticket! Please request a ticket from a staff member"
