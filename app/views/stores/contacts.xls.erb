@@ -12,7 +12,7 @@
       </Row>
       <% @phones.each do |p| %>
           <Row>
-            <Cell><Data ss:Type="Number"><%= p.phone %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= p.phone %></Data></Cell>
             <Cell><Data ss:Type="String"><%= p.created_at.strftime("%Y-%m-%d %H:%M") %></Data></Cell>
           </Row>
       <% end %>
