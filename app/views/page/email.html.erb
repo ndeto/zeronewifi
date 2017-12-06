@@ -165,16 +165,18 @@
 <div class="outer">
   <div class="middle">
     <div class="inner">
-      <div class="row">
+      <div class="col-md-12">
         <div class="condend">
           <div class="text-center col-md-6 col-md-offset-3">
+            <% if !flash[:alert].nil? %>
             <span style="font-size: 20px;color: red;font-weight: bold; background-color: white;opacity:0.8;padding:3px;border-radius: 3px"><%= alert %></span>
+            <% end %>
             <%= form_for :email, :url => {:controller=>"emails" ,:action=>"create"}, method: "post"  do  |f|%>
                 <p class="text-center" style="color:<%= @camp.text_color %>; font-size:36px; font-family:'Arial';">
-                  <strong>Please enter your email address</strong></p>
-                <p><%= f.email_field :email, placeholder:'Leave your email here', class:'text-center', id:'theemail', width:'100%', style:'color:#000' %></p>
+                  <strong>Enter your email address</strong></p>
+                <%= f.email_field :email, placeholder:'Leave your email here', class:'text-center', id:'theemail', width:'100%', style:'color:#000' %><br><br><br>
                 <div class="error"></div>
-                <p><%= submit_tag 'CONNECT', class: 'submit-button', id:'signupbtn', type: 'submit', disabled:'disabled' %></p>
+                <div class="col-md-6 col-md-offset-3 col-xs-12"><%= submit_tag 'CONNECT', class: 'submit-button', id:'signupbtn', type: 'submit', disabled:'disabled' %></div>
             <% end %>
           </div>
         </div>
