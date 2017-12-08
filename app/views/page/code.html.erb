@@ -123,7 +123,7 @@
 <div class="outer">
   <div class="middle">
     <div class="inner">
-      <div class="col-md-12">
+      <div class="col-md-12"'>
         <div class="condend">
           <div class="text-center col-md-6 col-md-offset-3">
             <% if !flash[:alert].nil? %>
@@ -136,15 +136,14 @@
                     <p class="text-center" style="color:<%= @camp.text_color %>; font-size:15px; font-family:'Arial';">
                       <strong>Request access code from staff if you lack one</strong>
                     </p>
-
                 <input type="text" name="ticket" class="text-center" required/><br><br><br>
-                <div class="col-md-6 col-md-offset-3 col-xs-12"><%= submit_tag 'CONNECT', class: 'submit-button', id: 'signupbtn', type: 'submit' %></div>
+                <%= submit_tag 'CONNECT', class: 'submit-button col-md-6 col-md-offset-3 col-xs-12"', id: 'con', type:'submit'%>
             <% end %>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-12"><br><br><br>
+    <div class="col-md-12" ><br><br><br>
       <p style="color:#000;text-align:center;font-weight:900">Powered by <a target="_blank" href="http://www.cnetwifi.com" style="color:#016d6f;font-weight:900">C-NET Wifi</a></p>
     </div>
   </div>
