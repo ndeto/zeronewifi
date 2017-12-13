@@ -72,8 +72,8 @@ class PageController < ApplicationController
 
       # Specify your login credentials
       if Rails.env.production?
-        username = "cnetwifi";
-        apikey = "da3fe299dc936e23363959d47738548d597bab7f23f2e8f596352b83eb1742d4";
+        username = "#{ENV['AT_USER']}";
+        apikey = "#{ENV['AT_KEY']}";
       else
         username = "sandbox";
         apikey = "975c3c12bb8d96457d74b88085350fb5f4732d7c88d6c2dbf27640be9363d8b9";
@@ -85,6 +85,9 @@ class PageController < ApplicationController
       # And of course we want our recipients to know what we really do
       message = "Hello, welcome to #{@store.store_name}, your access code is #{@code}"
 
+      # Specify your AfricasTalking shortCode or sender id
+      sender = "cnetwifi"
+
       # Create a new instance of our awesome gateway class
       gateway = AfricasTalkingGateway.new(username, apikey)
 
@@ -92,7 +95,7 @@ class PageController < ApplicationController
       # so wrap the call in a try-catch block
       begin
         # Thats it, hit send and we'll take care of the rest.
-        reports = gateway.sendMessage(to, message)
+        reports = gateway.sendMessage(to, message, sender)
 
         reports.each {|x|
           if x.status == "Success"
@@ -126,8 +129,8 @@ class PageController < ApplicationController
         # Specify your login credentials
 
         if Rails.env.production?
-          username = "cnetwifi";
-          apikey = "da3fe299dc936e23363959d47738548d597bab7f23f2e8f596352b83eb1742d4";
+          username = "#{ENV['AT_USER']}";
+          apikey = "#{ENV['AT_KEY']}";
         else
           username = "sandbox";
           apikey = "975c3c12bb8d96457d74b88085350fb5f4732d7c88d6c2dbf27640be9363d8b9";
@@ -141,17 +144,20 @@ class PageController < ApplicationController
         # And of course we want our recipients to know what we really do
         message = "Hello, welcome to #{@store.store_name}, your access code is #{@code}"
 
+        # Specify your AfricasTalking shortCode or sender id
+        sender = "cnetwifi"
+
         # Create a new instance of our awesome gateway class
         gateway = AfricasTalkingGateway.new(username, apikey)
 
         # Any gateway error will be captured by our custom Exception class below,
         # so wrap the call in a try-catch block
         begin
+          # Thats it, hit send and we'll take care of the rest.
+          reports = gateway.sendMessage(to, message, sender)
 
-            # Thats it, hit send and we'll take care of the rest.
-            reports = gateway.sendMessage(to, message)
 
-            reports.each {|x|
+          reports.each {|x|
               if x.status == "Success"
                 Ticket.create(code: @code, number_of_use: 2,store_id:@store.id)
                 Contact.create(store_id: @store.id, phone: params[:ticket][:phone], date: @date)
