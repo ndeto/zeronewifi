@@ -99,19 +99,20 @@
       <div class="row">
         <div class="condend">
           <div class="text-center col-md-6 col-md-offset-3">
+            <% if !flash[:alert].nil? %>
             <span style="font-size: 20px;color: red;font-weight: bold; background-color: white;opacity:0.8;padding:3px;border-radius: 3px"><%= alert %></span>
+                <% end %>
             <%= form_tag("/tickets/verify", method: "post") do %>
                 <% if !@today %>
-                    <p class="text-center" style="color:#000; font-size:36px; font-family:'Century Gothic';">
-                      <strong>Please enter the ticket we sent you to access the internet</strong></p>
+                    <p class="text-center" style="color:<%= @camp.text_color %>; font-size:35px; font-family:'Arial';">
                       <strong>Please enter the ticket we sent you to access the internet</strong></p>
                 <% else %>
-                    <p class="text-center" style="color:#000; font-size:36px; font-family:'Century Gothic';">
+                    <p class="text-center" style="color:<%= @camp.text_color %>; font-size:35px; font-family:'Arial';">
                       <strong>You have received your code for today. Please Request an access ticket from staff</strong>
                     </p>
                 <% end %>
-                <input type="text" name="ticket" required/>
-                <p><%= submit_tag 'Browse!', class: 'btn btn-lg', style: 'margin:1em;font-style:bold;font-size:22px; text-align:center;color:#000;border-radius:0px;width:"100%";border-style:none;background-color:#fff;opacity:0.9', id: 'signupbtn', type: 'submit' %></p>
+                <input type="text" name="ticket" class="text-center" required/><br><br><br>
+                <%= submit_tag 'CONNECT', class: 'submit-button col-md-6 col-md-offset-3 col-xs-12"', id: 'con', type:'submit'%>
             <% end %>
           </div>
         </div>
