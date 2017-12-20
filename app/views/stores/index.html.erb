@@ -161,10 +161,10 @@
 
                   data2.addRows([
                       <%
-                      @contact = Contact.where('created_at >= ?',1.week.ago).where(store_id:current_store.id).order("created_at ASC")
+                      @contact = Contact.where('created_at >= ?',1.week.ago).where(store_id:current_store.id).order("date ASC").distinct.pluck(:date)
                       if !@contact.nil?
                       @contact.each do |c|%>
-                      [new Date(<%= c.created_at.strftime("%Y") %>, <%= c.created_at.strftime("%m").to_i - 1 %>, <%= c.created_at.strftime("%-d") %>), <%= Contact.where(date:c.date,store_id:current_store.id).count %>, <%= Contact.where(date:c.date,store_id:current_store.id).where("contacts.email IS NOT NULL").count %>, <%= Contact.where(date:c.date,store_id:current_store.id).where("contacts.phone IS NOT NULL").count %>],
+                      [new Date(<%= c.strftime("%Y") %>, <%= c.strftime("%m").to_i - 1 %>, <%= c.strftime("%-d") %>), <%= Contact.where(date:c.strftime("%Y-%m-%d"),store_id:current_store.id).count %>, <%= Contact.where(date:c.strftime("%Y-%m-%d"),store_id:current_store.id).where("contacts.email IS NOT NULL").count %>, <%= Contact.where(date:c.strftime("%Y-%m-%d"),store_id:current_store.id).where("contacts.phone IS NOT NULL").count %>],
                       <%
                       end
                       end %>
