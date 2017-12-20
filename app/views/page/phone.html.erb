@@ -172,7 +172,7 @@
                 <p class="text-center" style="color:<%= @camp.text_color %>; font-size:15px; font-family:'Arial';">Use international format e.g Kenya: 2547xxxxxxxx, Uganda: 256xxxxxxxxx</p>
                 <%= f.number_field :phone, required:"required", id:'p_phone',class:'text-center',style:'color:#000' %><br><br>
                 <div class="error"></div><br><br>
-                <div class="col-md-6 col-md-offset-3 col-xs-12"><%= submit_tag 'CONNECT', class: 'submit-button', id: 'br_btn', type: 'submit' %><br><br><br></div>
+                <%= submit_tag 'CONNECT', class: 'submit-button', id: 'br_btn', type: 'submit' %><br><br><br>
                 <div class="col-md-12 text-center"><%= link_to "CLICK HERE IF YOU HAVE CODE ?", pages_code_path,style:'text-decoration:underline;font-weight:700' %></div>
             <% end %>
           </div>
