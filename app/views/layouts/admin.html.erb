@@ -10,7 +10,6 @@
     <%= favicon_link_tag 'favicon/logo.ico' %>
 
 		<%= csrf_meta_tags %>
-
 		<meta name="description" content="overview &amp; stats" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 	</head>
@@ -103,7 +102,7 @@
 			<%= render 'layouts/sidebar' %>
 			<%end%>
 
-			<%if user_signed_in? && controller_name=='home' || controller_name =='user_registrations' || (controller_name == 'store_registrations' && action_name == 'new') %>
+			<%if user_signed_in? && controller_name=='home' || controller_name =='user_registrations' || (controller_name == 'store_registrations' && action_name == 'new') || controller_name == 'admins'%>
 			<%= render 'layouts/usersidebar' %>
 			<%end%>
 
