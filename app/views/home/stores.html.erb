@@ -2,6 +2,49 @@
 <div class="col-md-12">
 <h1 class="myclass"><i class="fa fa-shopping-bag"></i> Your Stores</h1></br><br>
 </div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+  $(function () {
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart2);
+
+      function drawChart2() {
+
+          var data2 = new google.visualization.DataTable();
+          data2.addColumn('date', 'X');
+          <% @stores.each do |s| %>
+          data2.addColumn('number', '<%= s.store_name %>');
+          <% end %>
+
+          data2.addRows([
+              <% @stores.each do |s| %>
+              <%
+              @contact = Contact.where('created_at >= ?',1.week.ago).where(store_id:s.id).order("date ASC").distinct.pluck(:date)
+              if !@contact.nil?
+              @contact.each do |c|%>
+              [new Date(<%= c.strftime("%Y") %>, <%= c.strftime("%m").to_i - 1 %>, <%= c.strftime("%-d") %>), <%= Contact.where(date:c.strftime("%Y-%m-%d"),store_id:s.id).count %>],
+              <%
+              end
+              end %>
+              <% end %>
+          ]);
+          var options2 = {
+              hAxis: {
+                  title: 'Date'
+              },
+              vAxis: {
+                  title: 'Logins'
+              },
+          };
+          var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+          chart.draw(data2, options2);
+      }
+  });
+</script>
+<div class="col-md-12">
+  <div style="height:300px;border:1px solid #c6c6c6" id="curve_chart"></div><br>
+</div>
 </br>
 	<div class="col-md-12">
 		<a href="<%= home_new_path %>" class="my-button"> <i class="ace-icon fa fa-plus"></i> New Store</a>
