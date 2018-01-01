@@ -65,11 +65,16 @@ Store.find(1).update({
                                               store_campaign_id:1,
                                               user_id: 1
                                           })
-=end
-
 
 ContactType.create!([
   {name: "email", description: "Require Email", display: "Email"},
   {name: "phone", description: "Require Phone Number", display: "Phone"},
   {name: "none", description: "Require No Contacts", display: "None"}
 ])
+
+=end
+
+Admin.create!([
+                  {:email => 'martindeto@gmail.com', :password => 'spiderpig', :password_confirmation => 'spiderpig'}
+              ])
+
