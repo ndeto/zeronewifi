@@ -17,16 +17,15 @@
           <% end %>
 
           data2.addRows([
-              <% @stores.each do |s| %>
+
               <%
               @contact = Contact.where('created_at >= ?',1.week.ago).where(store_id:s.id).order("date ASC").distinct.pluck(:date)
               if !@contact.nil?
               @contact.each do |c|%>
-              [new Date(<%= c.strftime("%Y") %>, <%= c.strftime("%m").to_i - 1 %>, <%= c.strftime("%-d") %>), <%= Contact.where(date:c.strftime("%Y-%m-%d"),store_id:s.id).count %>],
+              [new Date(<%= c.strftime("%Y") %>, <%= c.strftime("%m").to_i - 1 %>, <%= c.strftime("%-d") %>),<% @stores.each do |s| %> <%= "#{Contact.where(date:c.strftime('%Y-%m-%d'),store_id:s.id).count}," %> <% end  %>],
               <%
               end
               end %>
-              <% end %>
           ]);
           var options2 = {
               hAxis: {
