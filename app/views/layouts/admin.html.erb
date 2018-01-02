@@ -28,7 +28,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="<%= root_path %>" class="navbar-brand"> <small class="mywhite"> <i class="fa fa-user"></i> <% if store_signed_in? %> <%= current_store.store_name.upcase%> <%else%> USER ACCOUNT <%end%> </small> </a>
+					<a href="<%= root_path %>" class="navbar-brand"> <small class="mywhite"> <i class="fa fa-user"></i> <% if store_signed_in? %><%= current_store.store_name.upcase %><% elsif user_signed_in? %><%= current_user.username.upcase %><% else %><%= "ADMINS" %><% end %></small> </a>
 
 				</div>
 
@@ -38,8 +38,7 @@
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
 								<img class="nav-user-photo" style="background:#fff" src="/assets/user.png" alt="User" />
 								<span class="user-info">
-									<small><% if store_signed_in? %><%= current_store.store_name %><% else %><%= "User" %><% end %></small>
-									Account
+                  <small><% if store_signed_in? %><%= current_store.store_name %><% elsif user_signed_in? %><%= current_user.username %><% else %><%= "ADMINS" %><% end %></small>
 								</span> <i class="ace-icon fa fa-caret-down"></i> </a>
 
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
