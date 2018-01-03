@@ -29,10 +29,10 @@
 
 				<div class="navbar-header pull-left">
           <%if store_signed_in? && controller_name=='stores' || controller_name=='store_campaigns'  || controller_name == 'polls' || controller_name == 'poll_answers' || (controller_name == 'store_registrations' && action_name == 'edit') || controller_name == 'tickets'%>
-					<a href="<%= root_path %>" class="navbar-brand"> <small class="mywhite"> <i class="fa fa-user"></i> <%= current_store.store_name.upcase %></small> </a>
+					<a href="<%= root_path %>" class="navbar-brand"> <small class="mywhite"> <i class="fa fa-user"></i> <% if store_signed_in? %><%= current_store.store_name.upcase %><% end  %></small> </a>
           <% end  %>
           <%if user_signed_in? && controller_name=='home' || controller_name =='user_registrations' || (controller_name == 'store_registrations' && action_name == 'new')%>
-              <a href="<%= root_path %>" class="navbar-brand"> <small class="mywhite"> <i class="fa fa-user"></i> <%= current_user.username.upcase %></small> </a>
+              <a href="<%= root_path %>" class="navbar-brand"> <small class="mywhite"> <i class="fa fa-user"></i><% if user_signed_in? %> <%= current_user.username.upcase %><% end %></small> </a>
           <% end %>
 
 				</div>
@@ -45,10 +45,10 @@
 								<span class="user-info">
 
                   <%if store_signed_in? && controller_name=='stores' || controller_name=='store_campaigns'  || controller_name == 'polls' || controller_name == 'poll_answers' || (controller_name == 'store_registrations' && action_name == 'edit') || controller_name == 'tickets'%>
-					<small class="mywhite"><%= current_store.store_name.upcase %></small>
+					<small class="mywhite"><% if store_signed_in? %><%= current_store.store_name.upcase %><% end %></small>
           <% end  %>
                   <%if user_signed_in? && controller_name=='home' || controller_name =='user_registrations' || (controller_name == 'store_registrations' && action_name == 'new')%>
-              <small class="mywhite"><%= current_user.username.upcase %></small>
+              <small class="mywhite"><% if user_signed_in? %><%= current_user.username.upcase %><% end %></small>
           <% end %>
 
 								</span> <i class="ace-icon fa fa-caret-down"></i> </a>
