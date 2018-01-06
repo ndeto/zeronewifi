@@ -8,6 +8,7 @@
 
 			</div>
 
+
 			<div class="widget-body">
 				<div class="widget-main">
 					<!-- <div id="piechart-placeholder"></div> -->
@@ -18,24 +19,30 @@
 						<br><br>
 
             <div class="col-md-4 col-xs-12">
+              <a href="<%= stores_data_path %>" style="text-decoration: none;color: #333333">
 							<div class="col-md-12 stats-div">
 							<span class=""> <i class="ace-icon fa fa-user fa-5x"></i> &nbsp; <span style="vertical-align: top;font-size:22px;font-weight:700;">Total Visits</span> </span>
 							<h4 class="bigger pull-right"><%= Contact.where(store_id:current_store.id).count %></h4>
 							</div>
+              </a>
 						</div>
 
 						<div class="col-md-4 col-xs-12">
+              <a href="<%= stores_data_path %>" style="text-decoration: none;color: #333333">
 							<div class="col-md-12 stats-div">
 							<span class=""> <i class="ace-icon fa fa-user-plus fa-5x"></i> &nbsp; <span style="vertical-align: top;font-size:20px;font-weight:700;">Unique Visits</span> </span>
 							<h4 class="bigger pull-right"><%= Contact.where(store_id:current_store.id).distinct.pluck(:phone).count %></h4>
 							</div>
+              </a>
 						</div>
 
 						<div class="col-md-4 col-xs-12">
+              <a href="<%= stores_data_path %>" style="text-decoration: none;color: #333333">
 							<div class="col-md-12 stats-div">
 							<span class=""> <i class="ace-icon fa fa-calendar fa-5x"></i> &nbsp; <span style="vertical-align: top;font-size:20px;font-weight:700;">Today</span> </span>
 							<h4 class="bigger pull-right"><%= Contact.where(date:Date.current,store_id:current_store.id).count %></h4>
 							</div>
+              </a>
 						</div>
 						<br><br>
 					</div>
