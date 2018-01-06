@@ -105,10 +105,10 @@ class StoresController < ApplicationController
   def allres
     from = params[:from]
     to = params[:to]
-    @phones = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.phone IS NOT NULL')
-    @phonesdistinct = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.phone IS NOT NULL').distinct.pluck(:phone)
-    @emails = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.email IS NOT NULL')
-    @emailsdistinct = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.email IS NOT NULL').distinct.pluck(:email)
+    @phones = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.phone IS NOT NULL').where(store_id: current_store.id)
+    @phonesdistinct = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.phone IS NOT NULL').where(store_id: current_store.id).distinct.pluck(:phone)
+    @emails = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.email IS NOT NULL').where(store_id: current_store.id)
+    @emailsdistinct = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.email IS NOT NULL').where(store_id: current_store.id).distinct.pluck(:email)
     render :layout => false
   end
 
