@@ -129,7 +129,7 @@ class StoresController < ApplicationController
   def uniquephones
     from = params[:from]
     to = params[:to]
-    @contacts = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.phone IS NOT NULL').where(store_id: current_store.id).distinct.pluck(:phone).
+    @contacts = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.phone IS NOT NULL').where(store_id: current_store.id).distinct.pluck(:phone)
     render :layout => false
   end
 
