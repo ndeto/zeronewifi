@@ -1,7 +1,7 @@
 <br><br>
 <script>
   $(function () {
-      $('#dynamic-table').DataTable();
+      $('#dynamic-table').DataTable({order: [[ 1, 'desc' ]]});
       $("#download").click(function () {
           $("#dynamic-table").table2excel({
               exclude: ".noExl",
