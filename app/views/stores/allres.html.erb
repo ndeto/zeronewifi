@@ -1,0 +1,135 @@
+<script>
+    $(function () {
+
+        $("#allphones").click(function (e) {
+            e.preventDefault;
+            from = $("#startdate").val();
+            end = $("#enddate").val();
+
+            //alert(from + "  " + end);
+
+            $.ajax({
+                url: '/stores/allphones',
+                method: 'post',
+                data: {
+                    from: from,
+                    to: end
+                },
+                success: function (e) {
+                    $("#detailedresults").html(e);
+                }
+            });
+        });
+
+        $("#allemails").click(function (e) {
+            e.preventDefault;
+            from = $("#startdate").val();
+            end = $("#enddate").val();
+
+            //alert(from + "  " + end);
+
+            $.ajax({
+                url: '/stores/allemails',
+                method: 'post',
+                data: {
+                    from: from,
+                    to: end
+                },
+                success: function (e) {
+                    $("#detailedresults").html(e);
+                }
+            });
+        });
+
+        $("#uniquephones").click(function (e) {
+            e.preventDefault;
+            from = $("#startdate").val();
+            end = $("#enddate").val();
+
+            //alert(from + "  " + end);
+
+            $.ajax({
+                url: '/stores/uniquephones',
+                method: 'post',
+                data: {
+                    from: from,
+                    to: end
+                },
+                success: function (e) {
+                    $("#detailedresults").html(e);
+                }
+            });
+        });
+
+        $("#uniqueemails").click(function (e) {
+            e.preventDefault;
+            from = $("#startdate").val();
+            end = $("#enddate").val();
+
+            //alert(from + "  " + end);
+
+            $.ajax({
+                url: '/stores/uniqueemails',
+                method: 'post',
+                data: {
+                    from: from,
+                    to: end
+                },
+                success: function (e) {
+                    $("#detailedresults").html(e);
+                }
+            });
+        });
+
+        $("#download").click(function () {
+            $("#dynamic-table").table2excel({
+                exclude: ".noExl",
+                name: "Excel Document Name",
+                filename: "myFileName" + new Date().toISOString().replace(/[\-\:\.]/g, ""),
+                fileext: ".xls",
+                exclude_img: true,
+                exclude_links: true,
+                exclude_inputs: true
+            });
+        });
+
+    });
+</script>
+<div class="col-md-12 text-center" style="margin: 1em;">
+  <h3>Click on the options below to get your data</h3>
+</div>
+<br><br>
+<a id="uniquephones" href="javascript:void(0);" style="text-decoration: none;color: #333333">
+  <div class="col-md-3 col-xs-12">
+    <div class="col-md-12 stats-div">
+      <span class=""> <i class="ace-icon fa fa-phone fa-5x"></i> &nbsp; <span style="vertical-align: top;font-size:22px;font-weight:700;">Unique Phone Visits</span> </span>
+      <h4 class="bigger pull-right" style="vertical-align: top;font-size:20px;font-weight:700;"><%= @phonesdistinct.count %></h4>
+    </div>
+  </div>
+</a>
+<a id="uniqueemails" href="javascript:void(0);" style="text-decoration: none;color: #333333">
+  <div class="col-md-3 col-xs-12">
+    <div class="col-md-12 stats-div">
+      <span class=""> <i class="ace-icon fa fa-envelope fa-5x"></i> &nbsp; <span style="vertical-align: top;font-size:20px;font-weight:700;">Unique Email Visits</span> </span>
+      <h4 class="bigger pull-right" style="vertical-align: top;font-size:20px;font-weight:700;"><%= @emailsdistinct.count %></h4>
+    </div>
+  </div>
+</a>
+<a id="allphones" href="javascript:void(0);" style="text-decoration: none;color: #333333">
+  <div class="col-md-3 col-xs-12">
+    <div class="col-md-12 stats-div">
+      <span class=""> <i class="ace-icon fa fa-phone fa-5x"></i> &nbsp; <span style="vertical-align: top;font-size:22px;font-weight:700;">All Phone Visits</span> </span>
+      <h4 class="bigger pull-right" style="vertical-align: top;font-size:20px;font-weight:700;"><%= @phones.count %></h4>
+    </div>
+  </div>
+</a>
+
+<a id="allemails" href="javascript:void(0);" style="text-decoration: none;color: #333333">
+  <div class="col-md-3 col-xs-12">
+    <div class="col-md-12 stats-div">
+      <span class=""> <i class="ace-icon fa fa-envelope fa-5x"></i> &nbsp; <span style="vertical-align: top;font-size:20px;font-weight:700;">All Email Visits</span> </span>
+      <h4 class="bigger pull-right" style="vertical-align: top;font-size:20px;font-weight:700;"><%= @emails.count %></h4>
+    </div>
+  </div>
+</a>
+

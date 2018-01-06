@@ -9,6 +9,12 @@ class PageController < ApplicationController
 
     @camp = StoreCampaign.find(@store.store_campaign_id)
 
+    if @camp.views.nil?
+      @camp.update(views:1)
+    else
+      @camp.update(views:@camp.views+1)
+    end
+
     @user = User.find(@store.user_id)
     session[:store_id] = @store.id
 
@@ -25,6 +31,12 @@ class PageController < ApplicationController
   rescue ActiveRecord::RecordNotFound
     render 'lost' and return
 
+  end
+
+  def redirect
+    @store = Store.includes(:user).where(key: params[:key]).first
+    @camp = StoreCampaign.find(@store.store_campaign_id)
+    redirect_to(@camp.redirect_link)
   end
 
   def campaign

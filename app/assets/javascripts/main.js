@@ -1,7 +1,5 @@
 jQuery(document).ready(function($) {
 	
-document.addEventListener("turbolinks:load", function() {
-
 
     $("#dynamic-table").DataTable();
     $("#dynamic-table2").DataTable();
@@ -90,7 +88,7 @@ document.addEventListener("turbolinks:load", function() {
     });
 
 	
-	});
+
 
 });
 

@@ -13,7 +13,7 @@
 //= require bootstrap-sprockets
 //= require bootstrap
 //= require jquery_ujs
+//= require jquery-ui/widgets/datepicker
 //= require dataTables/jquery.dataTables
 //= require bootstrap-colorpicker
-//= require turbolinks
 //= require_tree .

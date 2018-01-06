@@ -27,6 +27,7 @@
       <tr>
         <th>Name</th>
         <th>Campaign Type</th>
+        <th>Views</th>
         <th>Status</th>
       </tr>
       </thead>
@@ -41,6 +42,7 @@
             <% end %>
 
             <td><%= Campaign.find(c.campaign_id).display %></td>
+            <td><%= c.views %></td>
             <td>
               <div class="hidden-sm hidden-xs action-buttons">
                 <% if current_store.store_campaign_id == c.id %>

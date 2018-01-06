@@ -16,7 +16,8 @@
 
 					<div class="clearfix">
 						<br><br>
-						<div class="col-md-4 col-xs-12">
+
+            <div class="col-md-4 col-xs-12">
 							<div class="col-md-12 stats-div">
 							<span class=""> <i class="ace-icon fa fa-user fa-5x"></i> &nbsp; <span style="vertical-align: top;font-size:22px;font-weight:700;">Total Visits</span> </span>
 							<h4 class="bigger pull-right"><%= Contact.where(store_id:current_store.id).count %></h4>
@@ -63,8 +64,6 @@
 
   <script>
       $(function () {
-
-          document.addEventListener("turbolinks:load", function () {
 
               google.charts.load('current', {'packages':['corechart']});
 
@@ -181,7 +180,7 @@
 
                   chart.draw(data2, options2);
               }
-          });
+
       });
 
   </script>

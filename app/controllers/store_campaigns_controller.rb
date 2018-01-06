@@ -11,7 +11,6 @@ class StoreCampaignsController < ApplicationController
   end
 
   def create
-
     if params[:storecampaign][:campaign_id].to_i.equal?(3)
       splashpage_status = false
       campaign_text_status = true
@@ -22,7 +21,6 @@ class StoreCampaignsController < ApplicationController
       campaign_text = 'Welcome to ' + @store.store_name
       @campaign = @store.store_campaign.create(campaign_params.merge(splashpage_status:splashpage_status, campaign_text_status:campaign_text_status,campaign_text:campaign_text,background:background,background_color:background_color,text_color:text_color))
       @savecampaign = @campaign.save
-
       question = "Hello, please give us your opinion"
       @question = Question.create(question:question, store_campaign_id:@campaign.id,feedback:0)
       @question.save
@@ -93,7 +91,7 @@ class StoreCampaignsController < ApplicationController
 
   def campaign_params
     params.require(:storecampaign).permit(:name, :campaign_id, :campaign_text_status, :campaign_text, :sponsored_text_status, :sponsored_text, :media, :splashimage_opacity , :splashimage, :background_color ,
-    :bg_img, :background, :splashpage_status, :video , :contact_type_id, :text_color, :sms_status, :fb_link, :email_status, :fb_status )
+    :bg_img, :background, :splashpage_status, :video , :contact_type_id, :text_color, :sms_status, :fb_link, :email_status, :fb_status, :redirect_link )
   end
 
 end

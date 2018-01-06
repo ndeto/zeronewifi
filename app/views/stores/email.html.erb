@@ -1,0 +1,76 @@
+<%= render 'layouts/alerts'%>
+<div class="col-md-12">
+  <h1 class="myclass"><i class="fa fa-users"></i> <%= @email %></h1>
+</div>
+<div class="col-md-12">
+  <h3 class="header smaller lighter myclass"></h3>
+
+  <hr>
+
+  <div class="clearfix">
+    <div class="pull-right tableTools-container"></div>
+  </div>
+
+  <div class="table-header">
+    <i class="fa fa-users"></i> Frequency
+  </div>
+  <br><br>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+
+      google.charts.load('current', {packages: ['corechart', 'bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('datetime', 'Day');
+          data.addColumn('number', 'Visit');
+
+          data.addRows([
+              <%
+              @client.each do |c|%>
+              [new Date(<%= c.created_at.strftime("%Y") %>, <%= c.created_at.strftime("%m").to_i - 1 %>, <%= c.created_at.strftime("%-d") %>,<%= c.created_at.strftime("%H") %>,<%= c.created_at.strftime("%M") %>,<%= c.created_at.strftime("%S") %>),1],
+              <%
+              end
+               %>
+          ]);
+
+          if (data.getNumberOfRows() == 0) { // if you have no data, add a data point and make the series transparent
+              data.addRow([new Date(), 0])
+              var options = {
+                  title: 'Motivation Level Throughout the Day',
+                  hAxis: {
+                      title: 'Time of Day',
+                      format: 'h:mm a',
+                      viewWindow: {
+                          min: [7, 30, 0],
+                          max: [17, 30, 0]
+                      }
+                  },
+                  vAxis: {
+                      title: 'Rating (scale of 1-10)'
+                  }
+              };
+          }else {
+              var options = {
+                  title: 'Motivation Level Throughout the Day',
+                  hAxis: {
+                      title: 'Time of Day',
+                      format: 'h:mm a',
+                      viewWindow: {
+                          min: [7, 30, 0],
+                          max: [17, 30, 0]
+                      }
+                  },
+                  vAxis: {
+                      title: 'Rating (scale of 1-10)'
+                  }
+              };
+          }
+
+          var materialChart = new google.charts.Bar(document.getElementById('chart_div'));
+          materialChart.draw(data, options);
+      }
+  </script>
+  <div id="chart_div"></div>
+</div>

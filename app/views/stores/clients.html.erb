@@ -1,69 +1,100 @@
-<%= render 'layouts/alerts'%>
+<%= render 'layouts/alerts' %>
 <div class="col-md-12">
-<h1 class="myclass"><i class="fa fa-users"></i> Your Clients</h1>
+  <h1 class="myclass"><i class="fa fa-users"></i> Your Clients</h1>
 </div>
 <div class="col-md-12">
-		<h3 class="header smaller lighter myclass">Have a look at your client list</h3>
-
-  <%= link_to "Download List",  stores_contacts_path(format: "xls"), class:'my-button' %>
+  <h3 class="header smaller lighter myclass">Have a look at your client list</h3>
+  <%= link_to "Download List", stores_contacts_path(format: "xls"), class: 'my-button' %>
   <hr>
 
-		<div class="clearfix">
-			<div class="pull-right tableTools-container"></div>
-		</div>
-		<div class="table-header">
-			<i class="fa fa-users"></i> Phone Numbers
-		</div>
-<% if !@contacts.nil? %>
-<table id="dynamic-table" class="table table-striped table-bordered table-hover">
-  <thead>
-
-  <tr>
-    <th>Contact</th>
-    <th>Date</th>
-    <!--<th>Status</th>-->
-  </tr>
-  </thead>
-  <tbody>
-  <% @contacts.each do |c| %>
-      <tr>
-        <td><%= c.phone %></td>
-        <td><%= c.created_at.strftime("%m/%d/%Y") %></td>
-      </tr>
-  <% end %>
-  </tbody>
-</table>
-<% else %>
-<p> You currently do not have any contacts</p>
-<% end %>
-
-    <div class="clearfix">
-      <div class="pull-right tableTools-container"></div>
-    </div>
-    <div class="table-header">
-      <i class="fa fa-users"></i> Emails
-    </div>
-    <% if !@emails.nil? %>
-        <table id="dynamic-table2" class="table table-striped table-bordered table-hover">
-          <thead>
-
-          <tr>
-            <th>Contact</th>
-            <th>Date</th>
-            <!--<th>Status</th>-->
-          </tr>
-          </thead>
-          <tbody>
-          <% @emails.each do |c| %>
-              <tr>
-                <td><%= c.email %></td>
-                <td><%= c.created_at.strftime("%m/%d/%Y") %></td>
-              </tr>
-          <% end %>
-          </tbody>
-        </table>
-    <% else %>
-        <p> You currently do not have any emaill contacts</p>
-    <% end %>
-<br><br>
+  <div class="clearfix">
+    <div class="pull-right tableTools-container"></div>
   </div>
+  <div class="table-header">
+    <i class="fa fa-users"></i> Phone Numbers
+  </div>
+  <% if !@contacts.nil? %>
+      <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+        <thead>
+
+        <tr>
+          <th>Phone Number</th>
+          <th>Number of Visits</th>
+        </tr>
+        </thead>
+        <tbody>
+        <%
+          @contacts.each do |c|
+            number = Contact.where(phone: c, store_id: current_store.id).count
+        %>
+            <tr>
+              <td><%= link_to(c, stores_phone_path(c)) %></td>
+              <td><%= number %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+  <% else %>
+      <p> You currently do not have any contacts</p>
+  <% end %>
+  <div class="clearfix">
+    <div class="pull-right tableTools-container"></div>
+  </div>
+  <div class="table-header">
+    <i class="fa fa-users"></i> Emails
+  </div>
+  <% if !@emails.nil? %>
+      <table id="dynamic-table2" class="table table-striped table-bordered table-hover">
+        <thead>
+
+        <tr>
+          <th>Email</th>
+          <th>Number of Visits</th>
+        </tr>
+        </thead>
+        <tbody>
+        <%
+          @emails.each do |e|
+            number = Contact.where(email: e, store_id: current_store.id).count
+        %>
+            <tr>
+              <td><a href="" onclick="showmail('<%= e %>');"><%= e %></a></td>
+              <td><%= number %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+  <% else %>
+      <p> You currently do not have any emaill contacts</p>
+  <% end %>
+  <br><br>
+</div>
+
+<script>
+    function post(path, params, method) {
+        method = method || "post"; // Set method to post by default if not specified.
+
+        // The rest of this code assumes you are not using a library.
+        // It can be made less wordy if you use one.
+        var form = document.createElement("form");
+        form.setAttribute("method", method);
+        form.setAttribute("action", path);
+
+        for(var key in params) {
+            if(params.hasOwnProperty(key)) {
+                var hiddenField = document.createElement("input");
+                hiddenField.setAttribute("type", "hidden");
+                hiddenField.setAttribute("name", key);
+                hiddenField.setAttribute("value", params[key]);
+
+                form.appendChild(hiddenField);
+            }
+        }
+
+        document.body.appendChild(form);
+        form.submit();
+    }
+  function showmail(mail) {
+      post('<%= stores_email_path %>', {contact: mail});
+  }
+</script>

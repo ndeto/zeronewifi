@@ -1,5 +1,5 @@
 class StoresController < ApplicationController
-
+  skip_before_action :verify_authenticity_token, only: [:email]
   before_action :authenticate_store!
 
   # GET /stores
@@ -35,12 +35,12 @@ class StoresController < ApplicationController
     @store = Store.find(current_store.id)
 
     ticket = params[:store][:ticket_key]
-    @tick = Store.where(ticket_key:ticket).first
+    @tick = Store.where(ticket_key: ticket).first
 
     if !@tick.nil? && @tick.id != current_store.id
-        flash[:alert] = "This key isn't allowed, try another one"
-        redirect_to(request.referer) and return
-      end
+      flash[:alert] = "This key isn't allowed, try another one"
+      redirect_to(request.referer) and return
+    end
 
     if @store.update(store_params)
       flash[:notice] = "Store has been Updated"
@@ -58,10 +58,20 @@ class StoresController < ApplicationController
   end
 
   def clients
-    @contacts = Contact.where(store_id: current_store.id).where("contacts.phone IS NOT NULL").distinct(:phone)
-    @emails = Contact.where(store_id: current_store.id).where("contacts.email IS NOT NULL").distinct(:email)
-    #@contacts = Contact.select(:phone,:created_at,:email).where(store_id:current_store.id).distinct
-    #@contacts = Contact.where(store_id:current_store.id).select(:phone).distinct
+    @contacts = Contact.where(store_id: current_store.id).where("contacts.phone IS NOT NULL").distinct.pluck(:phone)
+    @emails = Contact.where(store_id: current_store.id).where("contacts.email IS NOT NULL").distinct.pluck(:email)
+    set_admin
+  end
+
+  def phone
+    @num = params[:contact]
+    @client = Contact.where(store_id: current_store.id, phone: params[:contact])
+    set_admin
+  end
+
+  def email
+    @email = params[:contact]
+    @client = Contact.where(store_id: current_store.id, email: params[:contact]).order("created_at ASC")
     set_admin
   end
 
@@ -73,7 +83,7 @@ class StoresController < ApplicationController
     @store = Store.find(params[:id])
 
     if @store.destroy
-    flash[:notice] = "Store Successfully deleted"
+      flash[:notice] = "Store Successfully deleted"
       redirect_to(request.referer)
     else
       flash[:alert] = "Store couldnt be deleted"
@@ -83,16 +93,57 @@ class StoresController < ApplicationController
   end
 
   def contacts
-      @phones = Contact.where(store_id:current_store.id).where('contacts.phone IS NOT NULL')
-      @emails = Contact.where(store_id:current_store.id).where('contacts.email IS NOT NULL')
+    @phones = Contact.where(store_id: current_store.id).where('contacts.phone IS NOT NULL')
+    @emails = Contact.where(store_id: current_store.id).where('contacts.email IS NOT NULL')
+    respond_to :xls
+  end
 
-      respond_to :xls
+  def data
+    set_admin
+  end
+
+  def allres
+    from = params[:from]
+    to = params[:to]
+    @phones = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.phone IS NOT NULL')
+    @phonesdistinct = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.phone IS NOT NULL').distinct.pluck(:phone)
+    @emails = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.email IS NOT NULL')
+    @emailsdistinct = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.email IS NOT NULL').distinct.pluck(:email)
+    render :layout => false
+  end
+
+  def allphones
+    from = params[:from]
+    to = params[:to]
+    @contacts = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.phone IS NOT NULL')
+    render :layout => false
+  end
+
+  def allemails
+    from = params[:from]
+    to = params[:to]
+    @contacts = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.email IS NOT NULL')
+    render :layout => false
+  end
+
+  def uniquephones
+    from = params[:from]
+    to = params[:to]
+    @contacts = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.phone IS NOT NULL').distinct.pluck(:phone)
+    render :layout => false
+  end
+
+  def uniqueemails
+    from = params[:from]
+    to = params[:to]
+    @contacts = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.email IS NOT NULL').distinct.pluck(:email)
+    render :layout => false
   end
 
   private
 
   def store_params
-    params.require(:store).permit(:store_name, :username, :active, :network_ip,:ticket_key)
+    params.require(:store).permit(:store_name, :username, :active, :network_ip, :ticket_key)
   end
 
 end

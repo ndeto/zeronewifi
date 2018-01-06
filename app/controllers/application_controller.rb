@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
     case resource
       when User then home_stores_path
       when Store then stores_path
+      when Admin then admins_path
     end
   end
   
@@ -15,9 +16,14 @@ class ApplicationController < ActionController::Base
       when Store then edit_store_registration_path
     end
   end
-
   
   def set_admin
     render layout:'admin'
   end
+
+=begin
+rescue ActionController::InvalidAuthenticityToken
+  render 'lost' and return
+=end
+
 end

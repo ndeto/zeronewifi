@@ -1,0 +1,71 @@
+<script>
+$(function() {
+$('.datepicker').datepicker({ dateFormat: 'yy-mm-dd' });
+
+$("#res").click(function (e) {
+    e.preventDefault;
+    from = $("#startdate").val();
+    end = $("#enddate").val();
+
+    //alert(from + "  " + end);
+
+    $.ajax({
+       url:'/stores/allres',
+        method:'post',
+        data:{
+           from:from,
+            to:end
+        },
+        success:function (e) {
+            $("#results").html(e);
+        }
+    });
+});
+
+$("#allphones").click(function (e) {
+    alert("mignon");
+});
+
+});
+</script>
+
+
+
+
+<%= render 'layouts/alerts' %>
+<div class="col-md-12">
+  <h1 class="myclass"><i class="fa fa-desktop"></i> Visits Data</h1></br><br>
+</div>
+
+<div class="col-md-12">
+
+</div>
+
+<div class="col-md-12">
+
+  <div class="clearfix">
+    <div class="pull-right tableTools-container"></div>
+  </div>
+  <div class="table-header">
+    Visits
+  </div>
+
+  <!-- div.table-responsive -->
+
+  <!-- div.dataTables_borderWrap -->
+  <div class="row text-center" style="margin-top: 4em;">
+    <h3>Select dates below</h3>
+    <div class="col-md-6 text-center">
+      <label for="startdate">From</label>
+      <input id="startdate" type="text" class="datepicker" />
+    </div>
+    <div class="col-md-6">
+      <label for="enddate">To</label>
+      <input id="enddate" type="text" class="datepicker" />
+    </div>
+    <button id="res" class="my-button">Show Contacts</button>
+  </div>
+  <div class="row" id="results"></div>
+  <div class="row" id="detailedresults"></div>
+  <br><br>
+</div>
