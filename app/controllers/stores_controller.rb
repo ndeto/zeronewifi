@@ -115,28 +115,28 @@ class StoresController < ApplicationController
   def allphones
     from = params[:from]
     to = params[:to]
-    @contacts = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.phone IS NOT NULL')
+    @contacts = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.phone IS NOT NULL').where(store_id: current_store.id).where(store_id: current_store.id)
     render :layout => false
   end
 
   def allemails
     from = params[:from]
     to = params[:to]
-    @contacts = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.email IS NOT NULL')
+    @contacts = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.email IS NOT NULL').where(store_id: current_store.id)
     render :layout => false
   end
 
   def uniquephones
     from = params[:from]
     to = params[:to]
-    @contacts = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.phone IS NOT NULL').distinct.pluck(:phone)
+    @contacts = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.phone IS NOT NULL').where(store_id: current_store.id).distinct.pluck(:phone).
     render :layout => false
   end
 
   def uniqueemails
     from = params[:from]
     to = params[:to]
-    @contacts = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.email IS NOT NULL').distinct.pluck(:email)
+    @contacts = Contact.where('date >= ?', from).where('date <= ?', to).where('contacts.email IS NOT NULL').where(store_id: current_store.id).distinct.pluck(:email)
     render :layout => false
   end
 
