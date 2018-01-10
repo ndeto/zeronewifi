@@ -75,6 +75,7 @@ ContactType.create!([
 =end
 
 Admin.create!([
-                  {:email => 'martindeto@gmail.com', :password => 'spiderpig', :password_confirmation => 'spiderpig'}
+                  #{:email => 'martindeto@gmail.com', :password => 'spiderpig', :password_confirmation => 'spiderpig'}
+                  {:email => 'nickndegwa0711@gmail.com', :password => 'Alicia2016', :password_confirmation => 'Alicia2016'}
               ])
 
