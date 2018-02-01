@@ -65,7 +65,8 @@ class StoresController < ApplicationController
 
   def phone
     @num = params[:contact]
-    @client = Contact.where(store_id: current_store.id, phone: params[:contact])
+    @client = Contact.where(store_id: current_store.id, phone: params[:contact]).distinct.pluck(:date)
+#    @contact = Contact.where('created_at >= ?',1.week.ago).where(store_id:current_store.id).order("date ASC").distinct.pluck(:date)
     set_admin
   end
 
