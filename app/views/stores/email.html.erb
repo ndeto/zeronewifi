@@ -29,7 +29,7 @@
           data.addRows([
               <%
               @client.each do |c|%>
-              [new Date(<%= c.created_at.strftime("%Y") %>, <%= c.created_at.strftime("%m").to_i - 1 %>, <%= c.created_at.strftime("%-d") %>,<%= c.created_at.strftime("%H") %>,<%= c.created_at.strftime("%M") %>,<%= c.created_at.strftime("%S") %>),1],
+              [new Date(<%= c.strftime("%Y") %>, <%= c.strftime("%m").to_i - 1 %>, <%= c.strftime("%-d") %>,<%= c.strftime("%H") %>,<%= c.strftime("%M") %>,<%= c.strftime("%S") %>),1],
               <%
               end
                %>

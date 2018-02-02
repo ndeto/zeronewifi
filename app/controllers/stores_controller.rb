@@ -72,7 +72,7 @@ class StoresController < ApplicationController
 
   def email
     @email = params[:contact]
-    @client = Contact.where(store_id: current_store.id, email: params[:contact]).order("created_at ASC")
+    @client = Contact.where(store_id: current_store.id, email: params[:contact]).order("created_at ASC").distinct.pluck(:date)
     set_admin
   end
 
