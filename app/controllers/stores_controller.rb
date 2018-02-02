@@ -65,14 +65,14 @@ class StoresController < ApplicationController
 
   def phone
     @num = params[:contact]
-    @client = Contact.where(store_id: current_store.id, phone: params[:contact]).distinct.pluck(:date)
+    @client = Contact.where(store_id: current_store.id, phone: params[:contact]).distinct.pluck(:created_at)
 #    @contact = Contact.where('created_at >= ?',1.week.ago).where(store_id:current_store.id).order("date ASC").distinct.pluck(:date)
     set_admin
   end
 
   def email
     @email = params[:contact]
-    @client = Contact.where(store_id: current_store.id, email: params[:contact]).order("created_at ASC").distinct.pluck(:date)
+    @client = Contact.where(store_id: current_store.id, email: params[:contact]).distinct.pluck(:created_at)
     set_admin
   end
 
