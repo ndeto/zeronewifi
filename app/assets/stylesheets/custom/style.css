@@ -8,9 +8,9 @@ dynamic-table_filter{
 .paginate_button{
     width: 100%;
     border-radius: 0px;
-    border: 2px solid #016d6f;
+    border: 2px solid #87c36b;
     background: #fff;
-    color: #016d6f;
+    color: #87c36b;
     transition: all 0.5s;
     font-weight: 700;
     padding-top: 1em;
@@ -24,23 +24,23 @@ dynamic-table_filter{
 .paginate_button:hover{
     width: 100%;
     border-radius: 0px;
-    border: 2px solid #016d6f;
-    background: #016d6f;
+    border: 2px solid #87c36b;
+    background: #87c36b;
     color: #fff;
     transition: all 0.5s;
     text-align: center;
 }
 .login-box .toolbar {
-    background: #016d6f !important;
+    background: #87c36b !important;
 }
 .myclass{
-  color: #016d6f !important;
+  color: #87c36b !important;
 }
 .mybackground{
-  background: #016d6f !important;
+  background: #87c36b !important;
 }
 .navbar-default {
-    background-color: #016d6f !important;
+    background-color: #87c36b !important;
     border-color: #e7e7e7;
 }
 .ace-nav>li.light-blue>a {
@@ -58,7 +58,7 @@ dynamic-table_filter{
 }
 .no-skin .nav-list > li > a:hover {
     color: #fff !important;
-    background:  #016d6f !important;
+    background:  #87c36b !important;
     transition: all 0.5s !important;
 }
 .navbar-brand{
@@ -69,7 +69,7 @@ dynamic-table_filter{
   border-radius: 0px;
   border: 2px solid #011f1f;
   background: #fff;
-  color: #016d6f;
+  color: #87c36b;
   transition: all 0.5s;
   font-weight: 700;
   padding-top: 1em;
@@ -79,8 +79,8 @@ dynamic-table_filter{
 .login-button:hover{
   width: 100%;
   border-radius: 0px;
-  border: 2px solid #016d6f;
-  background: #016d6f;
+  border: 2px solid #87c36b;
+  background: #87c36b;
   color: #fff;
   transition: all 0.5s;
   font-weight: 700;
@@ -94,7 +94,7 @@ dynamic-table_filter{
   border-radius: 0px;
   border: 2px solid #011f1f;
   background: #fff;
-  color: #016d6f;
+  color: #87c36b;
   transition: all 0.5s;
   font-weight: 700;
   padding: 0.7em;
@@ -105,8 +105,8 @@ dynamic-table_filter{
   display: inline-block;
   width: 150px;
   border-radius: 0px;
-  border: 2px solid #016d6f;
-  background: #016d6f;
+  border: 2px solid #87c36b;
+  background: #87c36b;
   color: #fff;
   transition: all 0.5s;
   font-weight: 700;
@@ -115,7 +115,7 @@ dynamic-table_filter{
   text-decoration: none;
 }
 .table-header {
-    background-color: #016d6f !important;
+    background-color: #87c36b !important;
     font-weight: 700;
 }
 .my-font-weight{
@@ -129,13 +129,13 @@ dynamic-table_filter{
 }
 .stats-div:hover{
   padding: 1em !important;
-  border: 2px solid #016d6f !important;
-  background: #016d6f;
+  border: 2px solid #87c36b !important;
+  background: #87c36b;
   color: #fff;
   transition: all 0.5s;
 }
 .no-skin .sidebar.menu-min .nav-list>li>a>.menu-text {
-    background-color: #016d6f !important;
+    background-color: #87c36b !important;
 }
 .submit-button{
   display: inline-block;
@@ -145,7 +145,7 @@ dynamic-table_filter{
   border-radius: 0px;
   border: 2px solid #011f1f;
   background: #fff;
-  color: #016d6f;
+  color: #87c36b;
   transition: all 0.5s;
   font-weight: 700;
   padding: 0.7em;
@@ -158,8 +158,8 @@ dynamic-table_filter{
   margin-left: auto;
   margin-right: auto;
   border-radius: 0px;
-  border: 2px solid #016d6f;
-  background: #016d6f;
+  border: 2px solid #87c36b;
+  background: #87c36b;
   color: #fff;
   transition: all 0.5s;
   font-weight: 700;
