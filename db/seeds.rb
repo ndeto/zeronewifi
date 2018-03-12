@@ -86,6 +86,7 @@ Store.create!([
                   {:store_name => 'Our Store', :email => 'test@gmail.com', :password => 'testtest', :password_confirmation => 'testtest', reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 15, current_sign_in_at: "2017-09-19 08:38:44", last_sign_in_at: "2017-09-19 08:38:42", current_sign_in_ip: "192.168.7.240", last_sign_in_ip: "192.168.7.239", username: "mndeto", key: "123", activecamp: nil, active: true, contact_type: nil},
               ])
 =end
+=begin
 Campaign.create!([
                      {name: "imagecampaign", display: "Image"},
                      {name: "videocampaign", display: "Video"},
@@ -95,6 +96,7 @@ Store.find(1).update({
                          store_campaign_id:1,
                          user_id: 1
                      })
+=end
 
 
 ContactType.create!([
