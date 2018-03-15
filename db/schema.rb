@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180101071712) do
+ActiveRecord::Schema.define(version: 20180314185946) do
 
-  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(version: 20180101071712) do
     t.string   "fb_link"
     t.string   "redirect_link"
     t.integer  "views",                                          default: 0
+    t.boolean  "direct_login"
     t.index ["campaign_id"], name: "index_store_campaigns_on_campaign_id", using: :btree
     t.index ["contact_type_id"], name: "index_store_campaigns_on_contact_type_id", using: :btree
     t.index ["store_id"], name: "index_store_campaigns_on_store_id", using: :btree
