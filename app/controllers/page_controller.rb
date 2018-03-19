@@ -208,6 +208,17 @@ class PageController < ApplicationController
 
   end
 
+  def direct
+    @store = Store.find(session[:store_id])
+    @camp = StoreCampaign.find(@store.store_campaign_id)
+    if !@camp.redirect_link.nil?
+    redirect_to(@camp.redirect_link) and return
+    else
+      redirect_to('https://www.google.com') and return
+    end
+
+  end
+
   private
 
   def randy
