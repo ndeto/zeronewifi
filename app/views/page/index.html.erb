@@ -83,7 +83,22 @@
 			margin-right: auto;
 			width: 100%;
 		}
-		
+		.accept{
+			border: 2px solid <%= @camp.text_color %> !important;
+			border-radius: 4px !important;
+			color: <%= @camp.text_color %> !important;
+			margin-top: 2em !important;
+			transition: all 0.5s;
+		}
+		.accept:hover{
+			border: 2px solid <%= @camp.text_color %> !important;
+			border-radius: 4px !important;
+			color: #fff !important;
+			background:  <%= @camp.text_color %> !important;
+			margin-top: 2em !important;
+			transition: all 0.5s;
+		}
+
 	</style>
 
 	<body alink="#FFFFFF" vlink="#FFFFFF">
