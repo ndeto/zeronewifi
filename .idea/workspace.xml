@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c4c1035-136e-4165-a935-41ba38637a2b" name="Default" comment="Change Poll order by" />
+    <list default="true" id="9c4c1035-136e-4165-a935-41ba38637a2b" name="Default" comment="Change Poll order by">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/page_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/page_controller.rb" />
+    </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -26,11 +28,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="page_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="page_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/page_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4380">
-              <caret line="219" column="4" lean-forward="false" selection-start-line="219" selection-start-column="4" selection-end-line="219" selection-end-column="4" />
+            <state relative-caret-position="440">
+              <caret line="217" column="49" lean-forward="false" selection-start-line="217" selection-start-column="49" selection-end-line="217" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -124,7 +126,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="640">
@@ -245,9 +247,9 @@
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/controllers/store_campaigns_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/store_campaigns/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/page_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/page/_login.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/page_controller.rb" />
       </list>
     </option>
   </component>
@@ -898,7 +900,7 @@
       <workItem from="1521139616142" duration="1697000" />
       <workItem from="1521276660304" duration="388000" />
       <workItem from="1521296903689" duration="62000" />
-      <workItem from="1521466558739" duration="252000" />
+      <workItem from="1521466558739" duration="879000" />
     </task>
     <task id="LOCAL-00001" summary="Ndeto working">
       <created>1506323708409</created>
@@ -925,7 +927,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="435261000" />
+    <option name="totallyTimeSpent" value="435888000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1382,14 +1384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/page_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4380">
-          <caret line="219" column="4" lean-forward="false" selection-start-line="219" selection-start-column="4" selection-end-line="219" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/store_campaign.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1402,6 +1396,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
           <caret line="52" column="41" lean-forward="false" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/page_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="217" column="49" lean-forward="false" selection-start-line="217" selection-start-column="49" selection-end-line="217" selection-end-column="49" />
           <folding />
         </state>
       </provider>
