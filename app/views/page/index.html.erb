@@ -45,6 +45,7 @@
 		body {
 			<% if @camp.background == 'image' %>
 			background-image:url('<%= @camp.bg_img_url.to_s %>');
+			background-size: cover;
 			<% else %>
 			background-color: <%= @camp.background_color %>;
 			<% end %>
