@@ -107,7 +107,7 @@ class PageController < ApplicationController
       # so wrap the call in a try-catch block
       begin
         # Thats it, hit send and we'll take care of the rest.
-        reports = gateway.sendMessage(to, message, sender)
+        reports = gateway.sendMessage(to, message)
 
         reports.each {|x|
           if x.status == "Success"
@@ -166,7 +166,7 @@ class PageController < ApplicationController
         # so wrap the call in a try-catch block
         begin
           # Thats it, hit send and we'll take care of the rest.
-          reports = gateway.sendMessage(to, message, sender)
+          reports = gateway.sendMessage(to, message)
 
 
           reports.each {|x|
