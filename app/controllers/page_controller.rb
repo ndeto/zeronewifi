@@ -98,7 +98,7 @@ class PageController < ApplicationController
       message = "Hello, welcome to #{@store.store_name}, your access code is #{@code}"
 
       # Specify your AfricasTalking shortCode or sender id
-      sender = "cnetwifi"
+      #sender = "cnetwifi"
 
       # Create a new instance of our awesome gateway class
       gateway = AfricasTalkingGateway.new(username, apikey)
@@ -157,7 +157,7 @@ class PageController < ApplicationController
         message = "Hello, welcome to #{@store.store_name}, your access code is #{@code}"
 
         # Specify your AfricasTalking shortCode or sender id
-        sender = "cnetwifi"
+#        sender = "cnetwifi"
 
         # Create a new instance of our awesome gateway class
         gateway = AfricasTalkingGateway.new(username, apikey)
