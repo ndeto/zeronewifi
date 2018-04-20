@@ -209,6 +209,8 @@ class PageController < ApplicationController
   end
 
   def login
+    @store = Store.find(session[:store_id])
+    @camp = StoreCampaign.find(@store.store_campaign_id)
     redirect_to("http://#{@store.network_ip}/login?username=57EDBGH3&password=57EDBGH3")
   end
 
