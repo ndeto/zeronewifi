@@ -45,6 +45,7 @@
 		body {
 			<% if @camp.background == 'image' %>
 			background-image:url('<%= @camp.bg_img_url.to_s %>');
+			background-size: cover;
 			<% else %>
 			background-color: <%= @camp.background_color %>;
 			<% end %>
@@ -87,13 +88,14 @@
 			border: 2px solid <%= @camp.text_color %> !important;
 			border-radius: 4px !important;
 			color: <%= @camp.text_color %> !important;
+			background:  <%= @camp.background_color %> !important;
 			margin-top: 2em !important;
 			transition: all 0.5s;
 		}
 		.accept:hover{
-			border: 2px solid <%= @camp.text_color %> !important;
+			border: 2px solid <%= @camp.background_color %> !important;
 			border-radius: 4px !important;
-			color: #fff !important;
+			color: <%= @camp.background_color %> !important;
 			background:  <%= @camp.text_color %> !important;
 			margin-top: 2em !important;
 			transition: all 0.5s;
