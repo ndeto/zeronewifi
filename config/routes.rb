@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   post 'stores/uniqueemails' => 'stores#uniqueemails'
   get 'admins/view/:id' => 'admins#view', as: 'admins_view'
   get 'pages/direct' => 'page#direct'
+  get 'pages/login' => 'page#login'
 
   devise_scope :store do
     get 'home/new', to: 'store_registrations#new'
