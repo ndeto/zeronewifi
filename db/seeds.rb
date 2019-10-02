@@ -74,7 +74,7 @@ ContactType.create!([
 
 =end
 
-=begin
+
 Admin.create!([
                   {:email => 'martindeto@gmail.com', :password => 'spiderpig', :password_confirmation => 'spiderpig'}
                   # {:email => 'nickndegwa0711@gmail.com', :password => 'Alicia2016', :password_confirmation => 'Alicia2016'}
@@ -85,7 +85,7 @@ User.create!([
 Store.create!([
                   {:store_name => 'Our Store', :email => 'test@gmail.com', :password => 'testtest', :password_confirmation => 'testtest', reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 15, current_sign_in_at: "2017-09-19 08:38:44", last_sign_in_at: "2017-09-19 08:38:42", current_sign_in_ip: "192.168.7.240", last_sign_in_ip: "192.168.7.239", username: "mndeto", key: "123", activecamp: nil, active: true, contact_type: nil},
               ])
-=end
+
 =begin
 Campaign.create!([
                      {name: "imagecampaign", display: "Image"},
@@ -99,9 +99,9 @@ Store.find(1).update({
 =end
 
 
-ContactType.create!([
-                        {name: "email", description: "Require Email", display: "Email"},
-                        {name: "phone", description: "Require Phone Number", display: "Phone"},
-                        {name: "none", description: "Require No Contacts", display: "None"}
-                    ])
-
+# ContactType.create!([
+#                         {name: "email", description: "Require Email", display: "Email"},
+#                         {name: "phone", description: "Require Phone Number", display: "Phone"},
+#                         {name: "none", description: "Require No Contacts", display: "None"}
+#                     ])
+#
