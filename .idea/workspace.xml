@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c4c1035-136e-4165-a935-41ba38637a2b" name="Default" comment="Change Poll order by" />
+    <list default="true" id="9c4c1035-136e-4165-a935-41ba38637a2b" name="Default" comment="Change Poll order by">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -36,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1500">
-              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="264">
+              <caret line="77" column="6" selection-start-line="77" selection-end-line="85" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -222,9 +224,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1440" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -539,7 +540,8 @@
       <workItem from="1523262575103" duration="762000" />
       <workItem from="1524219842948" duration="2581000" />
       <workItem from="1537182169029" duration="753000" />
-      <workItem from="1570005701815" duration="570000" />
+      <workItem from="1570005701815" duration="936000" />
+      <workItem from="1570006798410" duration="438000" />
     </task>
     <task id="LOCAL-00001" summary="Ndeto working">
       <created>1506323708409</created>
@@ -566,7 +568,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="446031000" />
+    <option name="totallyTimeSpent" value="446835000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -578,9 +580,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13951011" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18955651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -591,7 +593,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3292683" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5085683" side_tool="true" weight="0.3109756" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49143174" visible="true" weight="0.27425742" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49143174" visible="true" weight="0.33373493" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4980695" weight="0.3699187" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
@@ -998,8 +1000,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
-          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="264">
+          <caret line="77" column="6" selection-start-line="77" selection-end-line="85" selection-end-column="4" />
         </state>
       </provider>
     </entry>

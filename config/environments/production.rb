@@ -1,23 +1,23 @@
 Rails.application.configure do
   
-config.action_mailer.default_url_options = {:host => 'intense-sands-76808.herokuapp.com'}
+config.action_mailer.default_url_options = {:host => ''}
 config.action_mailer.delivery_method = :smtp
 
 config.action_mailer.smtp_settings = {
-  :address => "mail.cnetwifi.com",
+  :address => "",
   :port    => 25,
-  :domain  => 'cnetwifi.com',
-  :user_name    => 'auto@cnetwifi.com',
-  :password => 'Mart7592.',
-  :authentication => 'login',
-  :openssl_verify_mode => 'none'
+  :domain  => '',
+  :user_name    => '',
+  :password => '',
+  :authentication => '',
+  :openssl_verify_mode => ''
   #:enable_starttls_auto => true
 }
 
 config.paperclip_defaults = {
   storage: :s3,
   s3_credentials: {
-    bucket: 'card17',
+    bucket: ENV['S3_BUCKET'],
     access_key_id: ENV['S3_ACCESS_KEY'],
     secret_access_key: ENV['S3_SECRET_KEY'],
     s3_region: ENV['S3_REGION'],
