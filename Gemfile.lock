@@ -297,7 +297,7 @@ GEM
       paperclip (>= 2.5.2)
       rails
     pg (0.18.1)
-    puma (3.10.0)
+    puma (3.12.4)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -430,7 +430,7 @@ DEPENDENCIES
   paperclip-av-transcoder
   paperclip-ffmpeg
   pg (= 0.18.1)
-  puma (~> 3.0)
+  puma (~> 3.12)
   rails (~> 5.0.2)
   rails_12factor
   sass-rails (~> 5.0)
