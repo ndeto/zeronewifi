@@ -298,7 +298,7 @@ GEM
       rails
     pg (0.18.1)
     puma (3.10.0)
-    rack (2.0.3)
+    rack (2.2.3)
     rack-protection (2.0.0)
       rack
     rack-test (0.6.3)
